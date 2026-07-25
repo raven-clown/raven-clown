@@ -1,0 +1,25 @@
+# Delta Electronics Thailand
+
+**Web App Engineer** — IT manufacturing systems team · April 2026 – Present
+
+## What the role covers
+
+Both DevOps and full-stack web development for the factory's MES (Manufacturing Execution System) tooling, inside a fully air-gapped corporate network. Also acts as project manager on the initiatives below — planning, presenting to the department, and handling support afterward.
+
+## What I built
+
+**CI/CD platform.** Built and maintain the GitLab CI/CD pipelines for `mfg-portal-frontend` (React/Vite) and `mfg-portal-api` (ASP.NET Core), deploying through a Rancher-managed Kubernetes cluster with images pushed to Harbor. Was the first person on the Thai team to put this Rancher/Kubernetes/GitLab CI-CD architecture together and present it to the whole IT department — other application teams and the server team are now adopting it, and I'm the point of contact for that rollout.
+
+**MES monitoring dashboard.** Full-stack dashboard (React, .NET 8, Docker Swarm) showing real-time service health and usage metrics.
+
+**CTP diagnostic tool.** ASP.NET Core API + React/TypeScript frontend that automates cross-schema comparisons in Oracle (`PROD_SCHEMA_A` / `PROD_SCHEMA_B`), flagging MATCH/MISMATCH cases that used to be checked manually.
+
+**MinIO object storage.** Set up and configured a MinIO deployment from scratch and advise other teams on how to deploy against it.
+
+**Data investigation.** Traced a `shipment_code` vs internal `unit_serial` mismatch across the `PROD_SCHEMA_B` schema to support a live MES rework case.
+
+**Internal knowledge search tool.** Built a retrieval-based document search tool for the team — documents chunked ahead of time, with the Qwen API used as the underlying LLM to answer queries grounded in the retrieved text.
+
+## Full technical write-up
+
+See [`brain/devops-infrastructure`](../../brain/devops-infrastructure), [`brain/backend-development`](../../brain/backend-development), and [`brain/ai-integration`](../../brain/ai-integration) for the underlying technical detail.

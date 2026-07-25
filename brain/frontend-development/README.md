@@ -28,6 +28,7 @@ How the frameworks and design work actually function, point by point.
 
 ## UX/UI Design Practice
 
+- Design work happens in Figma — frames for each screen/state, a shared component library so a button or input looks the same everywhere it's used, and a consistent set of spacing/type tokens instead of eyeballing values per screen.
 - Consistency first — spacing, color, and interaction patterns should repeat predictably so a user doesn't have to relearn the interface screen to screen.
 - Every action needs visible feedback — a click, a toggle, a state change should be confirmed on screen immediately, especially in an interface layered on top of something else happening in real time underneath it.
 - Design for the failure/edge case, not just the happy path — what the screen looks like when data hasn't loaded yet, or when an action fails, gets designed deliberately rather than left as a blank state.

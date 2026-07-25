@@ -8,7 +8,7 @@
 
 <br>
 
-[![My Skills](https://skillicons.dev/icons?i=cs,ts,js,go,lua,py,java,php,html,css,react,nextjs,nuxtjs,vue,svelte,dotnet,express,nestjs,git,gitlab,docker,kubernetes,aws,vercel,postgres,mysql,mongodb,supabase,arduino,ps&perline=10)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=cs,ts,js,go,lua,py,java,php,html,css,react,nextjs,nuxtjs,vue,svelte,dotnet,express,nestjs,figma,git,gitlab,docker,kubernetes,aws,vercel,postgres,mysql,mongodb,supabase,arduino,ps&perline=10)](https://skillicons.dev)
 
 <br>
 
@@ -172,7 +172,7 @@ flowchart TB
 **Infrastructure:** GitLab CI/CD, Docker, Docker Swarm, Kubernetes (Rancher), Harbor Registry, AWS, Vercel, MinIO
 **Databases:** Oracle, Microsoft SQL Server, PostgreSQL, MySQL, MongoDB, Supabase
 **Data:** Power BI, machine learning fundamentals
-**Other:** LINE Bot/OA API, Arduino and embedded systems, Cisco networking, Adobe Photoshop/Illustrator
+**Other:** LINE Bot/OA API, Figma, Arduino and embedded systems, Cisco networking, Adobe Photoshop/Illustrator
 
 ---
 

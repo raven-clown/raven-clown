@@ -2,7 +2,7 @@
 
 # Ekdanai Kummee (RAVEN)
 
-**Web App Engineer** — Delta Electronics Thailand
+**Application Engineer** — Delta Electronics Thailand
 
 [GitHub: AK47-DEVELOPER](https://github.com/AK47-DEVELOPER) · [GitHub: raven-clown](https://github.com/raven-clown)
 

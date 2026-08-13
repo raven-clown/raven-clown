@@ -43,6 +43,12 @@ flowchart LR
 - A private registry stores built images so they don't have to be pulled from a public registry — important in restricted network environments, and it gives you control over retention and vulnerability scanning.
 - Base images (like `nginx:alpine`) need to be deliberately preserved/pinned in a private registry, or a routine cleanup policy can delete an image that's still in active use by a running deployment.
 
+## Apache NiFi
+
+- A dataflow automation tool built around a visual pipeline: each step (a "processor") reads, transforms, routes, or writes data, and processors are wired together into a flow instead of hand-writing point-to-point integration scripts.
+- Works well as a general middleware layer — logging, alerting, data migration, and routing data between systems can all live as flows in the same tool, so a new integration is usually a new flow rather than a new one-off script.
+- Flows are visual and inspectable at runtime — a stuck or failing step shows up directly in the flow itself, which makes tracing where a pipeline broke faster than digging through separate log files for each system it touches.
+
 ## MinIO (Object Storage)
 
 - An S3-compatible object store — same API shape as AWS S3, but self-hosted. Anything already written against the S3 SDK works against it with just an endpoint change.

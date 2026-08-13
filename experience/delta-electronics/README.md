@@ -18,6 +18,8 @@ Both DevOps and full-stack web development for the factory's MES (Manufacturing 
 
 **MinIO object storage.** Set up and configured a MinIO deployment from scratch and advise other teams on how to deploy against it.
 
+**NiFi middleware.** Set up and run a dedicated NiFi cluster, separate from the team's shared production clusters, used as middleware for logging, alerting, data migration, and routing data across multiple systems — including running scripts for MinIO job work. Presented this to the department as well.
+
 **Data investigation.** Traced a `shipment_code` vs internal `unit_serial` mismatch across the `PROD_SCHEMA_B` schema to support a live MES rework case.
 
 **Internal knowledge search tool.** Built a retrieval-based document search tool for the team — documents chunked ahead of time, with the Qwen API used as the underlying LLM to answer queries grounded in the retrieved text.

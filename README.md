@@ -8,7 +8,7 @@
 
 <br>
 
-[![My Skills](https://skillicons.dev/icons?i=discord,github,jquery,cs,ts,js,go,lua,py,java,php,html,css,react,nextjs,nuxtjs,vue,svelte,dotnet,express,nestjs,electron,nodejs,vite,redis,bun,figma,git,gitlab,docker,kubernetes,aws,vercel,postgres,mysql,mongodb,supabase,arduino,linux,vscode,visualstudio&perline=10)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=discord,jquery,cs,ts,js,go,lua,py,java,php,html,css,react,nextjs,nuxtjs,vue,svelte,dotnet,express,nestjs,electron,nodejs,vite,redis,bun,figma,git,gitlab,docker,kubernetes,aws,vercel,postgres,mysql,mongodb,supabase,arduino,linux,vscode,visualstudio&perline=10)](https://skillicons.dev)
 
 <br>
 

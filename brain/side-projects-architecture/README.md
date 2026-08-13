@@ -22,3 +22,9 @@ General principles I default to when scoping and designing a new system, indepen
 ## Observability From the Start
 
 - Health and metrics endpoints, structured logging, and rate limiting are easier to build in from day one than to retrofit once a system already has real traffic and real failure modes to account for.
+
+## Shared Core Across Multiple Runtimes
+
+- When two different front-ends need to operate on the same data (e.g. a VS Code extension and an Electron app), put all storage, validation, and migration logic in one shared package and let both front-ends depend on it — neither one should touch the filesystem or the data model directly. This keeps the read/write/validate logic in exactly one place instead of drifting between two implementations.
+- Real-time sync between independent processes doesn't need a server or IPC if they already share a filesystem — watching a common data file (chokidar or equivalent) and reacting to change events is enough, and it's simpler to reason about than a message bus for something this small.
+- Schema migrations need to be backward-compatible from day one in this kind of setup, since there's no central database to run a one-time migration against — each client migrates whatever version of the data it opens, on open.

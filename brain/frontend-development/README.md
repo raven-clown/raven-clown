@@ -32,3 +32,9 @@ How the frameworks and design work actually function, point by point.
 - Consistency first — spacing, color, and interaction patterns should repeat predictably so a user doesn't have to relearn the interface screen to screen.
 - Every action needs visible feedback — a click, a toggle, a state change should be confirmed on screen immediately, especially in an interface layered on top of something else happening in real time underneath it.
 - Design for the failure/edge case, not just the happy path — what the screen looks like when data hasn't loaded yet, or when an action fails, gets designed deliberately rather than left as a blank state.
+
+## Electron
+
+- A desktop app that's really two processes: a Node-capable main process (windows, native menus, filesystem, auto-update) and one or more renderer processes that run web content (React, Vite) with Node access disabled by default and a preload script bridging the two through a controlled IPC surface.
+- A frameless/custom title bar means giving up the OS chrome and rebuilding window controls (minimize/maximize/close, drag regions) by hand in the renderer — more design control, more edge cases to handle across platforms.
+- Distribution goes through electron-builder to produce platform installers, and electron-updater to check a release feed (GitHub Releases works directly) and apply updates in-app instead of asking the user to redownload manually.

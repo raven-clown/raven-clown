@@ -1,0 +1,83 @@
+<svg width="750" height="390" viewBox="0 0 750 390" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #ffffff; }
+    .title { fill: #1a1a2e; }
+    .label { fill: #57606a; }
+    .track { stroke: #e8e8f0; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0d1117; }
+      .title { fill: #e6edf3; }
+      .label { fill: #8b949e; }
+      .track { stroke: #21262d; }
+      .ring-green, .num-green { stroke: #3fb950 !important; fill: #3fb950 !important; }
+      .ring-orange, .num-orange { stroke: #d29922 !important; fill: #d29922 !important; }
+      .ring-red, .num-red { stroke: #f85149 !important; fill: #f85149 !important; }
+    }
+  </style>
+  <rect class="bg" fill="#ffffff" width="750" height="390" rx="10"/>
+  <text class="title" fill="#1a1a2e" x="45" y="30" style="font:700 16px Segoe UI,Helvetica,Arial,sans-serif">Skill Proficiency</text>
+  <g transform="translate(112.5,103)">
+    <circle class="track" stroke="#e8e8f0" r="34" fill="none" stroke-width="5"/>
+    <circle class="ring-green" stroke="#1a7f37" r="34" fill="none" stroke-width="5"
+      stroke-dasharray="213.63" stroke-dashoffset="10.68"
+      stroke-linecap="round" transform="rotate(-90)"/>
+    <text class="num-green" fill="#1a7f37" x="0" y="6" text-anchor="middle" style="font:700 17px Segoe UI,Helvetica,Arial,sans-serif">95</text>
+    <text class="label" fill="#57606a" x="0" y="58" text-anchor="middle" style="font:600 12px Segoe UI,Helvetica,Arial,sans-serif">FiveM &amp; RedM Dev</text>
+  </g>
+  <g transform="translate(277.5,103)">
+    <circle class="track" stroke="#e8e8f0" r="34" fill="none" stroke-width="5"/>
+    <circle class="ring-green" stroke="#1a7f37" r="34" fill="none" stroke-width="5"
+      stroke-dasharray="213.63" stroke-dashoffset="25.64"
+      stroke-linecap="round" transform="rotate(-90)"/>
+    <text class="num-green" fill="#1a7f37" x="0" y="6" text-anchor="middle" style="font:700 17px Segoe UI,Helvetica,Arial,sans-serif">88</text>
+    <text class="label" fill="#57606a" x="0" y="58" text-anchor="middle" style="font:600 12px Segoe UI,Helvetica,Arial,sans-serif">DevOps &amp; Infra</text>
+  </g>
+  <g transform="translate(442.5,103)">
+    <circle class="track" stroke="#e8e8f0" r="34" fill="none" stroke-width="5"/>
+    <circle class="ring-orange" stroke="#9a6700" r="34" fill="none" stroke-width="5"
+      stroke-dasharray="213.63" stroke-dashoffset="38.45"
+      stroke-linecap="round" transform="rotate(-90)"/>
+    <text class="num-orange" fill="#9a6700" x="0" y="6" text-anchor="middle" style="font:700 17px Segoe UI,Helvetica,Arial,sans-serif">82</text>
+    <text class="label" fill="#57606a" x="0" y="58" text-anchor="middle" style="font:600 12px Segoe UI,Helvetica,Arial,sans-serif">Backend Dev</text>
+  </g>
+  <g transform="translate(607.5,103)">
+    <circle class="track" stroke="#e8e8f0" r="34" fill="none" stroke-width="5"/>
+    <circle class="ring-orange" stroke="#9a6700" r="34" fill="none" stroke-width="5"
+      stroke-dasharray="213.63" stroke-dashoffset="47.00"
+      stroke-linecap="round" transform="rotate(-90)"/>
+    <text class="num-orange" fill="#9a6700" x="0" y="6" text-anchor="middle" style="font:700 17px Segoe UI,Helvetica,Arial,sans-serif">78</text>
+    <text class="label" fill="#57606a" x="0" y="58" text-anchor="middle" style="font:600 12px Segoe UI,Helvetica,Arial,sans-serif">Frontend Dev</text>
+  </g>
+  <g transform="translate(112.5,258)">
+    <circle class="track" stroke="#e8e8f0" r="34" fill="none" stroke-width="5"/>
+    <circle class="ring-orange" stroke="#9a6700" r="34" fill="none" stroke-width="5"
+      stroke-dasharray="213.63" stroke-dashoffset="59.82"
+      stroke-linecap="round" transform="rotate(-90)"/>
+    <text class="num-orange" fill="#9a6700" x="0" y="6" text-anchor="middle" style="font:700 17px Segoe UI,Helvetica,Arial,sans-serif">72</text>
+    <text class="label" fill="#57606a" x="0" y="58" text-anchor="middle" style="font:600 12px Segoe UI,Helvetica,Arial,sans-serif">Database Design</text>
+  </g>
+  <g transform="translate(277.5,258)">
+    <circle class="track" stroke="#e8e8f0" r="34" fill="none" stroke-width="5"/>
+    <circle class="ring-orange" stroke="#9a6700" r="34" fill="none" stroke-width="5"
+      stroke-dasharray="213.63" stroke-dashoffset="81.18"
+      stroke-linecap="round" transform="rotate(-90)"/>
+    <text class="num-orange" fill="#9a6700" x="0" y="6" text-anchor="middle" style="font:700 17px Segoe UI,Helvetica,Arial,sans-serif">62</text>
+    <text class="label" fill="#57606a" x="0" y="58" text-anchor="middle" style="font:600 12px Segoe UI,Helvetica,Arial,sans-serif">Discord Automation</text>
+  </g>
+  <g transform="translate(442.5,258)">
+    <circle class="track" stroke="#e8e8f0" r="34" fill="none" stroke-width="5"/>
+    <circle class="ring-orange" stroke="#9a6700" r="34" fill="none" stroke-width="5"
+      stroke-dasharray="213.63" stroke-dashoffset="85.45"
+      stroke-linecap="round" transform="rotate(-90)"/>
+    <text class="num-orange" fill="#9a6700" x="0" y="6" text-anchor="middle" style="font:700 17px Segoe UI,Helvetica,Arial,sans-serif">60</text>
+    <text class="label" fill="#57606a" x="0" y="58" text-anchor="middle" style="font:600 12px Segoe UI,Helvetica,Arial,sans-serif">AI / LLM Integration</text>
+  </g>
+  <g transform="translate(607.5,258)">
+    <circle class="track" stroke="#e8e8f0" r="34" fill="none" stroke-width="5"/>
+    <circle class="ring-red" stroke="#cf222e" r="34" fill="none" stroke-width="5"
+      stroke-dasharray="213.63" stroke-dashoffset="123.90"
+      stroke-linecap="round" transform="rotate(-90)"/>
+    <text class="num-red" fill="#cf222e" x="0" y="6" text-anchor="middle" style="font:700 17px Segoe UI,Helvetica,Arial,sans-serif">42</text>
+    <text class="label" fill="#57606a" x="0" y="58" text-anchor="middle" style="font:600 12px Segoe UI,Helvetica,Arial,sans-serif">Embedded &amp; Hardware</text>
+  </g>
+</svg>

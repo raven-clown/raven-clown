@@ -12,6 +12,8 @@ Both DevOps and full-stack web development for the factory's MES (Manufacturing 
 
 **MES monitoring dashboard.** Full-stack dashboard (React, .NET 8, Docker Swarm) showing real-time service health and usage metrics.
 
+**Yield Tracker Report.** Sole developer on a full-stack production yield reporting and drill-down tool for the QA team (React/TypeScript/Tailwind, ASP.NET Core/.NET 8, Oracle via ODP.NET, SQL Server holding query templates as config-as-data). Aggregates station-level pass/fail data across factories and models, with drill-down from summary down to individual repair records and Excel export via ExcelJS. Fixed an N+1 query in MO-to-model resolution, parallelized per-schema data fetching, added row virtualization for 10,000+ row tables without pagination, and traced a session-hydration race condition in the app's shared auth layer that had been silently breaking deep links app-wide. Deployed in Thailand with rollout planned for Taiwan and other sites; took about five days to build.
+
 **CTP diagnostic tool.** ASP.NET Core API + React/TypeScript frontend that automates cross-schema comparisons in Oracle (`PROD_SCHEMA_A` / `PROD_SCHEMA_B`), flagging MATCH/MISMATCH cases that used to be checked manually.
 
 **MinIO object storage.** Set up and configured a MinIO deployment from scratch and advise other teams on how to deploy against it.

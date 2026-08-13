@@ -4,7 +4,7 @@
 
 **Application Engineer** — Delta Electronics Thailand
 
-[GitHub: AK47-DEVELOPER](https://github.com/AK47-DEVELOPER) · [GitHub: raven-clown](https://github.com/raven-clown)
+[GitHub: raven-clown](https://github.com/raven-clown)
 
 <br>
 
@@ -22,6 +22,13 @@
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
 ![Machine Learning](https://img.shields.io/badge/Machine_Learning-FF6F00?style=flat-square)
 
+<br>
+
+![Skill Proficiency](./assets/skills-chart.svg)
+
+<br>
+
+![Language Proficiency](./assets/languages-chart.svg)
 
 </div>
 
@@ -65,7 +72,7 @@ Knowledge: [`brain/backend-development`](./brain/backend-development) · Portfol
 
 React, Next.js, Nuxt.js, Vue, and Svelte, plus UX/UI design for real-time interfaces where the UI can't get in the way of what's happening underneath it.
 
-Knowledge: [`brain/frontend-development`](./brain/frontend-development) · Portfolio: [`experience/delta-electronics`](./experience/delta-electronics) · [`experience/fivem-redm-platform`](./experience/fivem-redm-platform)
+Knowledge: [`brain/frontend-development`](./brain/frontend-development) · Portfolio: [`experience/delta-electronics`](./experience/delta-electronics) · [`experience/fivem-redm-platform`](./experience/fivem-redm-platform) · [`experience/side-projects`](./experience/side-projects)
 
 ### Database Design
 
@@ -132,7 +139,7 @@ flowchart LR
     BE --> Oracle[("Oracle DB\nPROD_SCHEMA_A / PROD_SCHEMA_B")]
 ```
 
-### Delta MES — CTP Diagnostic Tool and Dashboard
+### Delta MES — CTP Diagnostic Tool, Yield Tracker, and Dashboard
 
 Where the data actually comes from and how it reaches the screen.
 
@@ -140,8 +147,10 @@ Where the data actually comes from and how it reaches the screen.
 flowchart LR
     Oracle[("Oracle DB\nPROD_SCHEMA_A / PROD_SCHEMA_B")] --> API["ASP.NET Core API"]
     API --> CTP["CTP comparison engine\n(CTE-based MATCH / MISMATCH)"]
+    API --> Yield["Yield Tracker engine\n(station pass/fail aggregation)"]
     API --> Metrics["/api/health\n/api/metrics"]
     CTP --> UI1["CTP diagnostic UI\n(React / TypeScript)"]
+    Yield --> UI3["Yield Tracker UI\n(React / TypeScript / Tailwind)"]
     Metrics --> UI2["MES dashboard\n(React + .NET 8 + Docker Swarm)"]
 ```
 
@@ -163,12 +172,26 @@ flowchart TB
     Shop --> Cloud["Next.js + Go\non AWS / Kubernetes"]
 ```
 
+### Snippet Manager — Two Front-Ends, One Core
+
+How the VS Code extension and the Electron app share state without a server.
+
+```mermaid
+flowchart LR
+    Core["@snippet/core\nstorage, CRUD, validation, migration"]
+    Core <--> DataFile[("data.json\nOS app-data directory")]
+    VSC["vscode-extension"] --> Core
+    Electron["electron-app"] --> Core
+    DataFile -. "chokidar watch" .-> VSC
+    DataFile -. "chokidar watch" .-> Electron
+```
+
 ---
 
 ## Core Stack
 
 **Languages:** C#, TypeScript, JavaScript, Python, Java, PHP, Go, Lua, SQL
-**Frameworks:** React, Next.js, Nuxt.js, Vue.js, Svelte, ASP.NET Core (.NET 8), Express.js, NestJS
+**Frameworks:** React, Next.js, Nuxt.js, Vue.js, Svelte, Electron, ASP.NET Core (.NET 8), Express.js, NestJS
 **Infrastructure:** GitLab CI/CD, Docker, Docker Swarm, Kubernetes (Rancher), Harbor Registry, AWS, Vercel, MinIO
 **Databases:** Oracle, Microsoft SQL Server, PostgreSQL, MySQL, MongoDB, Supabase
 **Data:** Power BI, machine learning fundamentals
@@ -179,4 +202,4 @@ flowchart TB
 ## Contact
 
 - Email: ekdanai.kk@gmail.com
-- GitHub: [AK47-DEVELOPER](https://github.com/AK47-DEVELOPER) · [raven-clown](https://github.com/raven-clown)
+- GitHub: [raven-clown](https://github.com/raven-clown)

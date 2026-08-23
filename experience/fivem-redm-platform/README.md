@@ -1,10 +1,10 @@
 # FiveM & RedM Platform
 
-**Founder & Full-Stack Developer** — Independent project · 2021 – 2025
+**Founder & Full-Stack Developer**, Independent project · 2021 to 2025
 
 ## What it was
 
-A multiplayer roleplay platform (highclass-roleplay.com / `sv_highclass`) built and operated on FiveM, later extended to RedM. Five years of ownership, end to end — server, backend systems, database, and interface design, none of it handed to me by a framework.
+A multiplayer roleplay platform (highclass-roleplay.com / `sv_highclass`) built and operated on FiveM, later extended to RedM. Five years of ownership, end to end: server, backend systems, database, and interface design, none of it handed to me by a framework.
 
 ## What I built
 
@@ -14,9 +14,9 @@ A multiplayer roleplay platform (highclass-roleplay.com / `sv_highclass`) built 
 
 **Interface.** Designed and built the HUD and inventory UI (Svelte and React), and later carried the same design language into UX/UI work on RedM. Design work done in Figma:
 
-- [High](https://www.figma.com/design/kRnPTJNTakmiHXpQg616HX/High) — platform UI design
-- [GAME 1](https://www.figma.com/design/jlu1wfsoT4SyAnIXVI4zGM/GAME--1) — UI design
-- [GAME 2](https://www.figma.com/design/pJ1nSa22skJwN1oLw1fxLW/GAME--2) — UI design
+- [High](https://www.figma.com/design/kRnPTJNTakmiHXpQg616HX/High): platform UI design
+- [GAME 1](https://www.figma.com/design/jlu1wfsoT4SyAnIXVI4zGM/GAME--1): UI design
+- [GAME 2](https://www.figma.com/design/pJ1nSa22skJwN1oLw1fxLW/GAME--2): UI design
 
 **Infrastructure.** Ran the platform on a dedicated Windows server (i9, 64GB RAM, 10Gbps), with an nginx caching layer in front for resource delivery and SSL on the storefront subdomain. Later rebuilt the website/shop side on Next.js and Go, deployed on AWS and Kubernetes.
 

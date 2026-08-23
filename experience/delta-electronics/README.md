@@ -1,14 +1,14 @@
 # Delta Electronics Thailand
 
-**Web App Engineer** — IT manufacturing systems team · April 2026 – Present
+**Web App Engineer**, IT manufacturing systems team · April 2026 to present
 
 ## What the role covers
 
-Both DevOps and full-stack web development for the factory's MES (Manufacturing Execution System) tooling, inside a fully air-gapped corporate network. Also acts as project manager on the initiatives below — planning, presenting to the department, and handling support afterward.
+Both DevOps and full-stack web development for the factory's MES (Manufacturing Execution System) tooling, inside a fully air-gapped corporate network. Also acts as project manager on the initiatives below, planning, presenting to the department, and handling support afterward.
 
 ## What I built
 
-**CI/CD platform.** Built and maintain the GitLab CI/CD pipelines for `mfg-portal-frontend` (React/Vite) and `mfg-portal-api` (ASP.NET Core), deploying through a Rancher-managed Kubernetes cluster with images pushed to Harbor. Was the first person on the Thai team to put this Rancher/Kubernetes/GitLab CI-CD architecture together and present it to the whole IT department — other application teams and the server team are now adopting it, and I'm the point of contact for that rollout.
+**CI/CD platform.** Built and maintain the GitLab CI/CD pipelines for `mfg-portal-frontend` (React/Vite) and `mfg-portal-api` (ASP.NET Core), deploying through a Rancher-managed Kubernetes cluster with images pushed to Harbor. Was the first person on the Thai team to put this Rancher/Kubernetes/GitLab CI-CD architecture together and present it to the whole IT department. Other application teams and the server team are now adopting it, and I'm the point of contact for that rollout.
 
 **MES monitoring dashboard.** Full-stack dashboard (React, .NET 8, Docker Swarm) showing real-time service health and usage metrics.
 
@@ -18,11 +18,11 @@ Both DevOps and full-stack web development for the factory's MES (Manufacturing 
 
 **MinIO object storage.** Set up and configured a MinIO deployment from scratch and advise other teams on how to deploy against it.
 
-**NiFi middleware.** Set up and run a dedicated NiFi cluster, separate from the team's shared production clusters, used as middleware for logging, alerting, data migration, and routing data across multiple systems — including running scripts for MinIO job work. Presented this to the department as well.
+**NiFi middleware.** Set up and run a dedicated NiFi cluster, separate from the team's shared production clusters, used as middleware for logging, alerting, data migration, and routing data across multiple systems, including running scripts for MinIO job work. Presented this to the department as well.
 
 **Data investigation.** Traced a `shipment_code` vs internal `unit_serial` mismatch across the `PROD_SCHEMA_B` schema to support a live MES rework case.
 
-**Internal knowledge search tool.** Built a retrieval-based document search tool for the team — documents chunked ahead of time, with the Qwen API used as the underlying LLM to answer queries grounded in the retrieved text.
+**Internal knowledge search tool.** Built a retrieval-based document search tool for the team. Documents chunked ahead of time, with the Qwen API used as the underlying LLM to answer queries grounded in the retrieved text.
 
 ## Full technical write-up
 

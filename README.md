@@ -2,7 +2,7 @@
 
 # Ekdanai Kummee (RAVEN)
 
-**Application Engineer** — Delta Electronics Thailand
+**Application Engineer**, Delta Electronics Thailand
 
 [GitHub: raven-clown](https://github.com/raven-clown)
 
@@ -37,15 +37,15 @@
 
 ## About
 
-I'm a junior developer at Delta Electronics Thailand, on the IT manufacturing systems team, where I handle both DevOps and full-stack web development for the factory's MES (Manufacturing Execution System) tooling. I also run my own projects end to end — planning them, building them, presenting them to the team, and supporting the people who use them afterward.
+I'm a junior developer at Delta Electronics Thailand, on the IT manufacturing systems team, where I handle both DevOps and full-stack web development for the factory's MES (Manufacturing Execution System) tooling. I also run my own projects end to end: planning them, building them, presenting them to the team, and supporting the people who use them afterward.
 
-Outside of work, I've spent about five years building and operating multiplayer game-server platforms (FiveM and RedM), which is where most of my backend, database, and systems-architecture experience actually comes from before I ever touched a corporate codebase. I taught myself Lua well enough to write almost anything in it from memory, and that same instinct for "just build the thing and fix what breaks" carried over into everything else here — DevOps, backend APIs, database design, and UI.
+Outside of work, I've spent about five years building and operating multiplayer game-server platforms (FiveM and RedM), which is where most of my backend, database, and systems-architecture experience actually comes from before I ever touched a corporate codebase. I taught myself Lua well enough to write almost anything in it from memory, and that same instinct for "just build the thing and fix what breaks" carried over into everything else here: DevOps, backend APIs, database design, and UI.
 
 This repository is a map of that work. This page is the summary.
 
-- [`about/`](./about) — who I am outside of the job title: how I work, and personal background.
-- [`experience/`](./experience) — the portfolio: concrete projects and what came out of them.
-- [`brain/`](./brain) — the knowledge base: how each skill area actually works, in detail.
+- [`about/`](./about): who I am outside of the job title, how I work, and personal background.
+- [`experience/`](./experience): the portfolio, concrete projects and what came out of them.
+- [`brain/`](./brain): the knowledge base, how each skill area actually works, in detail.
 
 **Education:** B.Sc. Digital Business Technology, Southeast Bangkok University (2025, GPA 3.63, First Class Honors / Gold Medal) · High Vocational Certificate in Information Technology, Attawit Commercial Technology College (2023, GPA 3.10)
 
@@ -55,17 +55,17 @@ This repository is a map of that work. This page is the summary.
 
 ## What I Actually Do
 
-Each area below is split two ways: **Knowledge** explains how the technology itself works. **Portfolio** shows what I actually built with it. They're kept separate on purpose — one is reference material, the other is proof of work.
+Each area below is split two ways. **Knowledge** explains how the technology itself works. **Portfolio** shows what I actually built with it. They're kept separate on purpose: one is reference material, the other is proof of work.
 
 ### DevOps & Infrastructure
 
-CI/CD pipelines, Kubernetes/Rancher, Docker, container registries, object storage, and cloud hosting — the plumbing that gets code from a commit to a running service.
+CI/CD pipelines, Kubernetes/Rancher, Docker, container registries, object storage, and cloud hosting. The plumbing that gets code from a commit to a running service.
 
 Knowledge: [`brain/devops-infrastructure`](./brain/devops-infrastructure) · Portfolio: [`experience/delta-electronics`](./experience/delta-electronics)
 
 ### Backend Development
 
-ASP.NET Core, NestJS with Prisma, and Go — how each one structures a request, handles data access, and where they're each the right tool.
+ASP.NET Core, NestJS with Prisma, and Go. How each one structures a request, handles data access, and where they're each the right tool.
 
 Knowledge: [`brain/backend-development`](./brain/backend-development) · Portfolio: [`experience/delta-electronics`](./experience/delta-electronics) · [`experience/side-projects`](./experience/side-projects)
 
@@ -77,19 +77,19 @@ Knowledge: [`brain/frontend-development`](./brain/frontend-development) · Portf
 
 ### Database Design
 
-Oracle, SQL Server, PostgreSQL, MySQL, MongoDB, and Supabase — relational modeling, indexing, and schema design for both enterprise data and high-write real-time systems.
+Oracle, SQL Server, PostgreSQL, MySQL, MongoDB, and Supabase. Relational modeling, indexing, and schema design for both enterprise data and high-write real-time systems.
 
-Knowledge: [`brain/database-design`](./brain/database-design) · Portfolio: [`experience/delta-electronics`](./experience/delta-electronics) · [`experience/fivem-redm-platform`](./experience/fivem-redm-platform)
+Knowledge: [`brain/database-design`](./brain/database-design) · Portfolio: [`experience/delta-electronics`](./experience/delta-electronics) · [`experience/fivem-redm-platform`](./experience/fivem-redm-platform) · [`experience/side-projects`](./experience/side-projects)
 
 ### FiveM & RedM Development
 
-Five years of building on the FiveM and RedM multiplayer platforms — server architecture, the Lua resource model, and the ESX/QBCore frameworks that sit underneath most roleplay servers.
+Five years of building on the FiveM and RedM multiplayer platforms. Server architecture, the Lua resource model, and the ESX/QBCore frameworks that sit underneath most roleplay servers.
 
 Knowledge: [`brain/fivem-redm-development`](./brain/fivem-redm-development) · Portfolio: [`experience/fivem-redm-platform`](./experience/fivem-redm-platform)
 
 ### AI / LLM Integration
 
-Retrieval-based systems that ground an LLM's answers in real documents instead of relying on what the model already knows — chunking, retrieval, and prompt construction.
+Retrieval-based systems that ground an LLM's answers in real documents instead of relying on what the model already knows. Chunking, retrieval, and prompt construction.
 
 Knowledge: [`brain/ai-integration`](./brain/ai-integration) · Portfolio: [`experience/delta-electronics`](./experience/delta-electronics)
 
@@ -101,7 +101,7 @@ Knowledge: [`brain/discord-bots-automation`](./brain/discord-bots-automation) ·
 
 ### Embedded & Hardware
 
-Arduino programming, sensor input, and circuit prototyping — where software meets a physical breadboard.
+Arduino programming, sensor input, and circuit prototyping. Where software meets a physical breadboard.
 
 Knowledge: [`brain/embedded-hardware`](./brain/embedded-hardware) · Portfolio: [`experience/academic-projects`](./experience/academic-projects)
 
@@ -123,7 +123,7 @@ Knowledge: [`brain/tools-and-troubleshooting`](./brain/tools-and-troubleshooting
 
 A few of the systems above, laid out.
 
-### Delta MES — CI/CD and Deployment
+### Delta MES: CI/CD and Deployment
 
 How code gets from a commit to a running service inside the air-gapped cluster.
 
@@ -140,7 +140,7 @@ flowchart LR
     BE --> Oracle[("Oracle DB\nPROD_SCHEMA_A / PROD_SCHEMA_B")]
 ```
 
-### Delta MES — CTP Diagnostic Tool, Yield Tracker, and Dashboard
+### Delta MES: CTP Diagnostic Tool, Yield Tracker, and Dashboard
 
 Where the data actually comes from and how it reaches the screen.
 
@@ -173,7 +173,7 @@ flowchart TB
     Shop --> Cloud["Next.js + Go\non AWS / Kubernetes"]
 ```
 
-### Snippet Manager — Two Front-Ends, One Core
+### Snippet Manager: Two Front-Ends, One Core
 
 How the VS Code extension and the Electron app share state without a server.
 
@@ -185,6 +185,21 @@ flowchart LR
     Electron["electron-app"] --> Core
     DataFile -. "chokidar watch" .-> VSC
     DataFile -. "chokidar watch" .-> Electron
+```
+
+### RoomedIn: Defense in Depth on a Status Change
+
+Five independent layers between a tap on a phone and a row actually changing.
+
+```mermaid
+flowchart LR
+    UI["Staff taps\nnext status"] --> Domain["Domain\nRoom.changeStatus()"]
+    Domain --> App["Application\nactor/hotel check"]
+    App --> MW["Next.js middleware\nrole gating"]
+    MW --> RLS[("Postgres RLS\ncolumn-level grants")]
+    RLS --> Trigger["DB trigger\nwrites audit log"]
+    RLS --> Realtime["Supabase Realtime"]
+    Realtime --> Board["Every other\nstaff device"]
 ```
 
 ---

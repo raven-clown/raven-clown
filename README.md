@@ -53,6 +53,15 @@ This repository is a map of that work. This page is the summary.
 
 ---
 
+## Projects
+
+- [Delta Electronics](./experience/delta-electronics): the CI/CD platform, MES dashboards, and diagnostic tools I build and run as my day job.
+- [FiveM & RedM Platform](./experience/fivem-redm-platform): a multiplayer roleplay platform I founded and ran end to end for five years.
+- [Side Projects](./experience/side-projects): [RoomedIn](https://www.roomedin.online/), a LINE task bot, a habit-tracking tool, and a code snippet manager.
+- [Academic Projects](./experience/academic-projects): three projects from vocational and university coursework.
+
+---
+
 ## What I Actually Do
 
 Each area below is split two ways. **Knowledge** explains how the technology itself works. **Portfolio** shows what I actually built with it. They're kept separate on purpose: one is reference material, the other is proof of work.
@@ -187,7 +196,7 @@ flowchart LR
     DataFile -. "chokidar watch" .-> Electron
 ```
 
-### RoomedIn: Defense in Depth on a Status Change
+### [RoomedIn](https://www.roomedin.online/): Defense in Depth on a Status Change
 
 Five independent layers between a tap on a phone and a row actually changing.
 

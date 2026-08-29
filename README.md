@@ -57,7 +57,7 @@ This repository is a map of that work. This page is the summary.
 
 - [Delta Electronics](./experience/delta-electronics): the CI/CD platform, MES dashboards, and diagnostic tools I build and run as my day job.
 - [FiveM & RedM Platform](./experience/fivem-redm-platform): a multiplayer roleplay platform I founded and ran end to end for five years.
-- [Side Projects](./experience/side-projects): [RoomedIn](https://www.roomedin.online/), a LINE task bot, a habit-tracking tool, and a code snippet manager.
+- [Side Projects](./experience/side-projects): [RoomedIn](https://www.roomedin.online/), [IdpForge](https://github.com/raven-clown/idpforge), a LINE task bot, a habit-tracking tool, and a code snippet manager.
 - [Academic Projects](./experience/academic-projects): three projects from vocational and university coursework.
 
 ---
@@ -182,6 +182,22 @@ flowchart TB
     Shop --> Cloud["Next.js + Go\non AWS / Kubernetes"]
 ```
 
+### [IdpForge](https://github.com/raven-clown/idpforge): Cluster-Safe Background Jobs and Realtime Fan-Out
+
+How one binary stays correct whether it's a single instance or several behind a load balancer.
+
+```mermaid
+flowchart LR
+    Browser["Browser\n(embedded Next.js SPA)"] --> API["Go API\n(single binary, N instances)"]
+    API --> RBAC["RBAC resolver\n(cached, invalidated on write)"]
+    API --> OIDC["OIDC provider\nauth code+PKCE, client_credentials"]
+    API --> Hub["Realtime hub\n(WebSocket)"]
+    API --> Lease["Leader lease\n(delete-expired, insert, UPDATE by PK)"]
+    RBAC --> DB[("Postgres / MySQL /\nMSSQL / SQLite")]
+    Lease --> DB
+    Hub -. "Redis pub/sub" .-> Other["Every other instance's\nconnected browsers"]
+```
+
 ### Snippet Manager: Two Front-Ends, One Core
 
 How the VS Code extension and the Electron app share state without a server.
@@ -217,7 +233,7 @@ flowchart LR
 
 **Languages:** C#, TypeScript, JavaScript, Python, Java, PHP, Go, Lua, SQL
 **Frameworks:** React, Next.js, Nuxt.js, Vue.js, Svelte, Electron, ASP.NET Core (.NET 8), Express.js, NestJS
-**Infrastructure:** GitLab CI/CD, Docker, Docker Swarm, Kubernetes (Rancher), Harbor Registry, AWS, Vercel, MinIO
+**Infrastructure:** GitLab CI/CD, GitHub Actions, Docker, Docker Swarm, Kubernetes (Rancher), Harbor Registry, GitHub Container Registry, AWS, Vercel, MinIO, Redis, Prometheus, Grafana
 **Databases:** Oracle, Microsoft SQL Server, PostgreSQL, MySQL, MongoDB, Supabase
 **Data:** Power BI, machine learning fundamentals
 **Other:** LINE Bot/OA API, Figma, Arduino and embedded systems, Cisco networking, Adobe Photoshop/Illustrator, Linux (RHEL), Visual Studio, VS Code

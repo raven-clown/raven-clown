@@ -30,10 +30,6 @@ Packaged as a one-click NSIS installer with auto-update via `electron-updater` a
 
 Stack: Electron, vanilla JS/HTML/CSS, `@xhayper/discord-rpc`, `ws` for the overlay's local WebSocket server, `electron-updater`, `electron-builder` (NSIS), GitHub Actions.
 
-## LINE Task Bot
-
-A group task-management bot for LINE, built to run on free-tier infrastructure end to end (NestJS, Prisma, PostgreSQL on Render/Supabase). Task creation, exclusive vs. open-claim task modes, role permissions, and deadline notifications, shipped with 10 markdown docs covering the schema, MVP roadmap, and a monetization plan (roughly 49 to 99 THB per group per month) before a single user signed up.
-
 ## Excel Habit Tracker
 
 A habit-tracking workbook generated with Python (`openpyxl`) instead of built by hand. Monthly grids, 20 recurring tasks plus 5 ad-hoc slots a month, a GitHub-style contribution heatmap, and a yearly KPI summary.

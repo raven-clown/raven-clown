@@ -57,7 +57,7 @@ This repository is a map of that work. This page is the summary.
 
 - [Delta Electronics](./experience/delta-electronics): the CI/CD platform, MES dashboards, and diagnostic tools I build and run as my day job.
 - [FiveM & RedM Platform](./experience/fivem-redm-platform): a multiplayer roleplay platform I founded and ran end to end for five years.
-- [Side Projects](./experience/side-projects): [RoomedIn](https://www.roomedin.online/), [IdpForge](https://github.com/raven-clown/idpforge), [Vinylcord](https://github.com/raven-clown/vinylcord), a LINE task bot, a habit-tracking tool, and a code snippet manager.
+- [Side Projects](./experience/side-projects): [RoomedIn](https://www.roomedin.online/), [IdpForge](https://github.com/raven-clown/idpforge), [Vinylcord](https://github.com/raven-clown/vinylcord), a habit-tracking tool, and a code snippet manager.
 - [Academic Projects](./experience/academic-projects): three projects from vocational and university coursework.
 
 ---

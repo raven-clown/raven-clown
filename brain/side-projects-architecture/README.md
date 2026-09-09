@@ -29,6 +29,22 @@ General principles I default to when scoping and designing a new system, indepen
 - When a feature needs to bypass row-level security for a legitimate reason (cross-tenant admin stats, a platform-wide report), gate it with a narrow, internally-checked database function instead of introducing a service-role or admin credential into the application. A leaked or misused function call is scoped to what that function does; a leaked master credential bypasses everything.
 - A boolean-returning permission check has to treat an unexpected null as "deny," not "allow." In PL/pgSQL specifically, `if not some_check()` fails open when the check returns null instead of a real boolean, since a null condition is treated as false and the branch is silently skipped. Writing it as `if some_check() is not true` closes that gap.
 
+## Tapping a Stream Without Touching It
+
+- When a tool has to sit between two things that already have a working protocol (a client and a server talking stdio JSON-RPC, for example), the transport itself is off-limits: anything the wrapper writes into that channel corrupts it for both sides.
+- The fix is to relay the transport stream byte-for-byte, unmodified, and tap a second copy of the same data for parsing, logging, or metrics, rather than trying to intercept and reconstruct it.
+- A single `pipe()` from source to destination handles backpressure automatically; writing to the destination manually and separately does not, and a slow downstream consumer can make the wrapper's own memory usage grow without bound.
+
+```mermaid
+flowchart LR
+    Client["Client"] -->|"stdin"| Wrapper["Wrapper"]
+    Wrapper -->|"piped through\nuntouched"| Server["Server"]
+    Server -->|"stdout"| Wrapper
+    Wrapper -->|"piped through\nuntouched"| Client
+    Wrapper -.->|"tapped copy"| Parser["Parser / logger"]
+    Parser --> Log[("Log file")]
+```
+
 ## Shared Core Across Multiple Runtimes
 
 - When two different front-ends need to operate on the same data (e.g. a VS Code extension and an Electron app), put all storage, validation, and migration logic in one shared package and let both front-ends depend on it. Neither one should touch the filesystem or the data model directly. This keeps the read/write/validate logic in exactly one place instead of drifting between two implementations.

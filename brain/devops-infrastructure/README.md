@@ -11,9 +11,20 @@ flowchart LR
     Build --> Registry["Push image\nto container registry"]
     Registry --> Deploy["Authenticated deploy\n(API token)"]
     Deploy --> K8s["Kubernetes cluster"]
-    K8s --> FE["Frontend service"]
-    K8s --> BE["Backend service"]
+    K8s --> Kong["Kong gateway"]
+    Kong --> FE["Frontend service"]
+    Kong --> BE["Backend service"]
     K8s --> Storage[("Object storage")]
+    FE --> Kafka[("Kafka")]
+    BE --> Kafka
+    Kafka --> NiFi["NiFi middleware"]
+    FE --> Metrics["Prometheus"]
+    BE --> Metrics
+    Metrics --> Grafana["Grafana dashboards"]
+    FE --> Logs["OpenSearch"]
+    BE --> Logs
+    NiFi --> Logs
+    NiFi --> Storage
 ```
 
 ## GitLab CI/CD
@@ -43,11 +54,31 @@ flowchart LR
 - A private registry stores built images so they don't have to be pulled from a public registry. Important in restricted network environments, and it gives you control over retention and vulnerability scanning.
 - Base images (like `nginx:alpine`) need to be deliberately preserved/pinned in a private registry, or a routine cleanup policy can delete an image that's still in active use by a running deployment.
 
+## Apache Kafka
+
+- A distributed event log: producers publish messages to a topic, and consumers read from it independently, decoupled in time from whoever produced the message. A service doesn't need to know who's listening, or whether they're even online yet, to publish an event.
+- Topics are partitioned and replicated across brokers, which is what makes Kafka handle high-throughput streams (service events, logs, metrics) without a single broker becoming the bottleneck, and survive a broker going down without losing data.
+- A natural fit as the backbone in front of NiFi and the observability stack: services publish events once, and NiFi, log indexing, and any other consumer each read from the same topic independently instead of every service needing its own point-to-point integration with every downstream system.
+- AKHQ is the operational view into a running cluster: browsing topics, inspecting individual messages, watching consumer group lag, and managing ACLs and schemas from a UI instead of the Kafka CLI tools.
+
+## Kong (API Gateway)
+
+- Sits in front of backend services as a single entry point, handling routing, authentication, rate limiting, and request/response transformation in one place instead of every service reimplementing the same cross-cutting concerns.
+- Plugin-based: auth, rate limiting, logging, and transformations are each a plugin attached to a route or service, so the gateway's behavior is configuration rather than custom code for common concerns.
+- Centralizing this at the gateway means a policy change (a new rate limit, a new auth requirement) is one configuration change instead of a code change and redeploy in every service that needs it.
+
 ## Apache NiFi
 
 - A dataflow automation tool built around a visual pipeline: each step (a "processor") reads, transforms, routes, or writes data, and processors are wired together into a flow instead of hand-writing point-to-point integration scripts.
 - Works well as a general middleware layer. Logging, alerting, data migration, and routing data between systems can all live as flows in the same tool, so a new integration is usually a new flow rather than a new one-off script.
 - Flows are visual and inspectable at runtime. A stuck or failing step shows up directly in the flow itself, which makes tracing where a pipeline broke faster than digging through separate log files for each system it touches.
+
+## Observability: Metrics and Logs
+
+- Prometheus scrapes metrics from each service on a pull model: services expose a `/metrics` endpoint, and Prometheus polls it on an interval, rather than each service pushing metrics out to a collector. That makes adding a new service to monitor a matter of pointing Prometheus at it, not changing the service's own code to push somewhere new.
+- Grafana sits on top of Prometheus (and other data sources) as the dashboard and alerting layer, turning raw time-series metrics into panels people actually look at day to day.
+- OpenSearch centralizes logs from multiple services into one searchable index instead of SSH-ing into individual machines to `tail` separate log files. That same index is also what a retrieval step can query when an AI system needs to answer "what did this service actually do," grounding the answer in real log data instead of a guess.
+- Metrics answer "is something wrong," logs answer "what exactly happened." Keeping both in place from early on means a failure gets diagnosed from data that already exists instead of needing to reproduce it live.
 
 ## MinIO (Object Storage)
 

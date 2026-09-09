@@ -22,7 +22,9 @@ Both DevOps and full-stack web development for the factory's MES (Manufacturing 
 
 **Data investigation.** Traced a `shipment_code` vs internal `unit_serial` mismatch across the `PROD_SCHEMA_B` schema to support a live MES rework case.
 
-**Internal knowledge search tool.** Built a retrieval-based document search tool for the team. Documents chunked ahead of time, with the Qwen API used as the underlying LLM to answer queries grounded in the retrieved text.
+**Internal knowledge search tool.** Built a retrieval-based document search tool for the team. Documents chunked ahead of time, with the Qwen API used as the underlying LLM to answer queries grounded in the retrieved text. Extended beyond plain text retrieval with reranking, vision-language models for reading scanned/image-based documents, and speech-to-text for audio sources, plus using logs and API/error data indexed in OpenSearch as fine-tuning input for smaller models trained on operational data directly.
+
+**Observability stack.** Set up Prometheus and Grafana for metrics, and OpenSearch for centralized log storage and search across the team's services.
 
 ## Full technical write-up
 

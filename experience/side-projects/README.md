@@ -30,6 +30,22 @@ Packaged as a one-click NSIS installer with auto-update via `electron-updater` a
 
 Stack: Electron, vanilla JS/HTML/CSS, `@xhayper/discord-rpc`, `ws` for the overlay's local WebSocket server, `electron-updater`, `electron-builder` (NSIS), GitHub Actions.
 
+## [mcp-stdio-debug](https://www.npmjs.com/package/mcp-stdio-debug)
+
+A debugging and protocol-tracing wrapper for stdio-based MCP (Model Context Protocol) servers, published to npm from an empty repo through over 20 tagged releases in one sitting. Stdio MCP servers use stdout as the JSON-RPC transport itself, so a stray `console.log` breaks the client's parser outright. `mcp-stdio-debug` spawns the target server, relays its stdout to the real client byte-for-byte through a piped passthrough, and taps the same stream separately to trace every request and response with round-trip latency, protocol anomalies, and structured debug logs, all routed to stderr and a session log file instead.
+
+Caught and fixed a real protocol-correctness bug shortly after the first release: MCP supports server-initiated requests (sampling, elicitation), but the client's response to one of those was misclassified as a malformed message, because a single pending-request map was shared across both directions and client-issued and server-issued ids are independent sequences that can collide. Fixed by splitting it into two direction-scoped maps.
+
+Also caught two real gaps in the built-in secret redaction. `--verbose` payload redaction covered the protocol trace but not data passed to the logger directly, so a call like `debug("auth", { token })` leaked full credentials into both the terminal and the on-disk session log with default flags. The redactor's own depth cap failed open instead of closed too, returning nested objects unredacted rather than hiding them once past six levels, so a secret nested seven levels deep sailed through in full. Both fixed and covered with regression tests asserting the exact leak path is closed.
+
+Multi-byte UTF-8 characters (Thai, CJK, emoji) got corrupted into replacement characters whenever a character landed across two separate stdout/stderr chunk writes, since Node makes no guarantee about chunk boundaries and naive `Buffer.toString()` per chunk splits mid-character. Fixed with `StringDecoder`, verified by testing every possible split point of a mixed-script string exhaustively rather than one arbitrary offset. That same exhaustive testing caught that the test suite's own process-output capture had the identical bug and was making the regression test itself flaky by OS pipe timing.
+
+Ships four subcommands: `run` (the wrapper itself), `replay` (pretty-print or live-tail `--follow` a saved session), `stats` (latency percentiles and per-method breakdown), and `doctor` (environment sanity checks). `doctor`'s own PATH check turned out to falsely report a valid command as missing whenever given as a path rather than a bare name, since `where`/`which` only resolve bare names, and separately could hang or run slow enough on the Windows CI runner to fail outright with no timeout set. Fixed by dropping the external process entirely in favor of a native `PATH`/`PATHEXT` lookup. Windows also needed `shell: true` to resolve `.cmd`-shimmed commands like `npm`/`npx` at all, which then meant killing the wrapper had to `taskkill /T /F` the whole process tree instead of the immediate child, since killing a `cmd.exe`-wrapped process left the real one orphaned and running.
+
+Fully automated release pipeline: a version bump to `package.json` on push is the only manual step. GitHub Actions runs the test suite, tags and creates the GitHub release, then publishes to npm via Trusted Publishing (OIDC, no stored token), in that specific order, since a GitHub release can be deleted and retried but a published npm version can never be reused if a later step fails. Every third-party GitHub Action in the workflows is pinned to an exact commit SHA rather than a floating major-version tag, closing the supply-chain window where a compromised or force-moved tag would otherwise be pulled in automatically with no review.
+
+Stack: TypeScript, Bun (build and test runner), tsup, zero runtime dependencies.
+
 ## Excel Habit Tracker
 
 A habit-tracking workbook generated with Python (`openpyxl`) instead of built by hand. Monthly grids, 20 recurring tasks plus 5 ad-hoc slots a month, a GitHub-style contribution heatmap, and a yearly KPI summary.

@@ -8,7 +8,7 @@
 
 <br>
 
-[![My Skills](https://skillicons.dev/icons?i=discord,jquery,cs,ts,js,go,lua,py,java,php,html,css,react,nextjs,nuxtjs,vue,svelte,dotnet,express,nestjs,electron,nodejs,vite,redis,bun,figma,git,gitlab,docker,kubernetes,aws,vercel,postgres,mysql,mongodb,supabase,arduino,linux,vscode,visualstudio&perline=10)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=discord,jquery,cs,ts,js,go,lua,py,java,php,html,css,react,nextjs,nuxtjs,vue,svelte,dotnet,express,nestjs,electron,nodejs,vite,redis,bun,figma,git,gitlab,docker,kubernetes,aws,vercel,grafana,prometheus,kafka,kong,postgres,mysql,mongodb,supabase,arduino,linux,vscode,visualstudio&perline=10)](https://skillicons.dev)
 
 <br>
 
@@ -17,6 +17,9 @@
 ![MinIO](https://img.shields.io/badge/MinIO-C72E49?style=flat-square&logo=minio&logoColor=white)
 ![Harbor](https://img.shields.io/badge/Harbor-60B932?style=flat-square)
 ![Rancher](https://img.shields.io/badge/Rancher-0075A8?style=flat-square)
+![Apache NiFi](https://img.shields.io/badge/Apache_NiFi-728E9B?style=flat-square&logo=apachenifi&logoColor=white)
+![OpenSearch](https://img.shields.io/badge/OpenSearch-005EB8?style=flat-square&logo=opensearch&logoColor=white)
+![AKHQ](https://img.shields.io/badge/AKHQ-00ACC1?style=flat-square)
 ![LINE](https://img.shields.io/badge/LINE_API-06C755?style=flat-square&logo=line&logoColor=white)
 ![Cisco](https://img.shields.io/badge/Cisco-1BA0D7?style=flat-square&logo=cisco&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
@@ -233,7 +236,7 @@ flowchart LR
 
 **Languages:** C#, TypeScript, JavaScript, Python, Java, PHP, Go, Lua, SQL
 **Frameworks:** React, Next.js, Nuxt.js, Vue.js, Svelte, Electron, ASP.NET Core (.NET 8), Express.js, NestJS
-**Infrastructure:** GitLab CI/CD, GitHub Actions, Docker, Docker Swarm, Kubernetes (Rancher), Harbor Registry, GitHub Container Registry, AWS, Vercel, MinIO, Redis, Prometheus, Grafana
+**Infrastructure:** GitLab CI/CD, GitHub Actions, Docker, Docker Swarm, Kubernetes (Rancher), Harbor Registry, GitHub Container Registry, AWS, Vercel, MinIO, Redis, Kafka, AKHQ, Kong, Prometheus, Grafana, Apache NiFi, OpenSearch
 **Databases:** Oracle, Microsoft SQL Server, PostgreSQL, MySQL, MongoDB, Supabase
 **Data:** Power BI, machine learning fundamentals
 **Other:** LINE Bot/OA API, Figma, Arduino and embedded systems, Cisco networking, Adobe Photoshop/Illustrator, Linux (RHEL), Visual Studio, VS Code

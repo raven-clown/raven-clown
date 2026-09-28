@@ -133,7 +133,7 @@ This repository is a map of that work. This page is the summary.
 | [ARK](https://github.com/raven-clown/ark) | Kafka-to-HTTP bridge with flows, a cluster mode, an MCP server and a React console |
 | [Delta Electronics](./experience/delta-electronics) | The CI/CD platform, MES dashboards, and diagnostic tools I build and run as my day job |
 | [FiveM & RedM Platform](./experience/fivem-redm-platform) | A multiplayer roleplay platform I founded and ran end to end for five years |
-| [Side Projects](./experience/side-projects) | [ARK](https://github.com/raven-clown/ark), [RoomedIn](https://www.roomedin.online/), [IdpForge](https://github.com/raven-clown/idpforge), [Vinylcord](https://github.com/raven-clown/vinylcord), [mcp-stdio-debug](https://www.npmjs.com/package/mcp-stdio-debug), a habit-tracking tool, and a code snippet manager |
+| [Side Projects](./experience/side-projects) | [ARK](https://github.com/raven-clown/ark), [RoomedIn](https://www.roomedin.online/), [IdpForge](https://github.com/raven-clown/idpforge), [Vinylcord](https://github.com/raven-clown/vinylcord), [mcp-stdio-debug](https://www.npmjs.com/package/mcp-stdio-debug), [source-hub](https://github.com/raven-clown/source-hub), [samatha-command-ai](https://github.com/raven-clown/training-ai-voice), a habit-tracking tool, and a code snippet manager |
 | [Academic Projects](./experience/academic-projects) | Three projects from vocational and university coursework |
 
 ---

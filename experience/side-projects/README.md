@@ -54,7 +54,7 @@ MIT-licensed, with GitHub Actions building cross-platform release binaries (Linu
 
 ## [Vinylcord](https://github.com/raven-clown/vinylcord)
 
-A desktop app that turns YouTube Music into a live Discord Rich Presence status and an OBS-ready streaming overlay, built solo from an empty repo through eight tagged patch releases in one sitting. Electron wraps the real music.youtube.com in its own window rather than scraping through a browser extension, since Discord's Rich Presence only talks to a local process over IPC in the first place; a preload script reads now-playing state straight off the page's own `<video>` element and player-bar DOM (YouTube Music has no public API for it) and injects a small draggable settings panel directly into the page itself.
+A desktop app that turns YouTube Music into a live Discord Rich Presence status and an OBS-ready streaming overlay, built solo from an empty repo through eight tagged patch releases in one sitting, and now at v1.1.8 across 11 releases. Electron wraps the real music.youtube.com in its own window rather than scraping through a browser extension, since Discord's Rich Presence only talks to a local process over IPC in the first place; a preload script reads now-playing state straight off the page's own `<video>` element and player-bar DOM (YouTube Music has no public API for it) and injects a small draggable settings panel directly into the page itself.
 
 Caught and fixed a real "silently does nothing" bug in the first working build: Discord's RPC accepted every `setActivity` call without an error, logged "activity accepted," and simply never rendered anything on the actual profile, because an unregistered `smallImageKey` (`"play"`/`"pause"`, with no matching Rich Presence Art Asset uploaded yet) got the whole payload dropped client-side with no signal back over IPC. Stripping fields one at a time against a real Discord client, not retrying the same shape, is what actually surfaced it. Also had to work around YouTube Music's own Trusted Types CSP, which blocks a raw `element.innerHTML = string` assignment (and `DOMParser.parseFromString`, also a guarded sink there) outright; the panel registers its own Trusted Types policy and renders through that instead. Since the page is a single-page app that rewrites large parts of its own DOM during startup, the injected panel is anchored to `document.documentElement` rather than `document.body` and re-attaches itself if a re-render sweeps it out.
 
@@ -64,7 +64,7 @@ Stack: Electron, vanilla JS/HTML/CSS, `@xhayper/discord-rpc`, `ws` for the overl
 
 ## [mcp-stdio-debug](https://www.npmjs.com/package/mcp-stdio-debug)
 
-A debugging and protocol-tracing wrapper for stdio-based MCP (Model Context Protocol) servers, published to npm from an empty repo through over 20 tagged releases in one sitting. Stdio MCP servers use stdout as the JSON-RPC transport itself, so a stray `console.log` breaks the client's parser outright. `mcp-stdio-debug` spawns the target server, relays its stdout to the real client byte-for-byte through a piped passthrough, and taps the same stream separately to trace every request and response with round-trip latency, protocol anomalies, and structured debug logs, all routed to stderr and a session log file instead.
+A debugging and protocol-tracing wrapper for stdio-based MCP (Model Context Protocol) servers, published to npm from an empty repo through over 20 tagged releases in one sitting, and now at 1.9.2 with 34 published versions. Stdio MCP servers use stdout as the JSON-RPC transport itself, so a stray `console.log` breaks the client's parser outright. `mcp-stdio-debug` spawns the target server, relays its stdout to the real client byte-for-byte through a piped passthrough, and taps the same stream separately to trace every request and response with round-trip latency, protocol anomalies, and structured debug logs, all routed to stderr and a session log file instead.
 
 Caught and fixed a real protocol-correctness bug shortly after the first release: MCP supports server-initiated requests (sampling, elicitation), but the client's response to one of those was misclassified as a malformed message, because a single pending-request map was shared across both directions and client-issued and server-issued ids are independent sequences that can collide. Fixed by splitting it into two direction-scoped maps.
 
@@ -78,13 +78,31 @@ Fully automated release pipeline: a version bump to `package.json` on push is th
 
 Stack: TypeScript, Bun (build and test runner), tsup, zero runtime dependencies.
 
+## [source-hub](https://github.com/raven-clown/source-hub)
+
+A backend pipeline that pulls items from Gmail, Notion, Linear and Google Calendar into one Postgres database and normalizes each into a common shape (title, summary, category, sender, origin org, relevant date), with no frontend by design: it's the data layer a separate web app reads from. Each connector polls incrementally from a stored cursor, and API clients are built lazily inside the fetch call, so importing every connector never fails just because one source's credentials aren't configured, and one broken integration can't block the others.
+
+Storage is two-stage rather than one flat table: a `raw_items` landing table keeps the untouched payload with a content hash, so re-fetching an unchanged item skips the extraction step entirely, and a normalized `items` table carries a generated `tsvector` column for full-text search plus a JSONB catch-all for source-specific fields. Normalization goes through a pluggable language-model provider that forces a single structured tool call per item, Anthropic by default or any OpenAI-compatible endpoint (Ollama, vLLM, LM Studio), so it runs against open-weight models too.
+
+The result is exposed three ways: a REST API with filtered queries, status updates and a natural-language `/ask` endpoint; stats endpoints shaped for charts (time series from year down to second, breakdowns, period-over-period comparison, histograms); and an MCP server with the same data as tools, wrapped with mcp-stdio-debug for protocol tracing. CI runs typechecking, ESLint security rules, secretlint and `npm audit`.
+
+Stack: TypeScript, Node.js, PostgreSQL (PL/pgSQL migrations), Docker Compose, MCP SDK.
+
+## [samatha-command-ai](https://github.com/raven-clown/training-ai-voice)
+
+A local-first voice command agent for Windows that takes Thai, English or mixed Thai/English speech and turns it into a small, allow-listed set of OS actions: system status with console bar graphs for CPU, RAM and GPU, process lists, opening and closing apps, locking the screen. Speech recognition is pluggable: Vosk with a Thai and an English model fed the same audio and merged, or a single multilingual faster-whisper model, with a LoRA fine-tuning path for Whisper on recorded clips and a model card describing exactly what vocabulary it was trained on. With no model or no microphone permission it explains why and falls back to typed commands instead of exiting.
+
+Safety is enforced in code rather than hoped for: reads are limited to the working directory and Documents unless a root is added explicitly, there is no file deletion, shell execution or privilege escalation, killing a process requires typing `YES` and protected processes are always blocked, and user-taught aliases can only point at commands that are already allowed. A Tkinter dashboard shows a live audio graph, dB and Hz, a command feed, per-utterance turn time and an alias-teaching panel, and every event is logged as JSON Lines. Model weights, personal audio and learned aliases are kept out of the repo, and the dataset manifest uses relative paths so anyone can train on their own recordings.
+
+Stack: Python, faster-whisper, Vosk, Tkinter, MIT-licensed.
+
 ## Excel Habit Tracker
 
 A habit-tracking workbook generated with Python (`openpyxl`) instead of built by hand. Monthly grids, 20 recurring tasks plus 5 ad-hoc slots a month, a GitHub-style contribution heatmap, and a yearly KPI summary.
 
 ## Snippet Manager
 
-A code snippet manager built as two front-ends, a VS Code extension and an Electron desktop app, that read and write the same local `data.json` and stay in sync in real time via file watching (chokidar), with no server, no account, and no cloud involved. Started August 11, 2026 and under active development since, currently at v0.6.0, MIT-licensed, in an npm workspaces monorepo (`raven-clown/monorepo`) split into `@snippet/core` (storage, CRUD, and file-watch sync, no UI), `vscode-extension`, and `electron-app`. All storage, validation, and migration logic lives in `@snippet/core`; neither front-end touches the filesystem directly. Both apps read and write the same `data.json` in the OS's standard app-data directory (`%APPDATA%\snippet-manager` on Windows) and watch it with chokidar, no polling and no direct IPC between the two.
+A code snippet manager built as two front-ends, a VS Code extension and an Electron desktop app, that read and write the same local `data.json` and stay in sync in real time via file watching (chokidar), with no server, no account, and no cloud involved. Started August 11, 2026 and under active development since, currently at v0.7.0, MIT-licensed, in an npm workspaces monorepo (`raven-clown/monorepo`) split into `@snippet/core` (storage, CRUD, and file-watch sync, no UI), `vscode-extension`, and `electron-app`. All storage, validation, and migration logic lives in `@snippet/core`; neither front-end touches the filesystem directly. Both apps read and write the same `data.json` in the OS's standard app-data directory (`%APPDATA%\snippet-manager` on Windows) and watch it with chokidar, no polling and no direct IPC between the two.
 
 A snippet holds title, code, language, tags, category, pinned state, usage tracking, and a hidden-from-VS-Code flag. Categories are a real tree entity (id/parentId/order/pinned) supporting unlimited nesting, migrated automatically from the old flat-string schema. Export/import covers both full-store backups and single snippets, with merge or replace modes.
 

@@ -18,9 +18,9 @@ A multiplayer roleplay platform (highclass-roleplay.com / `sv_highclass`) built 
 - [GAME 1](https://www.figma.com/design/jlu1wfsoT4SyAnIXVI4zGM/GAME--1): UI design
 - [GAME 2](https://www.figma.com/design/pJ1nSa22skJwN1oLw1fxLW/GAME--2): UI design
 
-**Infrastructure.** Ran the platform on a dedicated Windows server (i9, 64GB RAM, 10Gbps), with an nginx caching layer in front for resource delivery and SSL on the storefront subdomain. Later rebuilt the website/shop side on Next.js and Go, deployed on AWS and Kubernetes.
+**Infrastructure.** Ran the platform on a dedicated Windows server (i9, 64GB RAM, 10Gbps), with an nginx caching layer in front for resource delivery and SSL on the storefront subdomain. Later rebuilt the website/shop side on Next.js and Go, deployed on AWS and Kubernetes: [Raven Webmarket](https://github.com/raven-clown/raven-webmarket), an ESX web shop with Discord OAuth, milestone and redeem accumulation, payment webhooks with slip storage, an admin back office, and real-time in-game delivery.
 
-**Tooling.** Built Raven Whitelist, a Discord-based whitelist management bot (TypeScript, Bun, Redis, BullMQ, MySQL), shipped as compiled binaries with bilingual documentation.
+**Tooling.** Built [Raven Whitelist](https://github.com/raven-clown/raven_whitelist), a Discord-based whitelist management bot (TypeScript, Bun, Redis, BullMQ, MySQL), shipped as compiled binaries with bilingual documentation.
 
 ## Full technical write-up
 

@@ -50,3 +50,33 @@ flowchart LR
 - When two different front-ends need to operate on the same data (e.g. a VS Code extension and an Electron app), put all storage, validation, and migration logic in one shared package and let both front-ends depend on it. Neither one should touch the filesystem or the data model directly. This keeps the read/write/validate logic in exactly one place instead of drifting between two implementations.
 - Real-time sync between independent processes doesn't need a server or IPC if they already share a filesystem. Watching a common data file (chokidar or equivalent) and reacting to change events is enough, and it's simpler to reason about than a message bus for something this small.
 - Schema migrations need to be backward-compatible from day one in this kind of setup, since there's no central database to run a one-time migration against. Each client migrates whatever version of the data it opens, on open.
+
+## Committing a Stream Without Losing or Skipping Anything
+
+- With Kafka, "processed" has to mean "its result is safely somewhere," not "a worker picked it up." Commit an offset only after the result (or the dead-letter copy) has been produced, and commit in order: a message that can't finish yet holds back the commits behind it on its partition instead of being skipped, so a crash can only cause a redelivery, never a gap.
+- Parallelism and ordering aren't opposites. Messages with the same key go one at a time and in order while different keys run side by side, which keeps most of the throughput without letting a customer's second order overtake their first.
+- A stable correlation ID derived from topic, partition and offset turns at-least-once into effectively-once for any downstream service willing to use it as an idempotency key, since a retry or a redelivery after a crash carries the same ID.
+- Classify failures instead of retrying everything: a 4xx means the message is the problem (reject it with the reason, no retry), 408/425/429 mean "later" (wait, honoring `Retry-After`, without spending a retry), and 5xx or a timeout means the service is the problem (retry with backoff, then dead-letter). Count a message's repeated failures once, or a handful of poison messages will trip a circuit breaker for everyone.
+
+## Coordinating Through What You Already Run
+
+- A clustered service doesn't automatically need etcd or ZooKeeper. If every node already talks to a system with durable, ordered logs, that system can carry heartbeats, leader election and shared config: a compacted topic keyed by pipeline name is a config store, and the latest heartbeat per node is a membership list.
+- Keep a node useful when coordination is slow: every node keeps serving what it already runs, and only placement decisions wait for the leader.
+- A service started before its dependency should wait for it, with backoff, rather than exit on the first failed connection and stay down after a host restart.
+
+```mermaid
+flowchart LR
+    N1["Node 1"] -->|"heartbeat"| HB[("heartbeat topic")]
+    N2["Node 2"] -->|"heartbeat"| HB
+    N3["Node 3\n(leader)"] -->|"heartbeat"| HB
+    HB --> N3
+    N3 -->|"placement"| Cfg[("compacted config topic")]
+    Cfg --> N1
+    Cfg --> N2
+```
+
+## Letting an Agent Operate a Real System
+
+- Give an agent the same tools a human operator has, but make every permission a ceiling that stacks: the token's scope, a per-resource limit, and a per-project limit, with the lowest one winning.
+- Never let a model apply a change in one step. A write returns a preview and a diff plus a one-time confirm token bound to the caller, and only a second call with that token applies it, so a human sees exactly what will change first.
+- Small local models follow instructions loosely, so anything that must hold (permissions, the confirm step, which tools exist) belongs in code the model can't talk its way around, not in the prompt.

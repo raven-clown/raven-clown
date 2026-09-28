@@ -1,5 +1,37 @@
 # Side Projects
 
+## [ARK](https://github.com/raven-clown/ark)
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="../../assets/ark/ark-flow-dark.svg">
+    <img src="../../assets/ark/ark-flow-light.svg" alt="Messages flow from a Kafka topic through ARK to an HTTP app; results, bad data and failures each land in their own topic" width="760">
+  </picture>
+</p>
+
+A config-driven bridge between Kafka and plain HTTP services, built solo from an empty repo: it consumes each message, validates it, calls the app, and produces the answer to another topic, so the app never touches a consumer group, an offset or a rebalance. One Go binary and one YAML file, with a separate React console, a public [website](https://raven-clown.github.io/ark/), and Apache 2.0 licensing. Delivery is at-least-once with in-order commits: an offset is committed only after its result is produced, and a message that can't finish blocks the commits behind it on its partition instead of being skipped. Status codes carry meaning: 4xx goes to a reject topic with the reason, 408/425/429 wait (honoring `Retry-After`) without spending a retry, 5xx retries with backoff and then dead-letters, and a circuit breaker with health probes holds messages in Kafka while the app is down.
+
+When one path isn't enough, a pipeline becomes a flow: a DAG of steps (call an app, condition, data check, topic, webhook, reject, dead letter, drop) where any step can fan out to several others and every answer, reject and failure has a line of its own. Loops are refused at validation, and a message is committed once every path it took is done and counted once however many ways it went. Ready-made app steps send to OpenSearch, Elasticsearch, NiFi, another Kafka cluster, Slack, Discord and Microsoft Teams, each with send patterns that fit the product (index by id, partial update with upsert, Block Kit cards, PUT by id), URL and body templates, and secrets read from the environment. A URL template can only fill in the path or query after `http(s)://host/`, so a message can never change where a request goes.
+
+Cluster mode adds no new dependency: nodes coordinate through Kafka itself, with heartbeats, an elected leader that places workers by label, pipeline config in a compacted topic so a reload on any node reaches all of them, and failover in about a second on a clean stop. An MCP server lets any agent diagnose a pipeline, explain an error, sample odd data, suggest tuning or draft a pipeline, and every config change is a preview and a diff first, applied only with a confirm token. Access is layered: an API or MCP token's scope, each pipeline's `mcp_access`, and each project's `ai_access` are all ceilings, and per-project MCP endpoints get their own tokens. The console's Ask ARK panel uses the same tools with any model (Anthropic, OpenAI, Gemini, or anything OpenAI-compatible, local Ollama included), in Thai, English, and simplified and traditional Chinese.
+
+<table>
+<tr>
+<td width="50%"><img src="../../assets/ark/console-canvas.png" alt="Live pipeline canvas"></td>
+<td width="50%"><img src="../../assets/ark/console-designer.png" alt="Flow designer"></td>
+</tr>
+<tr>
+<td><img src="../../assets/ark/console-pipeline.png" alt="Pipeline health and live trace"></td>
+<td><img src="../../assets/ark/console-assistant.png" alt="Ask ARK answering a Thai question next to project AI access settings"></td>
+</tr>
+</table>
+
+Caught and fixed real bugs by testing against real systems rather than trusting unit tests. An "index by the message's id" send pattern looked right in review and passed its tests, but checking the documents in a real OpenSearch showed every one of them stored under `_id: "<nil>"`: after an app call the message at that step is the app's answer, the id field wasn't in it, and the template rendered a missing value as `<nil>`, so each new document silently overwrote the last. The template's `path` function now fails on a missing value, which sends the message down the step's failed line with the reason, and the id field accepts `original.order_id` to read the message as it was consumed. Under a steady 10% of 500s the circuit breaker kept flapping open, because retries of the same failing message each counted as a new failure; a message now counts once. And opening the chat panel blanked the entire console in current Chrome, because a React effect returned `scrollIntoView`'s result, which Chrome now makes a Promise, and React called it as a cleanup function.
+
+The console draws every pipeline, topic and target on a live React Flow canvas where the dots on each line move at the real message rate (one dot per ten messages, more on busy lines), with a right-click menu for everything a pipeline can do, a flow designer that opens a running fixed-path pipeline as the equivalent flow, dead-letter browsing with retry and discard, a rule builder that previews how many recent messages would match, and metrics with latency percentiles. CI runs gosec, Semgrep, govulncheck, OSV-Scanner, Gitleaks, a Trivy image scan and CodeQL on every push.
+
+Stack: Go (kafka-go, expr-lang, the MCP Go SDK, Prometheus client), React 19, React Flow, ECharts, Vite, Docker Compose, GitHub Actions, GitHub Pages.
+
 ## [RoomedIn](https://www.roomedin.online/)
 
 A real-time room status board for small hotels/guesthouses, built solo end to end. That includes the architecture, the database, the UI, and the pricing model. Next.js 16 (App Router) on top of Supabase (Postgres, Auth, Realtime, RLS), with a hexagonal/ports architecture even inside a Next.js app: `domain/` and `application/` have zero imports from Next.js, React, or Supabase, enforced by a custom ESLint rule so it stays true as the app grows. Housekeeping changes a room's status from their phone, reception sees it update instantly through Supabase Realtime, no refresh and no separate WebSocket server to run.
@@ -56,7 +88,7 @@ A code snippet manager built as two front-ends, a VS Code extension and an Elect
 
 A snippet holds title, code, language, tags, category, pinned state, usage tracking, and a hidden-from-VS-Code flag. Categories are a real tree entity (id/parentId/order/pinned) supporting unlimited nesting, migrated automatically from the old flat-string schema. Export/import covers both full-store backups and single snippets, with merge or replace modes.
 
-The desktop app is the fuller surface: a glass/blur "iOS 26" visual style across three themes (White/Black/Color), generated from one set of AI-assisted design tokens in the oklch color space, then converted into real CSS custom properties rather than an off-the-shelf UI library. A VS Code Explorer-style category tree with drag-and-drop reorder/reparent, inline rename, and inline code editing directly on the detail view. A from-scratch syntax highlighter. A custom frameless title bar. Full EN/TH i18n. A responsive layout across three breakpoints (compact/medium/wide) where the sidebar collapses into a drawer on narrow screens. The storage location itself is relocatable, with a pointer-file mechanism to keep sync safe across the move.
+The desktop app is the fuller surface: a glass/blur "iOS 26" visual style across three themes (White/Black/Color), generated from one set of design tokens in the oklch color space, then converted into real CSS custom properties rather than an off-the-shelf UI library. A VS Code Explorer-style category tree with drag-and-drop reorder/reparent, inline rename, and inline code editing directly on the detail view. A from-scratch syntax highlighter. A custom frameless title bar. Full EN/TH i18n. A responsive layout across three breakpoints (compact/medium/wide) where the sidebar collapses into a drawer on narrow screens. The storage location itself is relocatable, with a pointer-file mechanism to keep sync safe across the move.
 
 The VS Code extension is the lighter surface: a sidebar tree grouped by language with a pinned section floating to the top, auto-reveal of the active file's language group, click-to-copy/insert/open per setting, and filtering out snippets marked hidden-from-VS-Code on the desktop side.
 

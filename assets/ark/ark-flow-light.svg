@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 290" role="img" aria-label="Messages flow from a Kafka topic through ARK to your app, and the results land in Kafka topics">
+  <g fill="none" stroke="#D0D7DE" stroke-width="2" stroke-linecap="round">
+    <path d="M250 152 C340 152 380 170 480 170"/>
+    <path d="M480 170 C580 170 600 60 700 60 L700 76"/>
+    <path d="M700 76 C610 76 590 170 480 170" stroke-dasharray="4 6"/>
+    <path d="M480 170 C590 170 610 156 700 156"/>
+    <path d="M480 170 C590 170 610 204 700 204"/>
+    <path d="M480 170 C590 170 610 252 700 252"/>
+  </g>
+  <g opacity="0">
+    <animateMotion dur="12s" begin="0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.3000;1" path="M250 152 C340 152 380 170 480 170 C580 170 600 60 700 60 L700 76 C610 76 590 170 480 170 C590 170 610 156 700 156"/>
+    <animate attributeName="opacity" dur="12s" begin="0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.01;0.2900;0.3000;1"/>
+    <circle r="10" fill="#0FA97A" opacity="0.22"></circle>
+    <circle r="4.5" fill="#0FA97A"></circle>
+  </g>
+  <g opacity="0">
+    <animateMotion dur="12s" begin="-10s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.3000;1" path="M250 152 C340 152 380 170 480 170 C580 170 600 60 700 60 L700 76 C610 76 590 170 480 170 C590 170 610 156 700 156"/>
+    <animate attributeName="opacity" dur="12s" begin="-10s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.01;0.2900;0.3000;1"/>
+    <circle r="10" fill="#0FA97A" opacity="0.22"></circle>
+    <circle r="4.5" fill="#0FA97A"></circle>
+  </g>
+  <g opacity="0">
+    <animateMotion dur="12s" begin="-8s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.1500;1" path="M250 152 C340 152 380 170 480 170 C590 170 610 204 700 204"/>
+    <animate attributeName="opacity" dur="12s" begin="-8s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.01;0.1400;0.1500;1"/>
+    <circle r="10" fill="#0FA97A" opacity="0.22"><animate attributeName="fill" dur="12s" begin="-8s" repeatCount="indefinite" calcMode="discrete" values="#0FA97A;#C98A12;#0FA97A" keyTimes="0;0.0750;0.1500"/></circle>
+    <circle r="4.5" fill="#0FA97A"><animate attributeName="fill" dur="12s" begin="-8s" repeatCount="indefinite" calcMode="discrete" values="#0FA97A;#C98A12;#0FA97A" keyTimes="0;0.0750;0.1500"/></circle>
+  </g>
+  <g opacity="0">
+    <animateMotion dur="12s" begin="-6s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.3000;1" path="M250 152 C340 152 380 170 480 170 C580 170 600 60 700 60 L700 76 C610 76 590 170 480 170 C590 170 610 156 700 156"/>
+    <animate attributeName="opacity" dur="12s" begin="-6s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.01;0.2900;0.3000;1"/>
+    <circle r="10" fill="#0FA97A" opacity="0.22"></circle>
+    <circle r="4.5" fill="#0FA97A"></circle>
+  </g>
+  <g opacity="0">
+    <animateMotion dur="12s" begin="-4s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.3000;1" path="M250 152 C340 152 380 170 480 170 C580 170 600 60 700 60 L700 76 C610 76 590 170 480 170 C590 170 610 156 700 156"/>
+    <animate attributeName="opacity" dur="12s" begin="-4s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.01;0.2900;0.3000;1"/>
+    <circle r="10" fill="#0FA97A" opacity="0.22"></circle>
+    <circle r="4.5" fill="#0FA97A"></circle>
+  </g>
+  <g opacity="0">
+    <animateMotion dur="12s" begin="-2s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.3083;1" path="M250 152 C340 152 380 170 480 170 C580 170 600 60 700 60 L700 76 C610 76 590 170 480 170 C590 170 610 252 700 252"/>
+    <animate attributeName="opacity" dur="12s" begin="-2s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.01;0.2983;0.3083;1"/>
+    <circle r="10" fill="#0FA97A" opacity="0.22"><animate attributeName="fill" dur="12s" begin="-2s" repeatCount="indefinite" calcMode="discrete" values="#0FA97A;#D9534F;#0FA97A" keyTimes="0;0.2374;0.3083"/></circle>
+    <circle r="4.5" fill="#0FA97A"><animate attributeName="fill" dur="12s" begin="-2s" repeatCount="indefinite" calcMode="discrete" values="#0FA97A;#D9534F;#0FA97A" keyTimes="0;0.2374;0.3083"/></circle>
+  </g>
+
+  <text x="30" y="118" font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" letter-spacing="2" fill="#57606A">KAFKA TOPIC</text>
+  <rect x="30" y="132" width="220" height="40" rx="20" fill="#F6F8FA" stroke="#D0D7DE"/>
+  <text x="54" y="157" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" fill="#0B0D10">orders.raw</text>
+
+  <text x="700" y="30" font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" letter-spacing="2" fill="#57606A">YOUR APP, OVER HTTP</text>
+  <rect x="700" y="42" width="230" height="52" rx="12" fill="#F6F8FA" stroke="#D0D7DE"/>
+  <text x="720" y="73" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" fill="#0B0D10">POST /process</text>
+  <text x="918" y="72" font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#57606A" text-anchor="end">your code</text>
+  <rect x="700" y="140" width="230" height="32" rx="16" fill="#F6F8FA" stroke="#D0D7DE"/>
+  <circle cx="720" cy="156" r="5" fill="#0FA97A"/>
+  <text x="734" y="161" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" fill="#0B0D10">orders.processed</text>
+  <text x="918" y="160.5" font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#57606A" text-anchor="end">result</text>
+  <rect x="700" y="188" width="230" height="32" rx="16" fill="#F6F8FA" stroke="#D0D7DE"/>
+  <circle cx="720" cy="204" r="5" fill="#C98A12"/>
+  <text x="734" y="209" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" fill="#0B0D10">orders.rejected</text>
+  <text x="918" y="208.5" font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#57606A" text-anchor="end">bad data</text>
+  <rect x="700" y="236" width="230" height="32" rx="16" fill="#F6F8FA" stroke="#D0D7DE"/>
+  <circle cx="720" cy="252" r="5" fill="#D9534F"/>
+  <text x="734" y="257" font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" fill="#0B0D10">orders.dlq</text>
+  <text x="918" y="256.5" font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#57606A" text-anchor="end">failed</text>
+
+  <g transform="translate(372.5 40.6) scale(0.42)">
+    <path d="M146 404 C146 262 196 164 256 110 C316 164 366 262 366 404" fill="none" stroke="#0B0D10" stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="256" cy="308" r="31" fill="#0FA97A" opacity="0.2"/>
+    <circle cx="256" cy="308" r="17" fill="#0FA97A"/>
+  </g>
+  <text x="480" y="250" font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="5" fill="#0B0D10" text-anchor="middle">ARK</text>
+  <text x="480" y="270" font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#57606A" text-anchor="middle">rules · retries · ordering · DLQ</text>
+</svg>

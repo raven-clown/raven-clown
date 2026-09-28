@@ -10,24 +10,29 @@
 
 <br>
 
-[![My Skills](https://skillicons.dev/icons?i=discord,jquery,cs,ts,js,go,lua,py,java,php,html,css,react,nextjs,nuxtjs,vue,svelte,dotnet,express,nestjs,electron,nodejs,vite,redis,bun,figma,git,gitlab,docker,kubernetes,aws,vercel,grafana,prometheus,kafka,kong,postgres,mysql,mongodb,supabase,arduino,linux,vscode,visualstudio&perline=10)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=cs,ts,js,go,lua,py,java,php,html,css,react,nextjs,nuxtjs,vue,svelte,jquery,tailwind,vite,electron,figma,nodejs,bun,dotnet,express,nestjs,prisma,npm,vitest,redis,kafka,postgres,mysql,mongodb,supabase,sqlite,elasticsearch,docker,kubernetes,nginx,aws,vercel,githubactions,gitlab,github,git,grafana,prometheus,linux,redhat,windows,bash,powershell,vscode,visualstudio,notion,ps,ai,arduino,discord&perline=10)](https://skillicons.dev)
 
 <br>
 
+![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
+![OpenSearch](https://img.shields.io/badge/OpenSearch-005EB8?style=flat-square&logo=opensearch&logoColor=white)
+![Apache NiFi](https://img.shields.io/badge/Apache_NiFi-728E9B?style=flat-square&logo=apachenifi&logoColor=white)
+![Kong](https://img.shields.io/badge/Kong-003459?style=flat-square&logo=kong&logoColor=white)
 ![Oracle](https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white)
 ![Microsoft SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)
 ![MinIO](https://img.shields.io/badge/MinIO-C72E49?style=flat-square&logo=minio&logoColor=white)
 ![Harbor](https://img.shields.io/badge/Harbor-60B932?style=flat-square)
-![Rancher](https://img.shields.io/badge/Rancher-0075A8?style=flat-square)
-![Apache NiFi](https://img.shields.io/badge/Apache_NiFi-728E9B?style=flat-square&logo=apachenifi&logoColor=white)
-![OpenSearch](https://img.shields.io/badge/OpenSearch-005EB8?style=flat-square&logo=opensearch&logoColor=white)
+![Rancher](https://img.shields.io/badge/Rancher-0075A8?style=flat-square&logo=rancher&logoColor=white)
 ![AKHQ](https://img.shields.io/badge/AKHQ-00ACC1?style=flat-square)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square)
 ![MCP](https://img.shields.io/badge/MCP-000000?style=flat-square&logo=modelcontextprotocol&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white)
 ![LINE](https://img.shields.io/badge/LINE_API-06C755?style=flat-square&logo=line&logoColor=white)
 ![Cisco](https://img.shields.io/badge/Cisco-1BA0D7?style=flat-square&logo=cisco&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
 ![Machine Learning](https://img.shields.io/badge/Machine_Learning-FF6F00?style=flat-square)
 ![Red Hat Enterprise Linux](https://img.shields.io/badge/RHEL-EE0000?style=flat-square&logo=redhat&logoColor=white)
+![Windows Server](https://img.shields.io/badge/Windows_Server-0078D4?style=flat-square&logo=windows&logoColor=white)
 
 </div>
 
@@ -335,7 +340,7 @@ flowchart LR
 | **Databases** | Oracle, Microsoft SQL Server, PostgreSQL, MySQL, MongoDB, Supabase |
 | **AI** | MCP servers, retrieval-based LLM systems, OpenAI-compatible and local models |
 | **Data** | Power BI, machine learning fundamentals |
-| **Other** | LINE Bot/OA API, Figma, Arduino and embedded systems, Cisco networking, Adobe Photoshop/Illustrator, Linux (RHEL), Visual Studio, VS Code |
+| **Other** | LINE Bot/OA API, Figma, Arduino and embedded systems, Cisco networking, Adobe Photoshop/Illustrator, Linux (RHEL), Windows Server, Visual Studio, VS Code, Notion |
 
 ---
 

@@ -60,6 +60,21 @@ flowchart LR
 - Topics are partitioned and replicated across brokers, which is what makes Kafka handle high-throughput streams (service events, logs, metrics) without a single broker becoming the bottleneck, and survive a broker going down without losing data.
 - A natural fit as the backbone in front of NiFi and the observability stack: services publish events once, and NiFi, log indexing, and any other consumer each read from the same topic independently instead of every service needing its own point-to-point integration with every downstream system.
 - AKHQ is the operational view into a running cluster: browsing topics, inspecting individual messages, watching consumer group lag, and managing ACLs and schemas from a UI instead of the Kafka CLI tools.
+- KRaft mode replaces ZooKeeper with Kafka's own Raft-based controller quorum. Each broker node can also act as a controller (clients on 9092, controller quorum on 9093), so a 3-node cluster needs no separate coordination service, and replication factor 3 means any one node can go down without losing data or availability.
+- Broker metrics come out through a JMX exporter on each node, which Prometheus scrapes like any other `/metrics` endpoint. Keeping AKHQ, Prometheus, and Grafana on a separate tooling VM means a monitoring problem never competes with the brokers for resources.
+- Run as a central platform, one cluster serves many applications. Each team gets its own topics and consumer groups instead of running its own broker, and the platform team owns capacity, monitoring, and upgrades in one place.
+
+## Spark Structured Streaming
+
+- Treats a Kafka topic as an unbounded table: a job reads new records as they arrive, transforms them with the same DataFrame API used for batch work, and writes the result out to another topic or store.
+- A common layout is raw and gold topics: raw holds events exactly as they were ingested, gold holds the cleaned, deduplicated, joined version that downstream apps actually consume. Raw stays untouched, so a gold job can be fixed and replayed from it.
+- Checkpoints track which offsets a job has already processed, so a restarted job resumes where it left off instead of reprocessing or skipping data.
+
+## Apache Airflow
+
+- Orchestrates jobs as DAGs: each task is a step, dependencies say what has to finish first, and a schedule says how often the whole DAG runs.
+- Fits the scheduling layer around batch or micro-batch Spark jobs (for example every 15 to 30 minutes), with retries, run history, and a UI showing which run failed at which step.
+- Airflow decides when and in what order work runs. It doesn't process the data itself, that stays in Spark, NiFi, or whatever the task calls.
 
 ## Kong (API Gateway)
 

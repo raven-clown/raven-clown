@@ -56,3 +56,23 @@ Built an internal document search tool using this pattern end to end: documents 
 ## Log and Error Data as Training/Fine-Tuning Input
 
 Machine logs, internal API responses, and error output from the factory floor are a different kind of input from documents: high-volume, structured or semi-structured, and continuously produced. Used as fine-tuning input for smaller models trained to work with that data directly, rather than only routing everything through a general-purpose LLM prompt. Logs are indexed into OpenSearch, with retrieval over that index used to ground answers about what a machine or service actually did, the same "ground answers in retrieved data instead of memory" principle as the document RAG case above, applied to operational data instead of static documents.
+
+## Applied To Log Analysis: AIDeltron
+
+```mermaid
+flowchart LR
+    Src["API / routing / SMT /\naggregator .log files"] --> Ingest["Python ingestion\nscheduled or manual upload"]
+    Ingest --> NDJSON["Convert to NDJSON"]
+    NDJSON --> OS[("OpenSearch")]
+    Ingest --> PG[("PostgreSQL\nfetch state, aggregates,\naudit log")]
+    OS --> API["FastAPI"]
+    PG --> API
+    API --> UI["UI: search, charts, crosstab,\nAI summary, AI Q&A, source config"]
+    API --> MCP["MCP server"]
+    MCP --> Agent["Agent: questions,\npattern comparison, root cause"]
+```
+
+- Every log source writes in its own format, so the ingestion step's real job is normalization: parse each format into one document shape and write it as NDJSON, which is what the OpenSearch bulk API expects. Once everything is in one shape, search, charts, and crosstabs work the same across sources.
+- Keeping ingestion state in PostgreSQL (which files were already fetched) is what makes a scheduled pull safe to rerun: a file is loaded once, not every time the schedule fires. The audit log in the same database records who changed which source or ran which fetch.
+- AI summaries and question answering sit on top of search results, not on raw files. The query narrows down to the relevant log lines first, and the model only reasons over that slice, which is the same retrieval principle as document RAG.
+- The MCP server exposes the same search and aggregation as tools, so an agent can pull logs from several sources, compare patterns between them, and work toward a root cause across multiple steps instead of answering from a single query.

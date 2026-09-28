@@ -17,6 +17,9 @@
 ![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
 ![OpenSearch](https://img.shields.io/badge/OpenSearch-005EB8?style=flat-square&logo=opensearch&logoColor=white)
 ![Apache NiFi](https://img.shields.io/badge/Apache_NiFi-728E9B?style=flat-square&logo=apachenifi&logoColor=white)
+![Apache Airflow](https://img.shields.io/badge/Apache_Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white)
+![Apache Spark](https://img.shields.io/badge/Apache_Spark-E25A1C?style=flat-square&logo=apachespark&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![Kong](https://img.shields.io/badge/Kong-003459?style=flat-square&logo=kong&logoColor=white)
 ![Oracle](https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white)
 ![Microsoft SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)
@@ -131,7 +134,7 @@ This repository is a map of that work. This page is the summary.
 | Project | What it is |
 |---|---|
 | [ARK](https://github.com/raven-clown/ark) | Kafka-to-HTTP bridge with flows, a cluster mode, an MCP server and a React console |
-| [Delta Electronics](./experience/delta-electronics) | The CI/CD platform, MES dashboards, and diagnostic tools I build and run as my day job |
+| [Delta Electronics](./experience/delta-electronics) | The CI/CD platform, central Kafka and NiFi platforms, the AIDeltron log analytics platform, MES dashboards, and diagnostic tools I build and run as my day job |
 | [FiveM & RedM Platform](./experience/fivem-redm-platform) | A multiplayer roleplay platform I founded and ran end to end for five years |
 | [Side Projects](./experience/side-projects) | [ARK](https://github.com/raven-clown/ark), [RoomedIn](https://www.roomedin.online/), [IdpForge](https://github.com/raven-clown/idpforge), [Vinylcord](https://github.com/raven-clown/vinylcord), [mcp-stdio-debug](https://www.npmjs.com/package/mcp-stdio-debug), [source-hub](https://github.com/raven-clown/source-hub), [samatha-command-ai](https://github.com/raven-clown/training-ai-voice), a habit-tracking tool, and a code snippet manager |
 | [Academic Projects](./experience/academic-projects) | Three projects from vocational and university coursework |
@@ -264,6 +267,37 @@ flowchart LR
     Metrics --> UI2["MES dashboard\n(React + .NET 8 + Docker Swarm)"]
 ```
 
+### Delta: AIDeltron Log Analytics
+
+Logs from every app and machine, in one place, with the cause attached.
+
+```mermaid
+flowchart LR
+    Src["API / routing / SMT /\naggregator .log files"] --> Ingest["Python ingestion\nscheduled or manual"]
+    Ingest --> OS[("OpenSearch\nNDJSON bulk load")]
+    Ingest --> PG[("PostgreSQL\nfetch state, aggregates,\naudit log")]
+    OS --> API["FastAPI"]
+    PG --> API
+    API --> UI["Search, charts, crosstab,\nAI summary, AI Q&A"]
+    API --> MCP["MCP server\nroot cause analysis"]
+```
+
+### Delta: Central Kafka and NiFi Platforms
+
+Shared platforms other IT teams plug their apps into, and the data flows built on top of them.
+
+```mermaid
+flowchart LR
+    Oracle[("Oracle MES DBs")] -->|"CDC / JDBC"| NiFi["Central NiFi\nplatform"]
+    NiFi -->|"raw topics"| Kafka[("Central Kafka platform\nKRaft, 3 brokers, RF 3")]
+    Apps["Other IT apps"] <--> Kafka
+    Kafka --> Spark["Spark Structured\nStreaming"]
+    Spark -->|"gold topics"| Kafka
+    Airflow["Airflow workflows\nevery 15-30 min"] -.-> Spark
+    Kafka -->|"JMX"| Prom["Prometheus / Grafana"]
+    Nginx["nginx"] --> AKHQ["AKHQ"] --> Kafka
+```
+
 ### FiveM Server Platform
 
 Server, systems, and the storefront running alongside it.
@@ -337,6 +371,7 @@ flowchart LR
 | **Frameworks** | React, Next.js, Nuxt.js, Vue.js, Svelte, Electron, ASP.NET Core (.NET 8), Express.js, NestJS |
 | **Infrastructure** | GitLab CI/CD, GitHub Actions, Docker, Docker Swarm, Kubernetes (Rancher), Harbor Registry, GitHub Container Registry, AWS, Vercel, MinIO, Redis, Kong, Prometheus, Grafana |
 | **Streaming & Integration** | Kafka (KRaft, consumer groups, compacted topics), AKHQ, Apache NiFi, OpenSearch |
+| **Data Processing** | Spark Structured Streaming, Apache Airflow |
 | **Databases** | Oracle, Microsoft SQL Server, PostgreSQL, MySQL, MongoDB, Supabase |
 | **AI** | MCP servers, retrieval-based LLM systems, OpenAI-compatible and local models |
 | **Data** | Power BI, machine learning fundamentals |

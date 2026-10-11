@@ -44,7 +44,7 @@ flowchart LR
 
 ## Applied To Internal Knowledge Search
 
-Built an internal document search tool using this pattern end to end: documents chunked ahead of time, a query-time retrieval step, and the Qwen API as the underlying LLM answering from whatever was retrieved. Full context in [`experience/delta-electronics`](../../experience/delta-electronics).
+Built an internal document search tool using this pattern end to end: documents synced from SharePoint, Confluence, and ServiceDesk Plus tickets and chunked ahead of time, a query-time retrieval step, and the Qwen API as the underlying LLM answering from whatever was retrieved. Full context in [`experience/delta-electronics`](../../experience/delta-electronics).
 
 ## Beyond Plain RAG: Reranking, Vision, and Embeddings
 

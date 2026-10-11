@@ -2,15 +2,16 @@
 
 # Ekdanai Kummee (RAVEN)
 
-**Application Engineer** at Delta Electronics Thailand · DevOps, backend and full-stack web
+**Application Engineer** at Delta Electronics Thailand · DevOps, data platforms and full-stack web · Project lead
 
 [![GitHub](https://img.shields.io/badge/GitHub-raven--clown-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/raven-clown)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Ekdanai_Kummee-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ekdanai-kummee-793ba43ab/)
 [![Email](https://img.shields.io/badge/Email-ekdanai.kk%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:ekdanai.kk@gmail.com)
 [![ARK](https://img.shields.io/badge/Featured-ARK-2EE6A6?style=flat-square&logo=apachekafka&logoColor=white)](https://github.com/raven-clown/ark)
 
 <br>
 
-[![My Skills](https://skillicons.dev/icons?i=cs,ts,js,go,lua,py,java,php,html,css,react,nextjs,nuxtjs,vue,svelte,jquery,tailwind,vite,electron,figma,nodejs,bun,dotnet,express,nestjs,prisma,npm,vitest,redis,kafka,postgres,mysql,mongodb,supabase,sqlite,elasticsearch,docker,kubernetes,nginx,aws,vercel,githubactions,gitlab,github,git,grafana,prometheus,linux,redhat,windows,bash,powershell,vscode,visualstudio,notion,ps,ai,arduino,discord&perline=10)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=cs,ts,js,go,lua,py,java,spring,php,html,css,react,nextjs,nuxtjs,vue,svelte,jquery,tailwind,vite,electron,figma,nodejs,bun,dotnet,express,nestjs,prisma,npm,vitest,redis,kafka,postgres,mysql,mongodb,supabase,sqlite,elasticsearch,docker,kubernetes,nginx,aws,vercel,githubactions,gitlab,github,git,grafana,prometheus,linux,redhat,windows,bash,powershell,vscode,visualstudio,notion,ps,ai,arduino,discord&perline=10)](https://skillicons.dev)
 
 <br>
 
@@ -20,6 +21,7 @@
 ![Apache Airflow](https://img.shields.io/badge/Apache_Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white)
 ![Apache Spark](https://img.shields.io/badge/Apache_Spark-E25A1C?style=flat-square&logo=apachespark&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
 ![Kong](https://img.shields.io/badge/Kong-003459?style=flat-square&logo=kong&logoColor=white)
 ![Oracle](https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white)
 ![Microsoft SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)
@@ -99,7 +101,9 @@ A self-hosted bridge between Kafka and the HTTP services a team already has, bui
 
 ## About
 
-I'm a junior developer at Delta Electronics Thailand, on the IT manufacturing systems team, where I handle both DevOps and full-stack web development for the factory's MES (Manufacturing Execution System) tooling. I also run my own projects end to end: planning them, building them, presenting them to the team, and supporting the people who use them afterward.
+I'm an Application Engineer at Delta Electronics Thailand, on the IT manufacturing systems team, where I handle DevOps, full-stack web development, and production line support for the factory's MES (Manufacturing Execution System) tooling. I also act as project manager on almost everything I build: planning it, working with other departments to keep it moving, presenting it to the department, and supporting the people who use it afterward.
+
+Beyond the apps, I build the data infrastructure behind them: a central Kafka platform other teams plug into, a NiFi cluster, pipelines that stream production data out of the MES, and a log analytics platform on OpenSearch for tracing application and machine failures. Lately that has grown into AI tools on our own data: a knowledge search assistant over SharePoint, Confluence, and ServiceDesk Plus, and a system that analyzes finance documents every month.
 
 Outside of work, I've spent about five years building and operating multiplayer game-server platforms (FiveM and RedM), which is where most of my backend, database, and systems-architecture experience actually comes from before I ever touched a corporate codebase. I taught myself Lua well enough to write almost anything in it from memory, and that same instinct for "just build the thing and fix what breaks" carried over into everything else here: DevOps, backend APIs, database design, and UI.
 
@@ -111,7 +115,7 @@ This repository is a map of that work. This page is the summary.
 | [`experience/`](./experience) | The portfolio: concrete projects and what came out of them |
 | [`brain/`](./brain) | The knowledge base: how each skill area actually works, in detail |
 
-**Education:** B.Sc. Digital Business Technology, Southeast Bangkok University (2025, GPA 3.63, First Class Honors / Gold Medal) · High Vocational Certificate in Information Technology, Attawit Commercial Technology College (2023, GPA 3.10)
+**Education:** B.Sc. Digital Business Technology, Southeast Bangkok University (2025, GPA 3.53, First Class Honors / Gold Medal) · High Vocational Certificate in Information Technology, Attawit Commercial Technology College (2023, GPA 3.10)
 
 **Languages:** Thai (native), English (working proficiency)
 
@@ -134,7 +138,7 @@ This repository is a map of that work. This page is the summary.
 | Project | What it is |
 |---|---|
 | [ARK](https://github.com/raven-clown/ark) | Kafka-to-HTTP bridge with flows, a cluster mode, an MCP server and a React console |
-| [Delta Electronics](./experience/delta-electronics) | The CI/CD platform, central Kafka and NiFi platforms, the AIDeltron log analytics platform, MES dashboards, and diagnostic tools I build and run as my day job |
+| [Delta Electronics](./experience/delta-electronics) | The CI/CD platform, central Kafka and NiFi platforms, the AIDeltron log analytics platform, AIFinance, the internal knowledge search tool, a request review system, MES dashboards, and diagnostic tools I build and run as my day job |
 | [FiveM & RedM Platform](./experience/fivem-redm-platform) | A multiplayer roleplay platform I founded and ran end to end for five years |
 | [Side Projects](./experience/side-projects) | [ARK](https://github.com/raven-clown/ark), [RoomedIn](https://www.roomedin.online/), [IdpForge](https://github.com/raven-clown/idpforge), [Vinylcord](https://github.com/raven-clown/vinylcord), [mcp-stdio-debug](https://www.npmjs.com/package/mcp-stdio-debug), [source-hub](https://github.com/raven-clown/source-hub), [samatha-command-ai](https://github.com/raven-clown/training-ai-voice), a habit-tracking tool, and a code snippet manager |
 | [Academic Projects](./experience/academic-projects) | Three projects from vocational and university coursework |
@@ -273,13 +277,41 @@ Logs from every app and machine, in one place, with the cause attached.
 
 ```mermaid
 flowchart LR
-    Src["API / routing / SMT /\naggregator .log files"] --> Ingest["Python ingestion\nscheduled or manual"]
-    Ingest --> OS[("OpenSearch\nNDJSON bulk load")]
-    Ingest --> PG[("PostgreSQL\nfetch state, aggregates,\naudit log")]
+    Src["API / routing / SMT /\naggregator .log files\nacross many IPs"] --> Ingest["Python ingestion\nscheduled or manual"]
+    Ingest --> OS[("OpenSearch cluster\n2 nodes, NDJSON bulk load")]
+    Ingest --> PG[("PostgreSQL\nfetch state, aggregates, history,\naudit log, AI token usage")]
+    Ingest --> Lite[("SQLite\nlightweight data")]
     OS --> API["FastAPI"]
     PG --> API
-    API --> UI["Search, charts, crosstab,\nAI summary, AI Q&A"]
+    Lite --> API
+    API --> UI["Machine logs, search, crosstab,\ndaily issues vs targets,\nAI summary, AI assistant"]
     API --> MCP["MCP server\nroot cause analysis"]
+```
+
+### Delta: AIFinance
+
+Finance documents in once a month, matched, and turned into analysis.
+
+```mermaid
+flowchart LR
+    Docs["Monthly finance\ndocuments"] --> API["FastAPI backend\n(Python)"]
+    API --> Match["Match related records\nacross sources"]
+    Match --> PG[("PostgreSQL\nmatched and historical data")]
+    PG --> AI["AI summaries and analysis\nvendors, customers,\ncurrency, salary"]
+    AI --> UI["React web app"]
+    AI --> Mail["Email notifications"]
+```
+
+### Delta: Request Review System
+
+Files people submit, stored once, and handed to the review flows that already exist.
+
+```mermaid
+flowchart LR
+    Web["Web frontend"] -->|"REST API"| API["Spring Boot backend\n(Java)"]
+    API --> MinIO[("MinIO in Docker\nslides, documents, images")]
+    API --> SQL[("SQL Server\nrequests, history,\nreview records")]
+    API --> Flows["Existing review flows\nMES requests, VM server requests"]
 ```
 
 ### Delta: Central Kafka and NiFi Platforms
@@ -368,12 +400,12 @@ flowchart LR
 | Area | Tools |
 |---|---|
 | **Languages** | C#, TypeScript, JavaScript, Python, Java, PHP, Go, Lua, SQL |
-| **Frameworks** | React, Next.js, Nuxt.js, Vue.js, Svelte, Electron, ASP.NET Core (.NET 8), Express.js, NestJS |
+| **Frameworks** | React, Next.js, Nuxt.js, Vue.js, Svelte, Electron, ASP.NET Core (.NET 8), Spring Boot, FastAPI, Express.js, NestJS |
 | **Infrastructure** | GitLab CI/CD, GitHub Actions, Docker, Docker Swarm, Kubernetes (Rancher), Harbor Registry, GitHub Container Registry, AWS, Vercel, MinIO, Redis, Kong, Prometheus, Grafana |
 | **Streaming & Integration** | Kafka (KRaft, consumer groups, compacted topics), AKHQ, Apache NiFi, OpenSearch |
 | **Data Processing** | Spark Structured Streaming, Apache Airflow |
-| **Databases** | Oracle, Microsoft SQL Server, PostgreSQL, MySQL, MongoDB, Supabase |
-| **AI** | MCP servers, retrieval-based LLM systems, OpenAI-compatible and local models |
+| **Databases** | Oracle, Microsoft SQL Server, PostgreSQL, MySQL, SQLite, MongoDB, Supabase |
+| **AI** | MCP servers, retrieval-based LLM systems (Qwen embeddings, rerankers, vision-language models, speech-to-text), OpenAI-compatible and local models |
 | **Data** | Power BI, machine learning fundamentals |
 | **Other** | LINE Bot/OA API, Figma, Arduino and embedded systems, Cisco networking, Adobe Photoshop/Illustrator, Linux (RHEL), Windows Server, Visual Studio, VS Code, Notion |
 
@@ -383,3 +415,4 @@ flowchart LR
 
 - Email: ekdanai.kk@gmail.com
 - GitHub: [raven-clown](https://github.com/raven-clown)
+- LinkedIn: [Ekdanai Kummee](https://www.linkedin.com/in/ekdanai-kummee-793ba43ab/)

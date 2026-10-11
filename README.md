@@ -8,6 +8,7 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Ekdanai_Kummee-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ekdanai-kummee-793ba43ab/)
 [![Email](https://img.shields.io/badge/Email-ekdanai.kk%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:ekdanai.kk@gmail.com)
 [![ARK](https://img.shields.io/badge/Featured-ARK-2EE6A6?style=flat-square&logo=apachekafka&logoColor=white)](https://github.com/raven-clown/ark)
+[![tack](https://img.shields.io/badge/Featured-tack-00ADD8?style=flat-square&logo=go&logoColor=white)](https://github.com/raven-clown/tack)
 
 <br>
 
@@ -138,9 +139,10 @@ This repository is a map of that work. This page is the summary.
 | Project | What it is |
 |---|---|
 | [ARK](https://github.com/raven-clown/ark) | Kafka-to-HTTP bridge with flows, a cluster mode, an MCP server and a React console |
+| [tack](https://github.com/raven-clown/tack) | Type-safe HTTP APIs for Go on `net/http`: one struct gives binding, validation, OpenAPI docs, a TypeScript client whose declared errors form a typed union, Zod schemas, a dev loop and a mock server |
 | [Delta Electronics](./experience/delta-electronics) | The CI/CD platform, central Kafka and NiFi platforms, the AIDeltron log analytics platform, AIFinance, the internal knowledge search tool, a request review system, MES dashboards, and diagnostic tools I build and run as my day job |
 | [FiveM & RedM Platform](./experience/fivem-redm-platform) | A multiplayer roleplay platform I founded and ran end to end for five years |
-| [Side Projects](./experience/side-projects) | [ARK](https://github.com/raven-clown/ark), [RoomedIn](https://www.roomedin.online/), [IdpForge](https://github.com/raven-clown/idpforge), [Vinylcord](https://github.com/raven-clown/vinylcord), [mcp-stdio-debug](https://www.npmjs.com/package/mcp-stdio-debug), [source-hub](https://github.com/raven-clown/source-hub), [samatha-command-ai](https://github.com/raven-clown/training-ai-voice), a habit-tracking tool, and a code snippet manager |
+| [Side Projects](./experience/side-projects) | [ARK](https://github.com/raven-clown/ark), [tack](https://github.com/raven-clown/tack), [RoomedIn](https://www.roomedin.online/), [IdpForge](https://github.com/raven-clown/idpforge), [Vinylcord](https://github.com/raven-clown/vinylcord), [mcp-stdio-debug](https://www.npmjs.com/package/mcp-stdio-debug), [source-hub](https://github.com/raven-clown/source-hub), [samatha-command-ai](https://github.com/raven-clown/training-ai-voice), a habit-tracking tool, and a code snippet manager |
 | [Academic Projects](./experience/academic-projects) | Three projects from vocational and university coursework |
 
 ---
@@ -157,7 +159,7 @@ Knowledge: [`brain/devops-infrastructure`](./brain/devops-infrastructure) · Por
 
 ### Backend Development
 
-ASP.NET Core, NestJS with Prisma, and Go. How each one structures a request, handles data access, and where they're each the right tool.
+ASP.NET Core, NestJS with Prisma, and Go, including [tack](https://github.com/raven-clown/tack), a Go API framework I wrote. How each one structures a request, handles data access, and where they're each the right tool.
 
 Knowledge: [`brain/backend-development`](./brain/backend-development) · Portfolio: [`experience/delta-electronics`](./experience/delta-electronics) · [`experience/side-projects`](./experience/side-projects)
 
@@ -237,6 +239,24 @@ flowchart LR
     Console["ARK Console\n(React + React Flow)"] <--> Engine
     Agents["MCP agents\nand Ask ARK"] <--> Engine
     Engine <-.->|"heartbeats, leader,\nshared config"| Nodes["Other ARK nodes"]
+```
+
+### [tack](https://github.com/raven-clown/tack): One Struct, Every Output
+
+Everything is derived at registration from the handler's types; the request path runs precomputed plans only, and every generated artifact reads the same OpenAPI document.
+
+```mermaid
+flowchart LR
+    Structs["Handler In / Out structs\npath, query, header, cookie,\nform and Body tags"] --> Reg["Registration, once\nbind plan, schema registry,\nOpenAPI 3.1 document"]
+    Reg --> Req["Request time\nplan, validator, handler"]
+    Req --> Resp["JSON, problem+json,\nserver-sent events"]
+    Reg --> Doc[("OpenAPI document")]
+    Doc --> Docs["/docs"]
+    Doc --> TS["api.ts\nResult unions by error code"]
+    Doc --> Zod["schemas.ts\nZod with the same rules"]
+    Doc --> Mock["tack mock"]
+    Dev["tack dev\nrebuild and regenerate on save"] -.-> Doc
+    Check["tack check / tsgen.Check\nCI fails on a stale client"] -.-> TS
 ```
 
 ### Delta MES: CI/CD and Deployment

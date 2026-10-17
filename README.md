@@ -291,6 +291,8 @@ Where the data actually comes from and how it reaches the screen.
 ```mermaid
 flowchart LR
     Oracle[("Oracle DB\nPROD_SCHEMA_A / PROD_SCHEMA_B")] --> API["ASP.NET Core API"]
+    MSSQL[("MS SQL Server")] --> API
+    PG[("PostgreSQL")] --> API
     API --> CTP["CTP comparison engine\n(CTE-based MATCH / MISMATCH)"]
     API --> Yield["Yield Tracker engine\n(station pass/fail aggregation)"]
     API --> Metrics["/api/health\n/api/metrics"]

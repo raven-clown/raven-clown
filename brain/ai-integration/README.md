@@ -61,18 +61,20 @@ Machine logs, internal API responses, and error output from the factory floor ar
 
 ```mermaid
 flowchart LR
-    Src["API / routing / SMT /\naggregator .log files"] --> Ingest["Python ingestion\nscheduled or manual upload"]
-    Ingest --> NDJSON["Convert to NDJSON"]
-    NDJSON --> OS[("OpenSearch")]
-    Ingest --> PG[("PostgreSQL\nfetch state, aggregates,\naudit log")]
+    Src["Gateway / routing / SMT /\nIoT aggregator logs"] -->|"new bytes only"| Col["Collector, workers,\nimporter (Go)"]
+    Col --> Parse["Python parsers\none record shape"]
+    Parse --> OS[("OpenSearch\ndaily indices")]
     OS --> API["FastAPI"]
-    PG --> API
-    API --> UI["UI: search, charts, crosstab,\nAI summary, AI Q&A, source config"]
-    API --> MCP["MCP server"]
-    MCP --> Agent["Agent: questions,\npattern comparison, root cause"]
+    API --> UI["Search, issues, crosstab,\nAI assistant with scoped links"]
+    OS --> Watch["Alert watcher"]
+    Watch --> AI["AI summary\nof each incident"]
+    Watch --> Teams["Teams"]
+    AI --> Teams
+    API --> Ext["External API\nfor other AI tools"]
 ```
 
-- Every log source writes in its own format, so the ingestion step's real job is normalization: parse each format into one document shape and write it as NDJSON, which is what the OpenSearch bulk API expects. Once everything is in one shape, search, charts, and crosstabs work the same across sources.
-- Keeping ingestion state in PostgreSQL (which files were already fetched) is what makes a scheduled pull safe to rerun: a file is loaded once, not every time the schedule fires. The audit log in the same database records who changed which source or ran which fetch.
-- AI summaries and question answering sit on top of search results, not on raw files. The query narrows down to the relevant log lines first, and the model only reasons over that slice, which is the same retrieval principle as document RAG.
-- The MCP server exposes the same search and aggregation as tools, so an agent can pull logs from several sources, compare patterns between them, and work toward a root cause across multiple steps instead of answering from a single query.
+- Every log source writes in its own format, so the parsers' real job is normalization: turn each format into one record shape. Once everything is in one shape, search, charts, crosstabs and alert rules work the same across sources.
+- The numbers never come from the model. Counts, issues and alert decisions come from OpenSearch queries and fixed rules, and the model only explains them: what an incident means for production, or the answer to a question asked over a slice of records it was handed.
+- Each answer returns the time range, sources, sites and filters it used, so every link inside the answer opens the same records the answer was based on. Counts, times and percentages in an answer are not turned into links, because no record holds them as written.
+- AI summaries of alerts run one at a time in their own queue and retry when the AI gateway is busy, so a burst of incidents never blocks a person's own question to the assistant.
+- An external API with read, tune and admin keys gives other AI tools the same search and aggregation, plus the settings, and every change made through it is logged with the values before and after and can be undone once.

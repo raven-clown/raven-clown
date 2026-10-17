@@ -104,7 +104,7 @@ A self-hosted bridge between Kafka and the HTTP services a team already has, bui
 
 I'm an Application Engineer at Delta Electronics Thailand, on the IT manufacturing systems team, where I handle DevOps, full-stack web development, and production line support for the factory's MES (Manufacturing Execution System) tooling. I also act as project manager on almost everything I build: planning it, working with other departments to keep it moving, presenting it to the department, and supporting the people who use it afterward.
 
-Beyond the apps, I build the data infrastructure behind them: a central Kafka platform other teams plug into, a NiFi cluster, pipelines that stream production data out of the MES, and a log analytics platform on OpenSearch for tracing application and machine failures. Lately that has grown into AI tools on our own data: a knowledge search assistant over SharePoint, Confluence, and ServiceDesk Plus, and a system that analyzes finance documents every month.
+Beyond the apps, I build the data infrastructure behind them: a central Kafka platform other teams plug into, a NiFi cluster, pipelines that stream production data out of the MES, and a log analytics platform on OpenSearch for tracing application and machine failures. Lately that has grown into AI tools on our own data: an AI portal with a knowledge search assistant over SharePoint, Confluence, and ServiceDesk Plus, log analysis that alerts Teams when production is hurt, and a system that matches Finance's customers and vendors from SAP every month.
 
 Outside of work, I've spent about five years building and operating multiplayer game-server platforms (FiveM and RedM), which is where most of my backend, database, and systems-architecture experience actually comes from before I ever touched a corporate codebase. I taught myself Lua well enough to write almost anything in it from memory, and that same instinct for "just build the thing and fix what breaks" carried over into everything else here: DevOps, backend APIs, database design, and UI.
 
@@ -140,7 +140,7 @@ This repository is a map of that work. This page is the summary.
 |---|---|
 | [ARK](https://github.com/raven-clown/ark) | Kafka-to-HTTP bridge with flows, a cluster mode, an MCP server and a React console |
 | [tack](https://github.com/raven-clown/tack) | Type-safe HTTP APIs for Go on `net/http`: one struct gives binding, validation, OpenAPI docs, a TypeScript client whose declared errors form a typed union, Zod schemas, a dev loop and a mock server |
-| [Delta Electronics](./experience/delta-electronics) | The CI/CD platform, central Kafka and NiFi platforms, the AIDeltron log analytics platform, AIFinance, the internal knowledge search tool, a request review system, MES dashboards, and diagnostic tools I build and run as my day job |
+| [Delta Electronics](./experience/delta-electronics) | The CI/CD platform, central Kafka and NiFi platforms, the AIDeltron log analytics platform with Teams alerts, the AI Center portal and AI Monitor, AIFinance company matching, a requirement tracking backend, MES dashboards, and diagnostic tools I build and run as my day job |
 | [FiveM & RedM Platform](./experience/fivem-redm-platform) | A multiplayer roleplay platform I founded and ran end to end for five years |
 | [Side Projects](./experience/side-projects) | [ARK](https://github.com/raven-clown/ark), [tack](https://github.com/raven-clown/tack), [RoomedIn](https://www.roomedin.online/), [IdpForge](https://github.com/raven-clown/idpforge), [Vinylcord](https://github.com/raven-clown/vinylcord), [mcp-stdio-debug](https://www.npmjs.com/package/mcp-stdio-debug), [source-hub](https://github.com/raven-clown/source-hub), [samatha-command-ai](https://github.com/raven-clown/training-ai-voice), a habit-tracking tool, and a code snippet manager |
 | [Academic Projects](./experience/academic-projects) | Three projects from vocational and university coursework |
@@ -301,45 +301,71 @@ flowchart LR
 
 ### Delta: AIDeltron Log Analytics
 
-Logs from every app and machine, in one place, with the cause attached.
+Only the new bytes of every log, parsed, searchable, and turned into Teams alerts while production is still affected.
 
 ```mermaid
 flowchart LR
-    Src["API / routing / SMT /\naggregator .log files\nacross many IPs"] --> Ingest["Python ingestion\nscheduled or manual"]
-    Ingest --> OS[("OpenSearch cluster\n2 nodes, NDJSON bulk load")]
-    Ingest --> PG[("PostgreSQL\nfetch state, aggregates, history,\naudit log, AI token usage")]
-    Ingest --> Lite[("SQLite\nlightweight data")]
-    OS --> API["FastAPI"]
-    PG --> API
-    Lite --> API
-    API --> UI["Machine logs, search, crosstab,\ndaily issues vs targets,\nAI summary, AI assistant"]
-    API --> MCP["MCP server\nroot cause analysis"]
+    Src["Gateway / routing / SMT /\nIoT aggregator log servers"] -->|"new bytes only\n(HTTP Range)"| Col["Collector\n(Go)"]
+    Col --> Jobs[("PostgreSQL\njob queue")]
+    Jobs --> W["Workers (Go, auto-scaled)\nrunning Python parsers"]
+    W --> Imp["Importer\n(Go)"]
+    Imp --> OS[("OpenSearch\ndaily indices")]
+    OS --> API["FastAPI\nsearch, issues,\nAI assistant, exports"]
+    OS --> Watch["Alert watcher\n(own container)"]
+    Watch -->|"outbox, retries"| Teams["Teams\nwebhook or channel email"]
+    Nginx["nginx\nblue/green API"] --> API
+    API --> UI["MES portal page and\nAI OpenSearch page"]
+    API --> Ext["External API\nfor other AI tools"]
+```
+
+### Delta: AI Center Portal and AI Monitor
+
+One portal for every AI project, split into services one step at a time.
+
+```mermaid
+flowchart LR
+    User["Browser\nSSO login"] --> Nginx["nginx"]
+    Nginx --> Portal["AI Center\n(React 19)"]
+    Nginx --> Edge["Edge\n(Go)"]
+    Edge --> API["API role"]
+    Edge --> Chat["Chat role\nretrieval answers"]
+    Edge --> Media["Media role\nstaff photos as WebP"]
+    Worker["Worker role\nConfluence / SharePoint sync"] --> PG
+    API --> PG[("Postgres + pgvector")]
+    Chat --> PG
+    Chat --> AIGW["AI gateway proxy (Go)\nquota share, 429 queue"]
+    AIGW --> Corp["Company AI gateway"]
+    API --> Store[("MinIO / NATS")]
+    Ops["Ops (Go)\ncontainer scaling"] -.-> API
+    Analytics["Analytics (Go)\nAI Monitor numbers"] --> PG
 ```
 
 ### Delta: AIFinance
 
-Finance documents in once a month, matched, and turned into analysis.
+Company matching for Finance: the same company found across SAP exports, put under its group, with every number from code.
 
 ```mermaid
 flowchart LR
-    Docs["Monthly finance\ndocuments"] --> API["FastAPI backend\n(Python)"]
-    API --> Match["Match related records\nacross sources"]
-    Match --> PG[("PostgreSQL\nmatched and historical data")]
-    PG --> AI["AI summaries and analysis\nvendors, customers,\ncurrency, salary"]
-    AI --> UI["React web app"]
-    AI --> Mail["Email notifications"]
+    Files["Monthly SAP exports\nmail or upload"] --> API["Web backend\n(FastAPI, roles)"]
+    API --> Queue[("NATS JetStream\nrun queue")]
+    Queue --> Worker["Workers\nread, normalize, exclude,\nmatch, group, check, summarize"]
+    Worker --> GW["AI gateway client\npaced batch questions"]
+    Know[("Knowledge file\noutranks the AI")] --> Worker
+    Worker --> PG[("PostgreSQL\nstored decisions, runs")]
+    PG --> UI["Dashboard\nreview and release"]
+    UI --> Export["xlsx / pdf / docx / pptx\nfour languages"]
 ```
 
-### Delta: Request Review System
+### Delta: Requirement Request Tracking
 
-Files people submit, stored once, and handed to the review flows that already exist.
+Requests that move through MES, AP, IT Server and OA review, stored as append-only snapshots.
 
 ```mermaid
 flowchart LR
-    Web["Web frontend"] -->|"REST API"| API["Spring Boot backend\n(Java)"]
-    API --> MinIO[("MinIO in Docker\nslides, documents, images")]
-    API --> SQL[("SQL Server\nrequests, history,\nreview records")]
-    API --> Flows["Existing review flows\nMES requests, VM server requests"]
+    Web["React frontend"] -->|"JWT"| API["FastAPI backend\nworkflow rules"]
+    API -->|"SELECT / INSERT only\nsnapshot per change,\napp lock + revision check"| SQL[("SQL Server")]
+    API -->|"files, metadata,\ncommit markers"| MinIO[("MinIO")]
+    API --> Flow["MES / AP / IT Server / OA\nreview stages"]
 ```
 
 ### Delta: Central Kafka and NiFi Platforms

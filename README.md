@@ -147,6 +147,14 @@ This repository is a map of that work. This page is the summary.
 
 ---
 
+## Open Source Contributions
+
+| Project | Contribution |
+|---|---|
+| [mark3labs/mcp-go](https://github.com/mark3labs/mcp-go) | [#1042](https://github.com/mark3labs/mcp-go/pull/1042): the streamable HTTP client now reports the real HTTP status when a gateway, CDN or web framework answers with a JSON error body, instead of failing with an unrelated parse error |
+
+---
+
 ## What I Actually Do
 
 Each area below is split two ways. **Knowledge** explains how the technology itself works. **Portfolio** shows what I actually built with it. They're kept separate on purpose: one is reference material, the other is proof of work.

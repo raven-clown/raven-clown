@@ -42,9 +42,9 @@ flowchart LR
 
 - Once relevant chunks are retrieved, they're combined with the user's question into a single prompt sent to the model through its API. How clearly the retrieved context is separated from the instructions has a real effect on answer quality, independent of which model is behind the API.
 
-## Applied To Internal Knowledge Search
+## Applied To Company Knowledge: AI Deltron
 
-Built an internal document search tool using this pattern end to end: documents synced from SharePoint, Confluence, and ServiceDesk Plus tickets and chunked ahead of time, a query-time retrieval step, and the Qwen API as the underlying LLM answering from whatever was retrieved. Full context in [`experience/delta-electronics`](../../experience/delta-electronics).
+Built AI Deltron, an assistant that answers from the company's own knowledge, using this pattern end to end: documents synced from SharePoint, Confluence, and ServiceDesk Plus tickets and chunked ahead of time, a query-time retrieval step, and the Qwen API as the underlying LLM answering from whatever was retrieved. Full context in [`experience/delta-electronics`](../../experience/delta-electronics).
 
 ## Beyond Plain RAG: Reranking, Vision, and Embeddings
 
@@ -57,7 +57,7 @@ Built an internal document search tool using this pattern end to end: documents 
 
 Machine logs, internal API responses, and error output from the factory floor are a different kind of input from documents: high-volume, structured or semi-structured, and continuously produced. Used as fine-tuning input for smaller models trained to work with that data directly, rather than only routing everything through a general-purpose LLM prompt. Logs are indexed into OpenSearch, with retrieval over that index used to ground answers about what a machine or service actually did, the same "ground answers in retrieved data instead of memory" principle as the document RAG case above, applied to operational data instead of static documents.
 
-## Applied To Log Analysis: AIDeltron
+## Applied To Log Analysis: AI OpenSearch
 
 ```mermaid
 flowchart LR

@@ -104,7 +104,7 @@ A self-hosted bridge between Kafka and the HTTP services a team already has, bui
 
 I'm an Application Engineer at Delta Electronics Thailand, on the IT manufacturing systems team, where I handle DevOps, full-stack web development, and production line support for the factory's MES (Manufacturing Execution System) tooling. I also act as project manager on almost everything I build: planning it, working with other departments to keep it moving, presenting it to the department, and supporting the people who use it afterward.
 
-Beyond the apps, I build the data infrastructure behind them: a central Kafka platform other teams plug into, a NiFi cluster, pipelines that stream production data out of the MES, and a log analytics platform on OpenSearch for tracing application and machine failures. Lately that has grown into AI tools on our own data: an AI portal with a knowledge search assistant over SharePoint, Confluence, and ServiceDesk Plus, log analysis that alerts Teams when production is hurt, and a system that matches Finance's customers and vendors from SAP every month.
+Beyond the apps, I build the data infrastructure behind them: a central Kafka platform other teams plug into, a NiFi cluster, pipelines that stream production data out of the MES, and a log analytics platform on OpenSearch for tracing application and machine failures. Lately that has grown into AI tools on our own data. AI Deltron answers from the company's own knowledge in SharePoint, Confluence, and ServiceDesk Plus. AI OpenSearch analyzes logs and alerts Teams when production is hurt. AIFinance matches Finance's customers and vendors from SAP every month. AI Center is the web portal that brings all of these AI projects together in one place.
 
 Outside of work, I've spent about five years building and operating multiplayer game-server platforms (FiveM and RedM), which is where most of my backend, database, and systems-architecture experience actually comes from before I ever touched a corporate codebase. I taught myself Lua well enough to write almost anything in it from memory, and that same instinct for "just build the thing and fix what breaks" carried over into everything else here: DevOps, backend APIs, database design, and UI.
 
@@ -140,7 +140,7 @@ This repository is a map of that work. This page is the summary.
 |---|---|
 | [ARK](https://github.com/raven-clown/ark) | Kafka-to-HTTP bridge with flows, a cluster mode, an MCP server and a React console |
 | [tack](https://github.com/raven-clown/tack) | Type-safe HTTP APIs for Go on `net/http`: one struct gives binding, validation, OpenAPI docs, a TypeScript client whose declared errors form a typed union, Zod schemas, a dev loop and a mock server |
-| [Delta Electronics](./experience/delta-electronics) | The CI/CD platform, central Kafka and NiFi platforms, the AIDeltron log analytics platform with Teams alerts, the AI Center portal and AI Monitor, AIFinance company matching, a requirement tracking backend, MES dashboards, and diagnostic tools I build and run as my day job |
+| [Delta Electronics](./experience/delta-electronics) | The CI/CD platform, central Kafka and NiFi platforms, the AI OpenSearch log analytics platform with Teams alerts, the AI Deltron knowledge assistant, the AI Center portal and AI Monitor, AIFinance company matching, a requirement tracking backend, MES dashboards, and diagnostic tools I build and run as my day job |
 | [FiveM & RedM Platform](./experience/fivem-redm-platform) | A multiplayer roleplay platform I founded and ran end to end for five years |
 | [Side Projects](./experience/side-projects) | [ARK](https://github.com/raven-clown/ark), [tack](https://github.com/raven-clown/tack), [RoomedIn](https://www.roomedin.online/), [IdpForge](https://github.com/raven-clown/idpforge), [Vinylcord](https://github.com/raven-clown/vinylcord), [mcp-stdio-debug](https://www.npmjs.com/package/mcp-stdio-debug), [source-hub](https://github.com/raven-clown/source-hub), [samatha-command-ai](https://github.com/raven-clown/training-ai-voice), a habit-tracking tool, and a code snippet manager |
 | [Academic Projects](./experience/academic-projects) | Three projects from vocational and university coursework |
@@ -301,7 +301,7 @@ flowchart LR
     Metrics --> UI2["MES dashboard\n(React + .NET 8 + Docker Swarm)"]
 ```
 
-### Delta: AIDeltron Log Analytics
+### Delta: AI OpenSearch Log Analytics
 
 Only the new bytes of every log, parsed, searchable, and turned into Teams alerts while production is still affected.
 
@@ -320,9 +320,9 @@ flowchart LR
     API --> Ext["External API\nfor other AI tools"]
 ```
 
-### Delta: AI Center Portal and AI Monitor
+### Delta: AI Center, AI Deltron and AI Monitor
 
-One portal for every AI project, split into services one step at a time.
+AI Center is the web portal for every AI project the team has built. AI Deltron answers from the company's own knowledge, and AI Monitor is the admin console behind both. The backend was split into services one step at a time.
 
 ```mermaid
 flowchart LR
@@ -330,7 +330,7 @@ flowchart LR
     Nginx --> Portal["AI Center\n(React 19)"]
     Nginx --> Edge["Edge\n(Go)"]
     Edge --> API["API role"]
-    Edge --> Chat["Chat role\nretrieval answers"]
+    Edge --> Chat["AI Deltron chat\nretrieval answers"]
     Edge --> Media["Media role\nstaff photos as WebP"]
     Worker["Worker role\nConfluence / SharePoint sync"] --> PG
     API --> PG[("Postgres + pgvector")]

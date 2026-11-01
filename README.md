@@ -1,474 +1,137 @@
 <div align="center">
 
-# Ekdanai Kummee (RAVEN)
+# Ekdanai Kummee
 
-**Application Engineer** at Delta Electronics Thailand · DevOps, data platforms and full-stack web · Project lead
+### Application Engineer · DevOps, data platforms and full-stack web
 
-[![GitHub](https://img.shields.io/badge/GitHub-raven--clown-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/raven-clown)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Ekdanai_Kummee-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ekdanai-kummee-793ba43ab/)
-[![Email](https://img.shields.io/badge/Email-ekdanai.kk%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:ekdanai.kk@gmail.com)
-[![ARK](https://img.shields.io/badge/Featured-ARK-2EE6A6?style=flat-square&logo=apachekafka&logoColor=white)](https://github.com/raven-clown/ark)
-[![tack](https://img.shields.io/badge/Featured-tack-00ADD8?style=flat-square&logo=go&logoColor=white)](https://github.com/raven-clown/tack)
+Building the systems behind a factory's MES at **Delta Electronics Thailand**, and open source tooling for Kafka and Go on the side.
 
 <br>
 
-[![My Skills](https://skillicons.dev/icons?i=cs,ts,js,go,lua,py,java,spring,php,html,css,react,nextjs,nuxtjs,vue,svelte,jquery,tailwind,vite,electron,figma,nodejs,bun,dotnet,express,nestjs,prisma,npm,vitest,redis,kafka,postgres,mysql,mongodb,supabase,sqlite,elasticsearch,docker,kubernetes,nginx,aws,vercel,githubactions,gitlab,github,git,grafana,prometheus,linux,redhat,windows,bash,powershell,vscode,visualstudio,notion,ps,ai,arduino,discord&perline=10)](https://skillicons.dev)
-
-<br>
-
-![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
-![OpenSearch](https://img.shields.io/badge/OpenSearch-005EB8?style=flat-square&logo=opensearch&logoColor=white)
-![Apache NiFi](https://img.shields.io/badge/Apache_NiFi-728E9B?style=flat-square&logo=apachenifi&logoColor=white)
-![Apache Airflow](https://img.shields.io/badge/Apache_Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white)
-![Apache Spark](https://img.shields.io/badge/Apache_Spark-E25A1C?style=flat-square&logo=apachespark&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
-![Kong](https://img.shields.io/badge/Kong-003459?style=flat-square&logo=kong&logoColor=white)
-![Oracle](https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white)
-![Microsoft SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)
-![MinIO](https://img.shields.io/badge/MinIO-C72E49?style=flat-square&logo=minio&logoColor=white)
-![Harbor](https://img.shields.io/badge/Harbor-60B932?style=flat-square)
-![Rancher](https://img.shields.io/badge/Rancher-0075A8?style=flat-square&logo=rancher&logoColor=white)
-![AKHQ](https://img.shields.io/badge/AKHQ-00ACC1?style=flat-square)
-![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square)
-![MCP](https://img.shields.io/badge/MCP-000000?style=flat-square&logo=modelcontextprotocol&logoColor=white)
-![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white)
-![LINE](https://img.shields.io/badge/LINE_API-06C755?style=flat-square&logo=line&logoColor=white)
-![Cisco](https://img.shields.io/badge/Cisco-1BA0D7?style=flat-square&logo=cisco&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
-![Machine Learning](https://img.shields.io/badge/Machine_Learning-FF6F00?style=flat-square)
-![Red Hat Enterprise Linux](https://img.shields.io/badge/RHEL-EE0000?style=flat-square&logo=redhat&logoColor=white)
-![Windows Server](https://img.shields.io/badge/Windows_Server-0078D4?style=flat-square&logo=windows&logoColor=white)
+[![GitHub](https://img.shields.io/badge/GitHub-raven--clown-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/raven-clown)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Ekdanai_Kummee-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ekdanai-kummee-793ba43ab/)
+[![Email](https://img.shields.io/badge/Email-ekdanai.kk%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ekdanai.kk@gmail.com)
 
 </div>
 
----
-
-## Featured Project: ARK
-
-<p align="center">
-  <a href="https://github.com/raven-clown/ark">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./assets/ark/ark-wordmark.svg">
-      <img src="./assets/ark/ark-wordmark-light.svg" alt="ARK" height="64">
-    </picture>
-  </a>
-</p>
-
-<p align="center"><b>Connect any Kafka topic to any HTTP app. No Kafka client code. Nothing lost.</b></p>
-
-<p align="center">
-  <a href="https://github.com/raven-clown/ark">Repository</a> ·
-  <a href="https://raven-clown.github.io/ark/">Website</a> ·
-  <a href="./experience/side-projects#ark">Write-up</a>
-</p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/ark/ark-flow-dark.svg">
-    <img src="./assets/ark/ark-flow-light.svg" alt="Messages flow from a Kafka topic through ARK to an HTTP app; results, bad data and failures each land in their own topic" width="760">
-  </picture>
-</p>
-
-A self-hosted bridge between Kafka and the HTTP services a team already has, built solo from an empty repo. ARK consumes each message, validates it, calls the app, and produces the answer to another topic, with retries, per-key ordering, dead letters and a circuit breaker built in. When one path isn't enough, a pipeline becomes a flow: conditions anywhere, fan-out to several apps, webhooks and topics, and a line of its own for every answer, reject and failure. One Go binary, one YAML file, and a React console to see and change all of it.
-
-<table>
-<tr>
-<td width="50%"><img src="./assets/ark/console-canvas.png" alt="Live pipeline canvas with dots moving along each line at the real message rate"></td>
-<td width="50%"><img src="./assets/ark/console-designer.png" alt="Flow designer with a data check, a condition, an app call, and OpenSearch and Slack steps"></td>
-</tr>
-<tr>
-<td align="center"><sub>Live canvas: every dot is ten real messages</sub></td>
-<td align="center"><sub>Flow designer with app steps and send patterns</sub></td>
-</tr>
-<tr>
-<td><img src="./assets/ark/console-pipeline.png" alt="One pipeline's health, throughput, lag, latency and live trace"></td>
-<td><img src="./assets/ark/console-metrics.png" alt="Metrics page with throughput and latency percentiles"></td>
-</tr>
-<tr>
-<td align="center"><sub>Health with the reason and the next step</sub></td>
-<td align="center"><sub>Throughput, lag and latency percentiles</sub></td>
-</tr>
-</table>
-
-- **Delivery you can trust:** at-least-once with in-order commits, stable correlation IDs, and every failure landing somewhere visible.
-- **Flows like a workflow:** a DAG of steps (call, condition, data check, topic, webhook, reject, dead letter) that refuses loops and commits each message once.
-- **Talks to the rest of the stack:** ready-made steps for OpenSearch, Elasticsearch, NiFi, another Kafka cluster, Slack, Discord and Teams.
-- **Cluster without a new dependency:** leader election, label-based placement and failover coordinated through Kafka itself.
-- **Built-in MCP server and assistant:** agents can diagnose a pipeline, explain an error or draft a config change that only applies after a confirmed preview.
-- **Checked on every push:** gosec, Semgrep, govulncheck, OSV-Scanner, Gitleaks, Trivy and CodeQL in CI.
-
----
+<br>
 
 ## About
 
-I'm an Application Engineer at Delta Electronics Thailand, on the IT manufacturing systems team, where I handle DevOps, full-stack web development, and production line support for the factory's MES (Manufacturing Execution System) tooling. I also act as project manager on almost everything I build: planning it, working with other departments to keep it moving, presenting it to the department, and supporting the people who use it afterward.
+- Application Engineer on the IT manufacturing systems team at Delta Electronics Thailand: CI/CD, Kubernetes, full-stack web, and production line support for MES tooling in an air-gapped network.
+- I build and run the shared data platforms other teams plug into: a central Kafka cluster, a NiFi cluster, streaming pipelines out of the MES, and a log analytics platform on OpenSearch.
+- I usually own what I build end to end, from scoping and cross-department coordination to presenting it and supporting the people who use it.
+- Before corporate work I spent five years founding and operating a multiplayer game-server platform (FiveM and RedM), which is where most of my backend and systems experience started.
 
-Beyond the apps, I build the data infrastructure behind them: a central Kafka platform other teams plug into, a NiFi cluster, pipelines that stream production data out of the MES, and a log analytics platform on OpenSearch for tracing application and machine failures. Lately that has grown into AI tools on our own data. AI Deltron answers from the company's own knowledge in SharePoint, Confluence, and ServiceDesk Plus. AI OpenSearch analyzes logs and alerts Teams when production is hurt. AIFinance matches Finance's customers and vendors from SAP every month. AI Center is the web portal that brings all of these AI projects together in one place.
+<br>
 
-Outside of work, I've spent about five years building and operating multiplayer game-server platforms (FiveM and RedM), which is where most of my backend, database, and systems-architecture experience actually comes from before I ever touched a corporate codebase. I taught myself Lua well enough to write almost anything in it from memory, and that same instinct for "just build the thing and fix what breaks" carried over into everything else here: DevOps, backend APIs, database design, and UI.
-
-This repository is a map of that work. This page is the summary.
-
-| Folder | What's inside |
-|---|---|
-| [`about/`](./about) | Who I am outside of the job title, how I work, and personal background |
-| [`experience/`](./experience) | The portfolio: concrete projects and what came out of them |
-| [`brain/`](./brain) | The knowledge base: how each skill area actually works, in detail |
-
-**Education:** B.Sc. Digital Business Technology, Southeast Bangkok University (2025, GPA 3.53, First Class Honors / Gold Medal) · High Vocational Certificate in Information Technology, Attawit Commercial Technology College (2023, GPA 3.10)
-
-**Languages:** Thai (native), English (working proficiency)
+## Tech Stack
 
 <div align="center">
 
-<br>
+[![Skills](https://skillicons.dev/icons?i=go,cs,ts,js,py,lua,react,nextjs,svelte,tailwind,nodejs,dotnet,nestjs,fastapi&perline=14)](https://skillicons.dev)
 
-![Skill Proficiency](./assets/skills-chart.svg)
-
-<br>
-
-![Language Proficiency](./assets/languages-chart.svg)
+[![Skills](https://skillicons.dev/icons?i=kafka,postgres,mysql,redis,elasticsearch,docker,kubernetes,nginx,gitlab,githubactions,linux,grafana,prometheus,aws&perline=14)](https://skillicons.dev)
 
 </div>
 
----
-
-## Projects
-
-| Project | What it is |
+| Area | Tools |
 |---|---|
-| [ARK](https://github.com/raven-clown/ark) | Kafka-to-HTTP bridge with flows, a cluster mode, an MCP server and a React console |
-| [tack](https://github.com/raven-clown/tack) | Type-safe HTTP APIs for Go on `net/http`: one struct gives binding, validation, OpenAPI docs, a TypeScript client whose declared errors form a typed union, Zod schemas, a dev loop and a mock server |
-| [Delta Electronics](./experience/delta-electronics) | The CI/CD platform, central Kafka and NiFi platforms, the AI OpenSearch log analytics platform with Teams alerts, the AI Deltron knowledge assistant, the AI Center portal and AI Monitor, AIFinance company matching, a requirement tracking backend, MES dashboards, and diagnostic tools I build and run as my day job |
-| [FiveM & RedM Platform](./experience/fivem-redm-platform) | A multiplayer roleplay platform I founded and ran end to end for five years |
-| [Side Projects](./experience/side-projects) | [ARK](https://github.com/raven-clown/ark), [tack](https://github.com/raven-clown/tack), [RoomedIn](https://www.roomedin.online/), [IdpForge](https://github.com/raven-clown/idpforge), [Vinylcord](https://github.com/raven-clown/vinylcord), [mcp-stdio-debug](https://www.npmjs.com/package/mcp-stdio-debug), [source-hub](https://github.com/raven-clown/source-hub), [samatha-command-ai](https://github.com/raven-clown/training-ai-voice), a habit-tracking tool, and a code snippet manager |
-| [Academic Projects](./experience/academic-projects) | Three projects from vocational and university coursework |
+| **Backend** | Go, ASP.NET Core, NestJS, FastAPI, Spring Boot |
+| **Frontend** | React, Next.js, Svelte, Vue, Tailwind CSS |
+| **Data and streaming** | Kafka, Apache NiFi, OpenSearch, Spark Structured Streaming, Airflow |
+| **Databases** | Oracle, SQL Server, PostgreSQL, MySQL, MongoDB, Redis |
+| **Infrastructure** | GitLab CI/CD, GitHub Actions, Docker, Kubernetes (Rancher), Harbor, MinIO, Prometheus, Grafana, AWS |
 
----
+<br>
 
-## Open Source Contributions
+## Featured Projects
+
+<table>
+<tr>
+<td width="33%" valign="top">
+<a href="https://github.com/raven-clown/ark"><img src="./project-images/covers/ark-kafkatohttp-bridge.png" alt="ARK"></a>
+<h3 align="center"><a href="https://github.com/raven-clown/ark">ARK</a></h3>
+<p align="center">Kafka-to-HTTP bridge in Go. Retries, dead letters, flows, cluster mode and a React console. One binary, one YAML file.</p>
+</td>
+<td width="33%" valign="top">
+<a href="https://github.com/raven-clown/tack"><img src="./project-images/covers/tack-typesafe-http-apis-for-go.png" alt="tack"></a>
+<h3 align="center"><a href="https://github.com/raven-clown/tack">tack</a></h3>
+<p align="center">Type-safe HTTP APIs for Go. Declare a struct once and get validation, OpenAPI docs, a TypeScript client and Zod schemas.</p>
+</td>
+<td width="33%" valign="top">
+<a href="https://github.com/raven-clown/idpforge"><img src="./project-images/covers/idpforge.png" alt="IdpForge"></a>
+<h3 align="center"><a href="https://github.com/raven-clown/idpforge">IdpForge</a></h3>
+<p align="center">Self-hosted SSO and identity platform in Go. OIDC, RBAC, realtime fan-out, and cluster-safe background jobs.</p>
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+<a href="./experience/delta-electronics"><img src="./project-images/covers/ai-opensearch.png" alt="AI OpenSearch"></a>
+<h3 align="center"><a href="./experience/delta-electronics">AI OpenSearch</a></h3>
+<p align="center">Log analytics platform for the factory. Go collectors and workers, OpenSearch indices, and Teams alerts while production is still affected.</p>
+</td>
+<td width="33%" valign="top">
+<a href="./experience/delta-electronics"><img src="./project-images/covers/central-kafka-platform.png" alt="Central Kafka Platform"></a>
+<h3 align="center"><a href="./experience/delta-electronics">Central Kafka Platform</a></h3>
+<p align="center">Shared Kafka and NiFi platforms other IT teams plug into, with CDC from the MES, Spark streaming jobs and Grafana monitoring.</p>
+</td>
+<td width="33%" valign="top">
+<a href="./experience/fivem-redm-platform"><img src="./project-images/covers/fivem-multiplayer-platform.png" alt="FiveM Multiplayer Platform"></a>
+<h3 align="center"><a href="./experience/fivem-redm-platform">FiveM Platform</a></h3>
+<p align="center">A multiplayer roleplay platform I founded and ran for five years: game server, Lua systems, web shop and infrastructure.</p>
+</td>
+</tr>
+</table>
+
+<p align="center">
+More: <a href="./experience/side-projects">side projects</a> · <a href="./experience/delta-electronics">work at Delta</a> · <a href="./experience/architecture.md">architecture diagrams</a> · <a href="./experience/academic-projects">academic projects</a>
+</p>
+
+<br>
+
+## Open Source
 
 | Project | Contribution |
 |---|---|
-| [mark3labs/mcp-go](https://github.com/mark3labs/mcp-go) | [#1042](https://github.com/mark3labs/mcp-go/pull/1042): the streamable HTTP client now reports the real HTTP status when a gateway, CDN or web framework answers with a JSON error body, instead of failing with an unrelated parse error |
+| [mark3labs/mcp-go](https://github.com/mark3labs/mcp-go) | [#1042](https://github.com/mark3labs/mcp-go/pull/1042): the streamable HTTP client reports the real HTTP status when a gateway or framework answers with a JSON error body |
 
----
+<br>
 
-## What I Actually Do
+## GitHub Stats
 
-Each area below is split two ways. **Knowledge** explains how the technology itself works. **Portfolio** shows what I actually built with it. They're kept separate on purpose: one is reference material, the other is proof of work.
+<div align="center">
 
-### DevOps & Infrastructure
+<a href="https://github.com/raven-clown"><img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=raven-clown&theme=transparent" alt="Profile details" width="100%"></a>
 
-CI/CD pipelines, Kubernetes/Rancher, Docker, container registries, object storage, and cloud hosting. The plumbing that gets code from a commit to a running service.
+<table>
+<tr>
+<td width="33%"><img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=raven-clown&theme=transparent" alt="Stats" width="100%"></td>
+<td width="33%"><img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=raven-clown&theme=transparent" alt="Top languages by commit" width="100%"></td>
+<td width="33%"><img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=raven-clown&theme=transparent" alt="Top languages by repo" width="100%"></td>
+</tr>
+</table>
 
-Knowledge: [`brain/devops-infrastructure`](./brain/devops-infrastructure) · Portfolio: [`experience/delta-electronics`](./experience/delta-electronics)
+<a href="https://github.com/raven-clown"><img src="https://streak-stats.demolab.com?user=raven-clown&hide_border=true&theme=transparent" alt="Contribution streak"></a>
 
-### Backend Development
+</div>
 
-ASP.NET Core, NestJS with Prisma, and Go, including [tack](https://github.com/raven-clown/tack), a Go API framework I wrote. How each one structures a request, handles data access, and where they're each the right tool.
+<br>
 
-Knowledge: [`brain/backend-development`](./brain/backend-development) · Portfolio: [`experience/delta-electronics`](./experience/delta-electronics) · [`experience/side-projects`](./experience/side-projects)
+## This Repository
 
-### Event Streaming & Integration
-
-Kafka consumer groups, offsets, rebalances, dead-letter topics, and getting messages into the systems that act on them (HTTP services, OpenSearch, NiFi) without losing or reordering any.
-
-Knowledge: [`brain/side-projects-architecture`](./brain/side-projects-architecture) · Portfolio: [`experience/side-projects`](./experience/side-projects#ark)
-
-### Frontend Development
-
-React, Next.js, Nuxt.js, Vue, and Svelte, plus UX/UI design for real-time interfaces where the UI can't get in the way of what's happening underneath it.
-
-Knowledge: [`brain/frontend-development`](./brain/frontend-development) · Portfolio: [`experience/delta-electronics`](./experience/delta-electronics) · [`experience/fivem-redm-platform`](./experience/fivem-redm-platform) · [`experience/side-projects`](./experience/side-projects)
-
-### Database Design
-
-Oracle, SQL Server, PostgreSQL, MySQL, MongoDB, and Supabase. Relational modeling, indexing, and schema design for both enterprise data and high-write real-time systems.
-
-Knowledge: [`brain/database-design`](./brain/database-design) · Portfolio: [`experience/delta-electronics`](./experience/delta-electronics) · [`experience/fivem-redm-platform`](./experience/fivem-redm-platform) · [`experience/side-projects`](./experience/side-projects)
-
-### FiveM & RedM Development
-
-Five years of building on the FiveM and RedM multiplayer platforms. Server architecture, the Lua resource model, and the ESX/QBCore frameworks that sit underneath most roleplay servers.
-
-Knowledge: [`brain/fivem-redm-development`](./brain/fivem-redm-development) · Portfolio: [`experience/fivem-redm-platform`](./experience/fivem-redm-platform)
-
-### AI / LLM Integration
-
-Retrieval-based systems that ground an LLM's answers in real documents instead of relying on what the model already knows, and MCP servers that let an agent operate a real system within scoped permissions.
-
-Knowledge: [`brain/ai-integration`](./brain/ai-integration) · Portfolio: [`experience/delta-electronics`](./experience/delta-electronics) · [`experience/side-projects`](./experience/side-projects)
-
-### Discord Bots & Automation
-
-Bot architecture, job queues, and the runtimes/libraries that make background automation reliable instead of flaky.
-
-Knowledge: [`brain/discord-bots-automation`](./brain/discord-bots-automation) · Portfolio: [`experience/fivem-redm-platform`](./experience/fivem-redm-platform) · [`experience/side-projects`](./experience/side-projects)
-
-### Embedded & Hardware
-
-Arduino programming, sensor input, and circuit prototyping. Where software meets a physical breadboard.
-
-Knowledge: [`brain/embedded-hardware`](./brain/embedded-hardware) · Portfolio: [`experience/academic-projects`](./experience/academic-projects)
-
-### System Design Patterns
-
-How I approach scoping an architecture to an actual budget, structuring a multi-service system, and deciding what to build versus what to borrow.
-
-Knowledge: [`brain/side-projects-architecture`](./brain/side-projects-architecture) · Portfolio: [`experience/side-projects`](./experience/side-projects)
-
-### Tools & Troubleshooting
-
-Environment debugging, git workflows, and the unglamorous work that has to happen before anything above ships.
-
-Knowledge: [`brain/tools-and-troubleshooting`](./brain/tools-and-troubleshooting)
-
----
-
-## System Architecture
-
-A few of the systems above, laid out.
-
-### [ARK](https://github.com/raven-clown/ark): From a Topic to Every System That Needs the Message
-
-One engine per node, coordinated through Kafka, with a console and agents on the side.
-
-```mermaid
-flowchart LR
-    Src[("Kafka topic")] --> Engine["ARK engine\n(Go, one binary)"]
-    Engine --> Check{"data rules\nand conditions"}
-    Check -->|"passes"| App["Your app\nover HTTP"]
-    Check -->|"breaks a rule"| Rej[("reject topic")]
-    App -->|"2xx"| Res[("result topic")]
-    App -->|"2xx"| Out["OpenSearch / NiFi /\nSlack / webhooks"]
-    App -.->|"retries used up"| DLQ[("dead-letter topic")]
-    Console["ARK Console\n(React + React Flow)"] <--> Engine
-    Agents["MCP agents\nand Ask ARK"] <--> Engine
-    Engine <-.->|"heartbeats, leader,\nshared config"| Nodes["Other ARK nodes"]
-```
-
-### [tack](https://github.com/raven-clown/tack): One Struct, Every Output
-
-Everything is derived at registration from the handler's types; the request path runs precomputed plans only, and every generated artifact reads the same OpenAPI document.
-
-```mermaid
-flowchart LR
-    Structs["Handler In / Out structs\npath, query, header, cookie,\nform and Body tags"] --> Reg["Registration, once\nbind plan, schema registry,\nOpenAPI 3.1 document"]
-    Reg --> Req["Request time\nplan, validator, handler"]
-    Req --> Resp["JSON, problem+json,\nserver-sent events"]
-    Reg --> Doc[("OpenAPI document")]
-    Doc --> Docs["/docs"]
-    Doc --> TS["api.ts\nResult unions by error code"]
-    Doc --> Zod["schemas.ts\nZod with the same rules"]
-    Doc --> Mock["tack mock"]
-    Dev["tack dev\nrebuild and regenerate on save"] -.-> Doc
-    Check["tack check / tsgen.Check\nCI fails on a stale client"] -.-> TS
-```
-
-### Delta MES: CI/CD and Deployment
-
-How code gets from a commit to a running service inside the air-gapped cluster.
-
-```mermaid
-flowchart LR
-    Dev["Commit"] --> CI["GitLab CI/CD\n(shell executor)"]
-    CI --> Build["Build & test"]
-    Build --> Harbor["Push image\nto Harbor registry"]
-    Harbor --> Deploy["kubectl deploy\n(Rancher API token)"]
-    Deploy --> K8s["Kubernetes cluster\nmfg-cluster-dev"]
-    K8s --> FE["mfg-portal-frontend\n(React / Vite)"]
-    K8s --> BE["mfg-portal-api\n(ASP.NET Core)"]
-    K8s --> MinIO[("MinIO\nobject storage")]
-    BE --> Oracle[("Oracle DB\nPROD_SCHEMA_A / PROD_SCHEMA_B")]
-```
-
-### Delta MES: CTP Diagnostic Tool, Yield Tracker, and Dashboard
-
-Where the data actually comes from and how it reaches the screen.
-
-```mermaid
-flowchart LR
-    Oracle[("Oracle DB\nPROD_SCHEMA_A / PROD_SCHEMA_B")] --> API["ASP.NET Core API"]
-    MSSQL[("MS SQL Server")] --> API
-    PG[("PostgreSQL")] --> API
-    API --> CTP["CTP comparison engine\n(CTE-based MATCH / MISMATCH)"]
-    API --> Yield["Yield Tracker engine\n(station pass/fail aggregation)"]
-    API --> Metrics["/api/health\n/api/metrics"]
-    CTP --> UI1["CTP diagnostic UI\n(React / TypeScript)"]
-    Yield --> UI3["Yield Tracker UI\n(React / TypeScript / Tailwind)"]
-    Metrics --> UI2["MES dashboard\n(React + .NET 8 + Docker Swarm)"]
-```
-
-### Delta: AI OpenSearch Log Analytics
-
-Only the new bytes of every log, parsed, searchable, and turned into Teams alerts while production is still affected.
-
-```mermaid
-flowchart LR
-    Src["Gateway / routing / SMT /\nIoT aggregator log servers"] -->|"new bytes only\n(HTTP Range)"| Col["Collector\n(Go)"]
-    Col --> Jobs[("PostgreSQL\njob queue")]
-    Jobs --> W["Workers (Go, auto-scaled)\nrunning Python parsers"]
-    W --> Imp["Importer\n(Go)"]
-    Imp --> OS[("OpenSearch\ndaily indices")]
-    OS --> API["FastAPI\nsearch, issues,\nAI assistant, exports"]
-    OS --> Watch["Alert watcher\n(own container)"]
-    Watch -->|"outbox, retries"| Teams["Teams\nwebhook or channel email"]
-    Nginx["nginx\nblue/green API"] --> API
-    API --> UI["MES portal page and\nAI OpenSearch page"]
-    API --> Ext["External API\nfor other AI tools"]
-```
-
-### Delta: AI Center, AI Deltron and AI Monitor
-
-AI Center is the web portal for every AI project the team has built. AI Deltron answers from the company's own knowledge, and AI Monitor is the admin console behind both. The backend was split into services one step at a time.
-
-```mermaid
-flowchart LR
-    User["Browser\nSSO login"] --> Nginx["nginx"]
-    Nginx --> Portal["AI Center\n(React 19)"]
-    Nginx --> Edge["Edge\n(Go)"]
-    Edge --> API["API role"]
-    Edge --> Chat["AI Deltron chat\nretrieval answers"]
-    Edge --> Media["Media role\nstaff photos as WebP"]
-    Worker["Worker role\nConfluence / SharePoint sync"] --> PG
-    API --> PG[("Postgres + pgvector")]
-    Chat --> PG
-    Chat --> AIGW["AI gateway proxy (Go)\nquota share, 429 queue"]
-    AIGW --> Corp["Company AI gateway"]
-    API --> Store[("MinIO / NATS")]
-    Ops["Ops (Go)\ncontainer scaling"] -.-> API
-    Analytics["Analytics (Go)\nAI Monitor numbers"] --> PG
-```
-
-### Delta: AIFinance
-
-Company matching for Finance: the same company found across SAP exports, put under its group, with every number from code.
-
-```mermaid
-flowchart LR
-    Files["Monthly SAP exports\nmail or upload"] --> API["Web backend\n(FastAPI, roles)"]
-    API --> Queue[("NATS JetStream\nrun queue")]
-    Queue --> Worker["Workers\nread, normalize, exclude,\nmatch, group, check, summarize"]
-    Worker --> GW["AI gateway client\npaced batch questions"]
-    Know[("Knowledge file\noutranks the AI")] --> Worker
-    Worker --> PG[("PostgreSQL\nstored decisions, runs")]
-    PG --> UI["Dashboard\nreview and release"]
-    UI --> Export["xlsx / pdf / docx / pptx\nfour languages"]
-```
-
-### Delta: Requirement Request Tracking
-
-Requests that move through MES, AP, IT Server and OA review, stored as append-only snapshots.
-
-```mermaid
-flowchart LR
-    Web["React frontend"] -->|"JWT"| API["FastAPI backend\nworkflow rules"]
-    API -->|"SELECT / INSERT only\nsnapshot per change,\napp lock + revision check"| SQL[("SQL Server")]
-    API -->|"files, metadata,\ncommit markers"| MinIO[("MinIO")]
-    API --> Flow["MES / AP / IT Server / OA\nreview stages"]
-```
-
-### Delta: Central Kafka and NiFi Platforms
-
-Shared platforms other IT teams plug their apps into, and the data flows built on top of them.
-
-```mermaid
-flowchart LR
-    Oracle[("Oracle MES DBs")] -->|"CDC / JDBC"| NiFi["Central NiFi\nplatform"]
-    NiFi -->|"raw topics"| Kafka[("Central Kafka platform\nKRaft, 3 brokers, RF 3")]
-    Apps["Other IT apps"] <--> Kafka
-    Kafka --> Spark["Spark Structured\nStreaming"]
-    Spark -->|"gold topics"| Kafka
-    Airflow["Airflow workflows\nevery 15-30 min"] -.-> Spark
-    Kafka -->|"JMX"| Prom["Prometheus / Grafana"]
-    Nginx["nginx"] --> AKHQ["AKHQ"] --> Kafka
-```
-
-### FiveM Server Platform
-
-Server, systems, and the storefront running alongside it.
-
-```mermaid
-flowchart TB
-    Client["Game client"] <--> Server["Windows Server\n(i9, 64GB RAM, 10Gbps)"]
-    Nginx["Nginx CDN cache"] --> Client
-    Server --> Core["raven_core\neconomy / identity, batched writes"]
-    Server --> Medical["raven_advanceambulance\nknockdown / crawl state machine"]
-    Server --> Pedscale["raven_pedscale"]
-    Server --> Opt["myopt\ncustom 7-module optimizer"]
-    Core --> DB[("MySQL\nvia oxmysql")]
-    Server --> UI["HUD / inventory UI\n(Svelte + React)"]
-    Server --> Shop["shop.highclass-roleplay.com"]
-    Shop --> Cloud["Next.js + Go\non AWS / Kubernetes"]
-```
-
-### [IdpForge](https://github.com/raven-clown/idpforge): Cluster-Safe Background Jobs and Realtime Fan-Out
-
-How one binary stays correct whether it's a single instance or several behind a load balancer.
-
-```mermaid
-flowchart LR
-    Browser["Browser\n(embedded Next.js SPA)"] --> API["Go API\n(single binary, N instances)"]
-    API --> RBAC["RBAC resolver\n(cached, invalidated on write)"]
-    API --> OIDC["OIDC provider\nauth code+PKCE, client_credentials"]
-    API --> Hub["Realtime hub\n(WebSocket)"]
-    API --> Lease["Leader lease\n(delete-expired, insert, UPDATE by PK)"]
-    RBAC --> DB[("Postgres / MySQL /\nMSSQL / SQLite")]
-    Lease --> DB
-    Hub -. "Redis pub/sub" .-> Other["Every other instance's\nconnected browsers"]
-```
-
-### Snippet Manager: Two Front-Ends, One Core
-
-How the VS Code extension and the Electron app share state without a server.
-
-```mermaid
-flowchart LR
-    Core["@snippet/core\nstorage, CRUD, validation, migration"]
-    Core <--> DataFile[("data.json\nOS app-data directory")]
-    VSC["vscode-extension"] --> Core
-    Electron["electron-app"] --> Core
-    DataFile -. "chokidar watch" .-> VSC
-    DataFile -. "chokidar watch" .-> Electron
-```
-
-### [RoomedIn](https://www.roomedin.online/): Defense in Depth on a Status Change
-
-Five independent layers between a tap on a phone and a row actually changing.
-
-```mermaid
-flowchart LR
-    UI["Staff taps\nnext status"] --> Domain["Domain\nRoom.changeStatus()"]
-    Domain --> App["Application\nactor/hotel check"]
-    App --> MW["Next.js middleware\nrole gating"]
-    MW --> RLS[("Postgres RLS\ncolumn-level grants")]
-    RLS --> Trigger["DB trigger\nwrites audit log"]
-    RLS --> Realtime["Supabase Realtime"]
-    Realtime --> Board["Every other\nstaff device"]
-```
-
----
-
-## Core Stack
-
-| Area | Tools |
+| Folder | What's inside |
 |---|---|
-| **Languages** | C#, TypeScript, JavaScript, Python, Java, PHP, Go, Lua, SQL |
-| **Frameworks** | React, Next.js, Nuxt.js, Vue.js, Svelte, Electron, ASP.NET Core (.NET 8), Spring Boot, FastAPI, Express.js, NestJS |
-| **Infrastructure** | GitLab CI/CD, GitHub Actions, Docker, Docker Swarm, Kubernetes (Rancher), Harbor Registry, GitHub Container Registry, AWS, Vercel, MinIO, Redis, Kong, Prometheus, Grafana |
-| **Streaming & Integration** | Kafka (KRaft, consumer groups, compacted topics), AKHQ, Apache NiFi, OpenSearch |
-| **Data Processing** | Spark Structured Streaming, Apache Airflow |
-| **Databases** | Oracle, Microsoft SQL Server, PostgreSQL, MySQL, SQLite, MongoDB, Supabase |
-| **AI** | MCP servers, retrieval-based LLM systems (Qwen embeddings, rerankers, vision-language models, speech-to-text), OpenAI-compatible and local models |
-| **Data** | Power BI, machine learning fundamentals |
-| **Other** | LINE Bot/OA API, Figma, Arduino and embedded systems, Cisco networking, Adobe Photoshop/Illustrator, Linux (RHEL), Windows Server, Visual Studio, VS Code, Notion |
+| [`experience/`](./experience) | The portfolio: what I built, where, and what came out of it |
+| [`brain/`](./brain) | The knowledge base: how each skill area works, in detail |
+| [`about/`](./about) | How I work and background outside the job title |
 
----
+**Education:** B.Sc. Digital Business Technology, Southeast Bangkok University, 2025 (First Class Honors, Gold Medal)
 
-## Contact
+<br>
 
-- Email: ekdanai.kk@gmail.com
-- GitHub: [raven-clown](https://github.com/raven-clown)
-- LinkedIn: [Ekdanai Kummee](https://www.linkedin.com/in/ekdanai-kummee-793ba43ab/)
+<div align="center">
+
+Open to interesting backend, platform and data engineering work. Reach me at [ekdanai.kk@gmail.com](mailto:ekdanai.kk@gmail.com).
+
+</div>

@@ -31,7 +31,7 @@ Building the systems behind a factory's MES at **Delta Electronics Thailand**, a
 
 [![Skills](https://skillicons.dev/icons?i=go,cs,ts,js,py,lua,react,nextjs,svelte,tailwind,nodejs,dotnet,nestjs,fastapi&perline=14)](https://skillicons.dev)
 
-[![Skills](https://skillicons.dev/icons?i=kafka,postgres,mysql,redis,elasticsearch,docker,kubernetes,nginx,gitlab,githubactions,linux,grafana,prometheus,aws&perline=14)](https://skillicons.dev)
+[![Skills](https://skillicons.dev/icons?i=kafka,rabbitmq,postgres,mysql,redis,elasticsearch,docker,kubernetes,nginx,gitlab,githubactions,linux,grafana,prometheus&perline=14)](https://skillicons.dev)
 
 </div>
 
@@ -39,7 +39,7 @@ Building the systems behind a factory's MES at **Delta Electronics Thailand**, a
 |---|---|
 | **Backend** | Go, ASP.NET Core, NestJS, FastAPI, Spring Boot |
 | **Frontend** | React, Next.js, Svelte, Vue, Tailwind CSS |
-| **Data and streaming** | Kafka, Apache NiFi, OpenSearch, Spark Structured Streaming, Airflow |
+| **Data and messaging** | Kafka, RabbitMQ, NATS, Apache NiFi, OpenSearch, Spark Structured Streaming, Airflow |
 | **Databases** | Oracle, SQL Server, PostgreSQL, MySQL, MongoDB, Redis |
 | **Infrastructure** | GitLab CI/CD, GitHub Actions, Docker, Kubernetes (Rancher), Harbor, MinIO, Prometheus, Grafana, AWS |
 
@@ -92,9 +92,22 @@ More: <a href="./experience/side-projects">side projects</a> · <a href="./exper
 
 ## Open Source
 
-| Project | Contribution |
-|---|---|
-| [mark3labs/mcp-go](https://github.com/mark3labs/mcp-go) | [#1042](https://github.com/mark3labs/mcp-go/pull/1042): the streamable HTTP client reports the real HTTP status when a gateway or framework answers with a JSON error body |
+Fixes and features sent upstream to projects I use. Merged work first, then what is still in review.
+
+| Project | Contribution | Status |
+|---|---|---|
+| [mark3labs/mcp-go](https://github.com/mark3labs/mcp-go) | [#1042](https://github.com/mark3labs/mcp-go/pull/1042) streamable HTTP client reports the real HTTP status when a gateway answers with a JSON error body | Merged |
+| [mark3labs/mcp-go](https://github.com/mark3labs/mcp-go) | [#1100](https://github.com/mark3labs/mcp-go/pull/1100) deterministic SSE custom client timeout test | Merged |
+| [thebanri/limoni](https://github.com/thebanri/limoni) | [#110](https://github.com/thebanri/limoni/pull/110) accessibility tests for redaction, announcements and mode switches | Merged |
+| [mark3labs/mcp-go](https://github.com/mark3labs/mcp-go) | [#1146](https://github.com/mark3labs/mcp-go/pull/1146) empty tool annotations omitted, `WithoutDefaultAnnotations` · [#1147](https://github.com/mark3labs/mcp-go/pull/1147) tool schema dialects and definitions preserved · [#1148](https://github.com/mark3labs/mcp-go/pull/1148) structured-only tool results · [#1149](https://github.com/mark3labs/mcp-go/pull/1149) notification params decoding · [#1150](https://github.com/mark3labs/mcp-go/pull/1150) replay callbacks get their own event copy · [#1151](https://github.com/mark3labs/mcp-go/pull/1151) empty PKCE challenge refused · [#1154](https://github.com/mark3labs/mcp-go/pull/1154) requests no longer re-parsed on the way to the handler · [#1155](https://github.com/mark3labs/mcp-go/pull/1155) listener retry interval | In review |
+| [prometheus/blackbox_exporter](https://github.com/prometheus/blackbox_exporter) | [#1695](https://github.com/prometheus/blackbox_exporter/pull/1695) configurable EDNS0 UDP payload size · [#1696](https://github.com/prometheus/blackbox_exporter/pull/1696) configured IP protocol kept on cross-host redirects | In review |
+| [grafana/mcp-grafana](https://github.com/grafana/mcp-grafana) | [#1455](https://github.com/grafana/mcp-grafana/pull/1455) TLS and SOCKS5 transport reused across tool calls | In review |
+| [qax-os/excelize](https://github.com/qax-os/excelize) | [#2476](https://github.com/qax-os/excelize/pull/2476) set row height without `customHeight` | In review |
+| [getgauge/gauge](https://github.com/getgauge/gauge) | [#2913](https://github.com/getgauge/gauge/pull/2913) escape backslash and pipe in table cells · [#2915](https://github.com/getgauge/gauge/pull/2915) keep multiline string arguments when formatting | In review |
+| [open-policy-agent/regal](https://github.com/open-policy-agent/regal) | [#2150](https://github.com/open-policy-agent/regal/pull/2150) LSP path handling on Windows | In review |
+| [clastix/kamaji](https://github.com/clastix/kamaji) | [#1403](https://github.com/clastix/kamaji/pull/1403) migration jobs scheduled from the DataStore | In review |
+
+Also in review: [editorconfig-core-go #249](https://github.com/editorconfig/editorconfig-core-go/pull/249), [gograph #300](https://github.com/hmdsefi/gograph/pull/300), [mc-router #651](https://github.com/itzg/mc-router/pull/651), [sesh #526](https://github.com/joshmedeski/sesh/pull/526), [donetick #949](https://github.com/donetick/donetick/pull/949), [warewulf #2342](https://github.com/warewulf/warewulf/pull/2342), [doc-scraper #132](https://github.com/Sriram-PR/doc-scraper/pull/132).
 
 <br>
 

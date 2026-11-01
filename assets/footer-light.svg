@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="140" viewBox="0 0 1200 140" role="img" aria-label="">
+  <defs>
+    <linearGradient id="w1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0969da" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#1a9e74" stop-opacity="0.25"/>
+    </linearGradient>
+    <linearGradient id="w2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1a9e74" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#0969da" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <path fill="url(#w1)" d="M0,80 C150,40 300,120 450,80 C600,40 750,120 900,80 C1050,40 1200,120 1350,80 C1500,40 1650,120 1800,80 C1950,40 2100,120 2250,80 L2400,80 L2400,140 L0,140 Z">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-900 0" dur="12s" repeatCount="indefinite"/>
+    </path>
+    <path fill="url(#w2)" d="M0,100 C150,70 300,130 450,100 C600,70 750,130 900,100 C1050,70 1200,130 1350,100 C1500,70 1650,130 1800,100 C1950,70 2100,130 2250,100 L2400,100 L2400,140 L0,140 Z">
+      <animateTransform attributeName="transform" type="translate" from="-900 0" to="0 0" dur="9s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>

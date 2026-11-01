@@ -1,0 +1,53 @@
+name: Profile assets
+
+on:
+  schedule:
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/profile-assets.yml"
+      - ".github/profile-3d.json"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-assets
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Render the 3D contribution graph
+        uses: yoshi389111/github-profile-3d-contrib@7d95e7d4cdc028dd1e1cbd957d65f35efb12ae39 # v0.9.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          SETTING_JSON: .github/profile-3d.json
+
+      - name: Render the contribution snake
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3.5.0
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            generated/snake-light.svg?color_snake=#1a9e74&color_dots=#ebeef3,#b9ecd9,#7bdcb8,#3ac993,#1a9e74
+            generated/snake-dark.svg?color_snake=#2ee6a6&color_dots=#161b22,#1d5c4a,#23906f,#2ee6a6,#9cf5d8
+
+      - name: Commit the generated graphics
+        run: |
+          mkdir -p generated
+          mv profile-3d-contrib/contrib-3d.svg generated/contrib-3d.svg
+          git config user.name "SNOWFLEX"
+          git config user.email "160258096+AK47-DEVELOPER@users.noreply.github.com"
+          git add generated
+          if git diff --cached --quiet; then
+            echo "Nothing changed"
+            exit 0
+          fi
+          git commit -m "Refresh the generated profile graphics"
+          git push

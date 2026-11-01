@@ -1,12 +1,14 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg">
+  <img src="./assets/header-light.svg" alt="Ekdanai Kummee, Application Engineer. DevOps, data platforms and full-stack web." width="100%">
+</picture>
+
 <div align="center">
 
-# Ekdanai Kummee
-
-### Application Engineer · DevOps, data platforms and full-stack web
-
-Building the systems behind a factory's MES at **Delta Electronics Thailand**, and open source tooling for Kafka and Go on the side.
-
-<br>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com/?lines=Central+Kafka+and+NiFi+platforms;Go+services+and+Kubernetes+delivery;React+consoles+for+real-time+systems;Log+analytics+on+OpenSearch;Five+years+of+multiplayer+game+servers&font=Fira+Code&size=17&pause=1200&color=2EE6A6&center=true&vCenter=true&width=640&height=36">
+  <img src="https://readme-typing-svg.demolab.com/?lines=Central+Kafka+and+NiFi+platforms;Go+services+and+Kubernetes+delivery;React+consoles+for+real-time+systems;Log+analytics+on+OpenSearch;Five+years+of+multiplayer+game+servers&font=Fira+Code&size=17&pause=1200&color=1A9E74&center=true&vCenter=true&width=640&height=36" alt="What I work on">
+</picture>
 
 [![GitHub](https://img.shields.io/badge/GitHub-raven--clown-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/raven-clown)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Ekdanai_Kummee-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ekdanai-kummee-793ba43ab/)
@@ -29,19 +31,59 @@ Building the systems behind a factory's MES at **Delta Electronics Thailand**, a
 
 <div align="center">
 
-[![Skills](https://skillicons.dev/icons?i=go,cs,ts,js,py,lua,react,nextjs,svelte,tailwind,nodejs,dotnet,nestjs,fastapi&perline=14)](https://skillicons.dev)
+<table>
+<tr>
+<td align="right"><b>Languages</b></td>
+<td><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=go,cs,ts,js,py,java,php,lua,html,css,bash,powershell&perline=12" alt="Languages"></a></td>
+</tr>
+<tr>
+<td align="right"><b>Frontend</b></td>
+<td><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=react,nextjs,nuxtjs,vue,svelte,jquery,tailwind,bootstrap,vite,electron,figma,ps&perline=12" alt="Frontend"></a></td>
+</tr>
+<tr>
+<td align="right"><b>Backend</b></td>
+<td><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=nodejs,bun,dotnet,nestjs,express,fastapi,spring,laravel,prisma,npm,vitest,ai&perline=12" alt="Backend"></a></td>
+</tr>
+<tr>
+<td align="right"><b>Data and messaging</b></td>
+<td><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=kafka,rabbitmq,redis,postgres,mysql,sqlite,mongodb,supabase,elasticsearch&perline=12" alt="Data and messaging"></a></td>
+</tr>
+<tr>
+<td align="right"><b>Infrastructure</b></td>
+<td><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=docker,kubernetes,nginx,linux,redhat,windows,aws,vercel,gitlab,githubactions,grafana,prometheus&perline=12" alt="Infrastructure"></a></td>
+</tr>
+<tr>
+<td align="right"><b>Tools</b></td>
+<td><a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=git,github,vscode,visualstudio,notion,discord,arduino&perline=12" alt="Tools"></a></td>
+</tr>
+</table>
 
-[![Skills](https://skillicons.dev/icons?i=kafka,rabbitmq,postgres,mysql,redis,elasticsearch,docker,kubernetes,nginx,gitlab,githubactions,linux,grafana,prometheus&perline=14)](https://skillicons.dev)
+![Apache NiFi](https://img.shields.io/badge/Apache_NiFi-728E9B?style=flat-square&logo=apachenifi&logoColor=white)
+![Apache Airflow](https://img.shields.io/badge/Apache_Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white)
+![Apache Spark](https://img.shields.io/badge/Apache_Spark-E25A1C?style=flat-square&logo=apachespark&logoColor=white)
+![OpenSearch](https://img.shields.io/badge/OpenSearch-005EB8?style=flat-square&logo=opensearch&logoColor=white)
+![NATS](https://img.shields.io/badge/NATS_JetStream-27AAE1?style=flat-square&logo=natsdotio&logoColor=white)
+![AKHQ](https://img.shields.io/badge/AKHQ-00ACC1?style=flat-square)
+![Oracle](https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square)
+![MinIO](https://img.shields.io/badge/MinIO-C72E49?style=flat-square&logo=minio&logoColor=white)
+![Kong](https://img.shields.io/badge/Kong-003459?style=flat-square&logo=kong&logoColor=white)
+![Harbor](https://img.shields.io/badge/Harbor-60B932?style=flat-square)
+![Rancher](https://img.shields.io/badge/Rancher-0075A8?style=flat-square&logo=rancher&logoColor=white)
+![Docker Swarm](https://img.shields.io/badge/Docker_Swarm-2496ED?style=flat-square&logo=docker&logoColor=white)
+![IIS](https://img.shields.io/badge/IIS-5E5E5E?style=flat-square&logo=windows&logoColor=white)
+![Windows Server](https://img.shields.io/badge/Windows_Server-0078D4?style=flat-square&logo=windows&logoColor=white)
+![RHEL](https://img.shields.io/badge/RHEL-EE0000?style=flat-square&logo=redhat&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square)
+![MCP](https://img.shields.io/badge/MCP-000000?style=flat-square&logo=modelcontextprotocol&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white)
+![LINE API](https://img.shields.io/badge/LINE_API-06C755?style=flat-square&logo=line&logoColor=white)
+![Cisco](https://img.shields.io/badge/Cisco-1BA0D7?style=flat-square&logo=cisco&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
+![Machine Learning](https://img.shields.io/badge/Machine_Learning-FF6F00?style=flat-square)
+![Adobe Illustrator](https://img.shields.io/badge/Illustrator-FF9A00?style=flat-square)
 
 </div>
-
-| Area | Tools |
-|---|---|
-| **Backend** | Go, ASP.NET Core, NestJS, FastAPI, Spring Boot |
-| **Frontend** | React, Next.js, Svelte, Vue, Tailwind CSS |
-| **Data and messaging** | Kafka, RabbitMQ, NATS, Apache NiFi, OpenSearch, Spark Structured Streaming, Airflow |
-| **Databases** | Oracle, SQL Server, PostgreSQL, MySQL, MongoDB, Redis |
-| **Infrastructure** | GitLab CI/CD, GitHub Actions, Docker, Kubernetes (Rancher), Harbor, MinIO, Prometheus, Grafana, AWS |
 
 <br>
 
@@ -52,33 +94,39 @@ Building the systems behind a factory's MES at **Delta Electronics Thailand**, a
 <td width="33%" valign="top">
 <a href="https://github.com/raven-clown/ark"><img src="./project-images/covers/ark-kafkatohttp-bridge.png" alt="ARK"></a>
 <h3 align="center"><a href="https://github.com/raven-clown/ark">ARK</a></h3>
-<p align="center">Kafka-to-HTTP bridge in Go. Retries, dead letters, flows, cluster mode and a React console. One binary, one YAML file.</p>
+<p align="center"><img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go"> <img src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white" alt="Kafka"> <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React"></p>
+<p align="center">Kafka-to-HTTP bridge. Retries, dead letters, flows, cluster mode and a live console. One binary, one YAML file.</p>
 </td>
 <td width="33%" valign="top">
 <a href="https://github.com/raven-clown/tack"><img src="./project-images/covers/tack-typesafe-http-apis-for-go.png" alt="tack"></a>
 <h3 align="center"><a href="https://github.com/raven-clown/tack">tack</a></h3>
+<p align="center"><img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go"> <img src="https://img.shields.io/badge/OpenAPI_3.1-6BA539?style=flat-square&logo=openapiinitiative&logoColor=white" alt="OpenAPI"> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"></p>
 <p align="center">Type-safe HTTP APIs for Go. Declare a struct once and get validation, OpenAPI docs, a TypeScript client and Zod schemas.</p>
 </td>
 <td width="33%" valign="top">
 <a href="https://github.com/raven-clown/idpforge"><img src="./project-images/covers/idpforge.png" alt="IdpForge"></a>
 <h3 align="center"><a href="https://github.com/raven-clown/idpforge">IdpForge</a></h3>
-<p align="center">Self-hosted SSO and identity platform in Go. OIDC, RBAC, realtime fan-out, and cluster-safe background jobs.</p>
+<p align="center"><img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go"> <img src="https://img.shields.io/badge/OIDC-F78C40?style=flat-square&logo=openid&logoColor=white" alt="OIDC"> <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js"></p>
+<p align="center">Self-hosted SSO and identity platform. OIDC, RBAC, realtime fan-out, and cluster-safe background jobs.</p>
 </td>
 </tr>
 <tr>
 <td width="33%" valign="top">
 <a href="./experience/delta-electronics"><img src="./project-images/covers/ai-opensearch.png" alt="AI OpenSearch"></a>
 <h3 align="center"><a href="./experience/delta-electronics">AI OpenSearch</a></h3>
-<p align="center">Log analytics platform for the factory. Go collectors and workers, OpenSearch indices, and Teams alerts while production is still affected.</p>
+<p align="center"><img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go"> <img src="https://img.shields.io/badge/OpenSearch-005EB8?style=flat-square&logo=opensearch&logoColor=white" alt="OpenSearch"> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"></p>
+<p align="center">Log analytics for the factory. Go collectors and workers, OpenSearch indices, and Teams alerts while production is still affected.</p>
 </td>
 <td width="33%" valign="top">
 <a href="./experience/delta-electronics"><img src="./project-images/covers/central-kafka-platform.png" alt="Central Kafka Platform"></a>
 <h3 align="center"><a href="./experience/delta-electronics">Central Kafka Platform</a></h3>
+<p align="center"><img src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white" alt="Kafka"> <img src="https://img.shields.io/badge/NiFi-728E9B?style=flat-square&logo=apachenifi&logoColor=white" alt="NiFi"> <img src="https://img.shields.io/badge/Spark-E25A1C?style=flat-square&logo=apachespark&logoColor=white" alt="Spark"></p>
 <p align="center">Shared Kafka and NiFi platforms other IT teams plug into, with CDC from the MES, Spark streaming jobs and Grafana monitoring.</p>
 </td>
 <td width="33%" valign="top">
 <a href="./experience/fivem-redm-platform"><img src="./project-images/covers/fivem-multiplayer-platform.png" alt="FiveM Multiplayer Platform"></a>
 <h3 align="center"><a href="./experience/fivem-redm-platform">FiveM Platform</a></h3>
+<p align="center"><img src="https://img.shields.io/badge/Lua-2C2D72?style=flat-square&logo=lua&logoColor=white" alt="Lua"> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL"> <img src="https://img.shields.io/badge/Svelte-FF3E00?style=flat-square&logo=svelte&logoColor=white" alt="Svelte"></p>
 <p align="center">A multiplayer roleplay platform I founded and ran for five years: game server, Lua systems, web shop and infrastructure.</p>
 </td>
 </tr>
@@ -96,35 +144,48 @@ Merged upstream in projects I use.
 
 <table>
 <tr>
-<td width="33%" valign="top" align="center">
-<a href="https://github.com/mark3labs/mcp-go"><img src="https://github.com/mark3labs.png?size=96" width="56" alt="mark3labs"></a>
-<h3><a href="https://github.com/mark3labs/mcp-go">mcp-go</a></h3>
-<a href="https://github.com/mark3labs/mcp-go/pull/1042"><img src="https://img.shields.io/badge/PR-%231042-8957e5?style=flat-square&logo=github&logoColor=white" alt="PR 1042"></a>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a></h3>
+<p align="center">
+<a href="https://github.com/mark3labs/mcp-go/pull/1042"><img src="https://img.shields.io/badge/Merged-%231042-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1042"></a>
+<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
 <img src="https://img.shields.io/github/stars/mark3labs/mcp-go?style=flat-square&color=555" alt="stars">
-<p>The streamable HTTP client now reports the real HTTP status when a gateway or framework answers with a JSON error body, instead of failing with an unrelated parse error.</p>
+</p>
+<p align="center">The streamable HTTP client now reports the real HTTP status when a gateway or framework answers with a JSON error body, instead of failing with an unrelated parse error.</p>
 </td>
-<td width="33%" valign="top" align="center">
-<a href="https://github.com/mark3labs/mcp-go"><img src="https://github.com/mark3labs.png?size=96" width="56" alt="mark3labs"></a>
-<h3><a href="https://github.com/mark3labs/mcp-go">mcp-go</a></h3>
-<a href="https://github.com/mark3labs/mcp-go/pull/1100"><img src="https://img.shields.io/badge/PR-%231100-8957e5?style=flat-square&logo=github&logoColor=white" alt="PR 1100"></a>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a></h3>
+<p align="center">
+<a href="https://github.com/mark3labs/mcp-go/pull/1100"><img src="https://img.shields.io/badge/Merged-%231100-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1100"></a>
+<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
 <img src="https://img.shields.io/github/stars/mark3labs/mcp-go?style=flat-square&color=555" alt="stars">
-<p>A flaky SSE transport test raced a 1 ns client timeout against a mock server and panicked on a nil error about half the time on Windows. It is deterministic now.</p>
+</p>
+<p align="center">A flaky SSE transport test raced a 1 ns client timeout against a mock server and panicked on a nil error about half the time on Windows. It is deterministic now.</p>
 </td>
-<td width="33%" valign="top" align="center">
-<a href="https://github.com/thebanri/limoni"><img src="https://github.com/thebanri.png?size=96" width="56" alt="thebanri"></a>
-<h3><a href="https://github.com/thebanri/limoni">limoni</a></h3>
-<a href="https://github.com/thebanri/limoni/pull/110"><img src="https://img.shields.io/badge/PR-%23110-8957e5?style=flat-square&logo=github&logoColor=white" alt="PR 110"></a>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/thebanri/limoni">thebanri/limoni</a></h3>
+<p align="center">
+<a href="https://github.com/thebanri/limoni/pull/110"><img src="https://img.shields.io/badge/Merged-%23110-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 110"></a>
+<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
 <img src="https://img.shields.io/github/stars/thebanri/limoni?style=flat-square&color=555" alt="stars">
-<p>Tests for the accessibility package of a Go terminal UI engine: value redaction, screen reader announcements on three platforms, and mode switches. Coverage went from 65% to 91%.</p>
+</p>
+<p align="center">Tests for the accessibility package of a Go terminal UI engine: value redaction, screen reader announcements on three platforms, and mode switches. Coverage went from 65% to 91%.</p>
 </td>
 </tr>
 </table>
 
 <br>
 
-## GitHub Stats
+## Activity
 
 <div align="center">
+
+<img src="./generated/contrib-3d.svg" alt="3D contribution graph" width="100%">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./generated/snake-dark.svg">
+  <img src="./generated/snake-light.svg" alt="Contribution snake" width="100%">
+</picture>
 
 <a href="https://github.com/raven-clown"><img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=raven-clown&theme=transparent" alt="Profile details" width="100%"></a>
 
@@ -159,3 +220,8 @@ Merged upstream in projects I use.
 Open to interesting backend, platform and data engineering work. Reach me at [ekdanai.kk@gmail.com](mailto:ekdanai.kk@gmail.com).
 
 </div>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/footer-dark.svg">
+  <img src="./assets/footer-light.svg" alt="" width="100%">
+</picture>

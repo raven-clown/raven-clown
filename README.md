@@ -148,19 +148,47 @@ Merged upstream in projects I use.
 <h3 align="center"><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a></h3>
 <p align="center">
 <a href="https://github.com/mark3labs/mcp-go/pull/1042"><img src="https://img.shields.io/badge/Merged-%231042-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1042"></a>
+<a href="https://github.com/mark3labs/mcp-go/pull/1100"><img src="https://img.shields.io/badge/Merged-%231100-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1100"></a>
+<a href="https://github.com/mark3labs/mcp-go/pull/1146"><img src="https://img.shields.io/badge/Merged-%231146-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1146"></a>
+<a href="https://github.com/mark3labs/mcp-go/pull/1148"><img src="https://img.shields.io/badge/Merged-%231148-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1148"></a>
+<a href="https://github.com/mark3labs/mcp-go/pull/1149"><img src="https://img.shields.io/badge/Merged-%231149-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1149"></a>
+<a href="https://github.com/mark3labs/mcp-go/pull/1150"><img src="https://img.shields.io/badge/Merged-%231150-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1150"></a>
+<a href="https://github.com/mark3labs/mcp-go/pull/1151"><img src="https://img.shields.io/badge/Merged-%231151-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1151"></a>
+<a href="https://github.com/mark3labs/mcp-go/pull/1154"><img src="https://img.shields.io/badge/Merged-%231154-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1154"></a>
+<a href="https://github.com/mark3labs/mcp-go/pull/1155"><img src="https://img.shields.io/badge/Merged-%231155-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1155"></a>
 <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
 <img src="https://img.shields.io/github/stars/mark3labs/mcp-go?style=flat-square&color=555" alt="stars">
 </p>
-<p align="center">The streamable HTTP client now reports the real HTTP status when a gateway or framework answers with a JSON error body, instead of failing with an unrelated parse error.</p>
+<p align="center">Nine fixes in the Go MCP SDK: the real HTTP status on JSON error bodies, a deterministic SSE test, empty PKCE values refused, a copy of each replayed event per callback, structured-only tool results accepted, and requests no longer parsed twice on the way to the handler.</p>
 </td>
 <td width="33%" valign="top">
-<h3 align="center"><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a></h3>
+<h3 align="center"><a href="https://github.com/grafana/mcp-grafana">grafana/mcp-grafana</a></h3>
 <p align="center">
-<a href="https://github.com/mark3labs/mcp-go/pull/1100"><img src="https://img.shields.io/badge/Merged-%231100-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1100"></a>
+<a href="https://github.com/grafana/mcp-grafana/pull/1455"><img src="https://img.shields.io/badge/Merged-%231455-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1455"></a>
 <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
-<img src="https://img.shields.io/github/stars/mark3labs/mcp-go?style=flat-square&color=555" alt="stars">
+<img src="https://img.shields.io/github/stars/grafana/mcp-grafana?style=flat-square&color=555" alt="stars">
 </p>
-<p align="center">A flaky SSE transport test raced a 1 ns client timeout against a mock server and panicked on a nil error about half the time on Windows. It is deterministic now.</p>
+<p align="center">Tool calls with a custom TLS config or a SOCKS5 proxy share one transport instead of building a new one each time. 300 calls open 1 connection instead of 300, and each call is about 25 times faster.</p>
+</td>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/Sriram-PR/doc-scraper">Sriram-PR/doc-scraper</a></h3>
+<p align="center">
+<a href="https://github.com/Sriram-PR/doc-scraper/pull/132"><img src="https://img.shields.io/badge/Merged-%23132-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 132"></a>
+<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
+<img src="https://img.shields.io/github/stars/Sriram-PR/doc-scraper?style=flat-square&color=555" alt="stars">
+</p>
+<p align="center">Markdown converters are pooled, so crawls keep scaling past 8 workers. The maintainer measured about 905 pages per second at 32 workers, against 559 before.</p>
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/joshmedeski/sesh">joshmedeski/sesh</a></h3>
+<p align="center">
+<a href="https://github.com/joshmedeski/sesh/pull/526"><img src="https://img.shields.io/badge/Merged-%23526-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 526"></a>
+<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
+<img src="https://img.shields.io/github/stars/joshmedeski/sesh?style=flat-square&color=555" alt="stars">
+</p>
+<p align="center">Window, pane and session lookups use the configured <code>tmux_command</code>, so another multiplexer such as psmux works for every command, not only some.</p>
 </td>
 <td width="33%" valign="top">
 <h3 align="center"><a href="https://github.com/thebanri/limoni">thebanri/limoni</a></h3>

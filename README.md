@@ -148,19 +148,89 @@ Merged upstream in projects I use.
 <h3 align="center"><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a></h3>
 <p align="center">
 <a href="https://github.com/mark3labs/mcp-go/pull/1042"><img src="https://img.shields.io/badge/Merged-%231042-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1042"></a>
+<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
+<img src="https://img.shields.io/github/stars/mark3labs/mcp-go?style=flat-square&color=555" alt="stars">
+</p>
+<p align="center">The streamable HTTP client now reports the real HTTP status when a gateway or framework answers with a JSON error body, instead of failing with an unrelated parse error.</p>
+</td>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a></h3>
+<p align="center">
 <a href="https://github.com/mark3labs/mcp-go/pull/1100"><img src="https://img.shields.io/badge/Merged-%231100-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1100"></a>
+<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
+<img src="https://img.shields.io/github/stars/mark3labs/mcp-go?style=flat-square&color=555" alt="stars">
+</p>
+<p align="center">A flaky SSE transport test raced a 1 ns client timeout against a mock server and panicked on a nil error about half the time on Windows. It is deterministic now.</p>
+</td>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a></h3>
+<p align="center">
 <a href="https://github.com/mark3labs/mcp-go/pull/1146"><img src="https://img.shields.io/badge/Merged-%231146-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1146"></a>
+<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
+<img src="https://img.shields.io/github/stars/mark3labs/mcp-go?style=flat-square&color=555" alt="stars">
+</p>
+<p align="center">Tools no longer send an empty <code>annotations</code> object, and the new <code>WithoutDefaultAnnotations()</code> drops the default hints, so clients can tell an annotated tool from one without hints.</p>
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a></h3>
+<p align="center">
 <a href="https://github.com/mark3labs/mcp-go/pull/1148"><img src="https://img.shields.io/badge/Merged-%231148-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1148"></a>
+<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
+<img src="https://img.shields.io/github/stars/mark3labs/mcp-go?style=flat-square&color=555" alt="stars">
+</p>
+<p align="center">Clients accept a tool result that only has <code>structuredContent</code>, instead of failing with <code>content is missing</code>.</p>
+</td>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a></h3>
+<p align="center">
 <a href="https://github.com/mark3labs/mcp-go/pull/1149"><img src="https://img.shields.io/badge/Merged-%231149-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1149"></a>
+<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
+<img src="https://img.shields.io/github/stars/mark3labs/mcp-go?style=flat-square&color=555" alt="stars">
+</p>
+<p align="center">Decoding a notification into a reused value no longer keeps <code>_meta</code> and fields left over from the previous notification.</p>
+</td>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a></h3>
+<p align="center">
 <a href="https://github.com/mark3labs/mcp-go/pull/1150"><img src="https://img.shields.io/badge/Merged-%231150-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1150"></a>
+<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
+<img src="https://img.shields.io/github/stars/mark3labs/mcp-go?style=flat-square&color=555" alt="stars">
+</p>
+<p align="center">Each replay callback gets its own copy of a stored event, so a callback that changes a message can no longer corrupt what later replays send.</p>
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a></h3>
+<p align="center">
 <a href="https://github.com/mark3labs/mcp-go/pull/1151"><img src="https://img.shields.io/badge/Merged-%231151-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1151"></a>
+<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
+<img src="https://img.shields.io/github/stars/mark3labs/mcp-go?style=flat-square&color=555" alt="stars">
+</p>
+<p align="center">OAuth with PKCE enabled now refuses an empty code challenge or verifier, instead of quietly finishing the flow without PKCE.</p>
+</td>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a></h3>
+<p align="center">
 <a href="https://github.com/mark3labs/mcp-go/pull/1154"><img src="https://img.shields.io/badge/Merged-%231154-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1154"></a>
+<img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
+<img src="https://img.shields.io/github/stars/mark3labs/mcp-go?style=flat-square&color=555" alt="stars">
+</p>
+<p align="center">Requests are no longer parsed several times on the way to the handler. Profiling showed those extra JSON reads took most of the time and memory on large tool calls.</p>
+</td>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a></h3>
+<p align="center">
 <a href="https://github.com/mark3labs/mcp-go/pull/1155"><img src="https://img.shields.io/badge/Merged-%231155-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1155"></a>
 <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go">
 <img src="https://img.shields.io/github/stars/mark3labs/mcp-go?style=flat-square&color=555" alt="stars">
 </p>
-<p align="center">Nine fixes in the Go MCP SDK: the real HTTP status on JSON error bodies, a deterministic SSE test, empty PKCE values refused, a copy of each replayed event per callback, structured-only tool results accepted, and requests no longer parsed twice on the way to the handler.</p>
+<p align="center">The client listener keeps the retry interval it was created with instead of reading a package variable, which fixes an intermittent <code>go test -race</code> failure.</p>
 </td>
+</tr>
+<tr>
 <td width="33%" valign="top">
 <h3 align="center"><a href="https://github.com/grafana/mcp-grafana">grafana/mcp-grafana</a></h3>
 <p align="center">
@@ -179,8 +249,6 @@ Merged upstream in projects I use.
 </p>
 <p align="center">Markdown converters are pooled, so crawls keep scaling past 8 workers. The maintainer measured about 905 pages per second at 32 workers, against 559 before.</p>
 </td>
-</tr>
-<tr>
 <td width="33%" valign="top">
 <h3 align="center"><a href="https://github.com/joshmedeski/sesh">joshmedeski/sesh</a></h3>
 <p align="center">
@@ -190,6 +258,8 @@ Merged upstream in projects I use.
 </p>
 <p align="center">Window, pane and session lookups use the configured <code>tmux_command</code>, so another multiplexer such as psmux works for every command, not only some.</p>
 </td>
+</tr>
+<tr>
 <td width="33%" valign="top">
 <h3 align="center"><a href="https://github.com/thebanri/limoni">thebanri/limoni</a></h3>
 <p align="center">

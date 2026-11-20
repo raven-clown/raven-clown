@@ -165,15 +165,15 @@ const (
 
 	// The left pane loops on a cycle that starts once the first command is typed.
 	loopBegin = 1.2
-	cycle     = 16.0
-	tArt0     = 0.02
-	tArt1     = 0.36
-	tEnter0   = 0.50
-	tEnter1   = 0.56
-	tGone     = 0.58
-	tRun0     = 0.60
-	tRun1     = 0.92
-	tEnd      = 0.97
+	cycle     = 80.0
+	tArt0     = 0.3 / cycle
+	tArt1     = 6.0 / cycle
+	tEnter0   = 66.0 / cycle
+	tEnter1   = 68.0 / cycle
+	tGone     = 68.6 / cycle
+	tRun0     = 69.0 / cycle
+	tRun1     = 78.0 / cycle
+	tEnd      = 79.5 / cycle
 )
 
 type svg struct{ strings.Builder }

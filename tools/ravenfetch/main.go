@@ -50,36 +50,33 @@ var lines = []info{
 type logLine struct{ kind, text string }
 
 var runLog = []logLine{
-	{"cmd", "$ ./mothership --launch"},
-	{"dim", "[boot] loading CONTRACT.md ......................... ok"},
-	{"dim", "[boot] identity: oidc issuer reachable, jwks cached"},
-	{"cmd", "$ go build ./... && go test -race ./..."},
-	{"ok", "ok   github.com/raven-clown/airlock/internal/gate      0.41s"},
-	{"ok", "ok   github.com/raven-clown/rosetta/internal/bridge    0.37s"},
-	{"ok", "ok   github.com/raven-clown/transponder/internal/router 0.52s"},
-	{"ok", "ok   github.com/raven-clown/logbook/internal/recall    0.29s"},
-	{"cmd", "$ kubectl apply -k deploy/ && kubectl rollout status deploy"},
-	{"dim", "deployment.apps/airlock configured"},
-	{"dim", "deployment.apps/transponder configured"},
-	{"ok", "rollout: 3/3 replicas ready  [airlock transponder logbook]"},
+	{"cmd", "$ go test -race ./..."},
+	{"ok", "ok  airlock/internal/gate         0.41s"},
+	{"ok", "ok  rosetta/internal/bridge       0.37s"},
+	{"ok", "ok  transponder/internal/router   0.52s"},
+	{"ok", "ok  logbook/internal/recall       0.29s"},
+	{"cmd", "$ kubectl rollout status deploy"},
+	{"dim", "deployment/airlock configured"},
+	{"dim", "deployment/transponder configured"},
+	{"ok", "3/3 replicas ready"},
 	{"cmd", "$ transponder --check"},
-	{"dim", "route chat-default  -> anthropic, openai, ollama  (fallback)"},
-	{"dim", "budget user:*      $20.00/month  used $3.41"},
-	{"dim", "limits free        20000 tok/min  60 req/min"},
-	{"warn", "target openai: 503, cooling down 30s, trying anthropic"},
-	{"ok", "200 OK  in=812 out=240 reasoning=96 cost=$0.0041"},
-	{"cmd", "$ kafka-consumer-groups --describe --group mes-pipeline"},
-	{"dim", "mes.events   p0  offset 18842071  lag 0"},
-	{"dim", "mes.events   p1  offset 18839930  lag 0"},
-	{"dim", "mes.events   p2  offset 18840455  lag 2"},
-	{"cmd", "$ curl -s localhost:8080/readyz"},
-	{"ok", "{\"status\":\"ready\",\"store\":\"postgres\",\"replicas\":3}"},
-	{"cmd", "$ logbook recall \"deploy notes\" --verified"},
-	{"dim", "[0.94] staging uses pgx pool size 20 (verified by ci)"},
-	{"dim", "[0.88] rotate provider keys on the 1st (verified)"},
+	{"dim", "route chat -> anthropic, openai, ollama"},
+	{"dim", "budget user:*  $20.00/mo  used $3.41"},
+	{"dim", "limits free  20k tok/min  60 req/min"},
+	{"warn", "openai 503: cooldown 30s, -> anthropic"},
+	{"ok", "200 OK  in=812 out=240 think=96"},
+	{"cmd", "$ kafka-consumer-groups --describe"},
+	{"dim", "mes.events  p0  lag 0"},
+	{"dim", "mes.events  p1  lag 0"},
+	{"dim", "mes.events  p2  lag 2"},
+	{"cmd", "$ curl -s :8080/readyz"},
+	{"ok", "{\"status\":\"ready\",\"replicas\":3}"},
+	{"cmd", "$ logbook recall \"deploy notes\""},
+	{"dim", "[0.94] pgx pool size 20 (verified)"},
+	{"dim", "[0.88] rotate keys on the 1st"},
 	{"cmd", "$ git push origin main"},
-	{"ok", "main -> main  ci: 9/9 checks passed"},
-	{"ok", "all systems nominal. see you next loop."},
+	{"ok", "ci: 9/9 checks passed"},
+	{"ok", "all systems nominal."},
 }
 
 func main() {
@@ -160,36 +157,50 @@ const (
 	artX, artY = 30.0, 100.0
 	infoX      = 430.0
 	infoY      = 140.0
-	cycle      = 16.0
 
-	tCmd0, tCmd1   = 0.01, 0.05
-	tArt0, tArt1   = 0.06, 0.40
-	tInfo0, tInfo1 = 0.41, 0.52
-	tEnter0        = 0.60
-	tEnter1        = 0.66
-	tGone          = 0.68
-	tRun0, tRun1   = 0.69, 0.95
-	tEnd           = 0.97
+	paneX0, paneY0, paneX1, paneY1 = 22.0, 86.0, 405.0, 446.0
+	promptY                        = 470.0
+	runLH                          = 15.0
+	runFS                          = 10.5
+
+	// The left pane loops on a cycle that starts once the first command is typed.
+	loopBegin = 1.2
+	cycle     = 16.0
+	tArt0     = 0.02
+	tArt1     = 0.36
+	tEnter0   = 0.50
+	tEnter1   = 0.56
+	tGone     = 0.58
+	tRun0     = 0.60
+	tRun1     = 0.92
+	tEnd      = 0.97
 )
 
 type svg struct{ strings.Builder }
 
 func (b *svg) p(format string, a ...any) { fmt.Fprintf(b, format, a...) }
 
-// reveal animates a clip rect's width: hidden until t0, wiped open by t1, held until hide, then gone.
-func (b *svg) reveal(id string, x, y, height, full, t0, t1, hide float64) {
-	b.p(`<clipPath id="%s"><rect x="%.1f" y="%.1f" height="%.1f" width="0"><animate attributeName="width" values="0;0;%.1f;%.1f;0;0" keyTimes="0;%.4f;%.4f;%.4f;%.4f;1" dur="%.0fs" repeatCount="indefinite"/></rect></clipPath>`,
-		id, x, y, height, full, full, t0, t1, hide, hide+0.001, cycle)
+func (b *svg) loopReveal(id string, x, y, height, full, t0, t1, hide float64) {
+	b.p(`<clipPath id="%s"><rect x="%.1f" y="%.1f" height="%.1f" width="0"><animate attributeName="width" values="0;0;%.1f;%.1f;0;0" keyTimes="0;%.4f;%.4f;%.4f;%.4f;1" begin="%.1fs" dur="%.0fs" repeatCount="indefinite"/></rect></clipPath>`,
+		id, x, y, height, full, full, t0, t1, hide, hide+0.001, loopBegin, cycle)
 }
 
-// window shows an element from t0 to t1 of every cycle.
-func window(t0, t1 float64) string {
-	return fmt.Sprintf(`<animate attributeName="opacity" values="0;1;0" keyTimes="0;%.4f;%.4f" calcMode="discrete" dur="%.0fs" repeatCount="indefinite"/>`, t0, t1, cycle)
+func (b *svg) onceReveal(id string, x, y, height, full, begin, dur float64) {
+	b.p(`<clipPath id="%s"><rect x="%.1f" y="%.1f" height="%.1f" width="0"><animate attributeName="width" from="0" to="%.1f" begin="%.2fs" dur="%.2fs" fill="freeze"/></rect></clipPath>`,
+		id, x, y, height, full, begin, dur)
+}
+
+func loopWindow(t0, t1 float64) string {
+	return fmt.Sprintf(`<animate attributeName="opacity" values="0;1;0" keyTimes="0;%.4f;%.4f" calcMode="discrete" begin="%.1fs" dur="%.0fs" repeatCount="indefinite"/>`, t0, t1, loopBegin, cycle)
+}
+
+func onceShow(begin float64) string {
+	return fmt.Sprintf(`<animate attributeName="opacity" from="0" to="1" begin="%.2fs" dur="0.25s" fill="freeze"/>`, begin)
 }
 
 func render(grid [][]cell, t theme) string {
 	var b svg
-	b.p(`<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d" role="img" aria-label="ravenfetch: Ekdanai Kummee, Application Engineer. A raven in a top hat holding a lantern, typed out in ASCII.">`, w, h, w, h)
+	b.p(`<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d" role="img" aria-label="ravenfetch: Ekdanai Kummee, Application Engineer. A raven in a top hat holding a lantern, typed out in code.">`, w, h, w, h)
 	b.p(`<defs>`)
 	b.p(`<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="%s"/><stop offset="1" stop-color="%s"/></linearGradient>`, t.bg0, t.bg1)
 	b.p(`<linearGradient id="art" x1="%.0f" y1="%.0f" x2="%.0f" y2="%.0f" gradientUnits="userSpaceOnUse">`, artX, artY-lh, artX+cols*charW*0.5, artY+rows*lh)
@@ -198,27 +209,26 @@ func render(grid [][]cell, t theme) string {
 	b.p(`</linearGradient>`)
 	b.p(`<linearGradient id="bar" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="%s"/><stop offset="1" stop-color="%s"/></linearGradient>`, t.a0, t.a1)
 	b.p(`<radialGradient id="flameglow"><stop offset="0" stop-color="%s" stop-opacity="0.55"/><stop offset="1" stop-color="%s" stop-opacity="0"/></radialGradient>`, t.glow, t.glow)
-	b.p(`<clipPath id="body"><rect x="20" y="44" width="%d" height="%d"/></clipPath>`, w-40, h-58)
+	b.p(`<clipPath id="pane"><rect x="%.0f" y="%.0f" width="%.0f" height="%.0f"/></clipPath>`, paneX0, paneY0, paneX1-paneX0, paneY1-paneY0)
 
-	b.reveal("cmd", 58, 60, 20, 80, tCmd0, tCmd1, tGone)
+	b.onceReveal("cmd", 58, 60, 20, 80, 0.2, 0.7)
 	for r := range grid {
 		y := artY + float64(r)*lh
 		t0 := tArt0 + (tArt1-tArt0)*float64(r)/rows
 		t1 := tArt0 + (tArt1-tArt0)*float64(r+1)/rows
-		b.reveal(fmt.Sprintf("r%d", r), artX, y-lh+1, lh+1, cols*charW+2, t0, t1, tGone)
+		b.loopReveal(fmt.Sprintf("r%d", r), artX, y-lh+1, lh+1, cols*charW+2, t0, t1, tGone)
 	}
-	b.reveal("head", infoX, infoY-12, 16, 24*infoCharW, tInfo0, tInfo0+0.01, tGone)
+	infoBegin := 1.0
+	b.onceReveal("head", infoX, infoY-12, 16, 24*infoCharW, infoBegin, 0.25)
 	for i, l := range lines {
 		y := infoY + ilh*1.4 + float64(i+1)*(ilh+6)
-		t0 := tInfo0 + 0.01 + (tInfo1-tInfo0-0.01)*float64(i)/float64(len(lines))
-		t1 := tInfo0 + 0.01 + (tInfo1-tInfo0-0.01)*float64(i+1)/float64(len(lines))
 		full := float64(len(l.k)+2+len(l.v))*infoCharW + 4
-		b.reveal(fmt.Sprintf("i%d", i), infoX, y-12, 16, full, t0, t1, tGone)
+		b.onceReveal(fmt.Sprintf("i%d", i), infoX, y-12, 16, full, infoBegin+0.3+float64(i)*0.22, 0.2)
 	}
 	enterCmd := "./mothership --launch"
-	b.reveal("enter", 58, float64(h)-41, 18, float64(len(enterCmd))*infoCharW+4, tEnter0, tEnter1, tGone)
+	b.loopReveal("enter", 58, promptY-13, 18, float64(len(enterCmd))*infoCharW+4, tEnter0, tEnter1, tGone)
 	b.p(`</defs>`)
-	b.p(`<style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;font-size:%.1fpx}.art text{font-size:8.4px}</style>`, fs)
+	b.p(`<style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;font-size:%.1fpx}.art text{font-size:8.4px}.run text{font-size:%.1fpx}</style>`, fs, runFS)
 
 	b.p(`<rect x="1" y="1" width="%d" height="%d" rx="14" fill="url(#bg)" stroke="%s"/>`, w-2, h-2, t.border)
 	b.p(`<path d="M1 15a14 14 0 0 1 14-14h%dv0a14 14 0 0 1 14 14v19H1z" fill="%s"/>`, w-30, t.bar)
@@ -227,11 +237,10 @@ func render(grid [][]cell, t theme) string {
 		b.p(`<circle cx="%d" cy="18" r="6" fill="%s"/>`, 24+i*20, c)
 	}
 	b.p(`<text x="%d" y="22" text-anchor="middle" fill="%s">raven@mothership: ~</text>`, w/2, t.dim)
+	b.p(`<rect x="%.0f" y="52" width="1" height="%.0f" fill="%s" opacity="0">%s</rect>`, paneX1+12, float64(h)-70, t.border, onceShow(0.8))
 
-	b.p(`<g>%s`, window(0, tGone))
 	b.p(`<text x="34" y="74" fill="%s">❯</text>`, t.prompt)
 	b.p(`<text x="58" y="74" fill="%s" clip-path="url(#cmd)">ravenfetch</text>`, t.text)
-	b.p(`</g>`)
 
 	b.p(`<g class="art" fill="url(#art)">`)
 	var flames [][2]float64
@@ -264,7 +273,7 @@ func render(grid [][]cell, t theme) string {
 		cx, cy := sx/float64(len(flames))+charW/2, sy/float64(len(flames))-4
 		frow := (flames[0][1] - artY) / lh
 		fOn := tArt0 + (tArt1-tArt0)*(frow+1)/rows
-		b.p(`<g opacity="0">%s`, window(fOn, tGone))
+		b.p(`<g opacity="0">%s`, loopWindow(fOn, tGone))
 		b.p(`<circle cx="%.1f" cy="%.1f" r="26" fill="url(#flameglow)"><animate attributeName="r" values="24;30;22;28;24" dur="1.6s" repeatCount="indefinite"/></circle>`, cx, cy)
 		b.p(`<g class="art" fill="%s">`, t.flame)
 		for _, f := range flames {
@@ -274,34 +283,39 @@ func render(grid [][]cell, t theme) string {
 	}
 
 	b.p(`<text x="%.0f" y="%.1f" clip-path="url(#head)"><tspan fill="%s" font-weight="700">raven-clown</tspan><tspan fill="%s">@</tspan><tspan fill="%s" font-weight="700">mothership</tspan></text>`, infoX, infoY, t.a0, t.dim, t.a1)
-	b.p(`<rect x="%.0f" y="%.1f" width="%.0f" height="2" rx="1" fill="url(#bar)" clip-path="url(#head)"/>`, infoX, infoY+ilh-5, 22*infoCharW)
-	b.p(`<rect x="%.0f" y="%.1f" width="%.0f" height="2" rx="1" fill="url(#bar)" opacity="0">%s</rect>`, infoX, infoY+ilh-5, 22*infoCharW, window(tInfo0+0.01, tGone))
+	b.p(`<rect x="%.0f" y="%.1f" width="0" height="2" rx="1" fill="url(#bar)"><animate attributeName="width" from="0" to="%.0f" begin="%.2fs" dur="0.4s" fill="freeze"/></rect>`, infoX, infoY+ilh-5, 22*infoCharW, infoBegin+0.15)
 	for i, l := range lines {
 		y := infoY + ilh*1.4 + float64(i+1)*(ilh+6)
 		b.p(`<text x="%.0f" y="%.1f" clip-path="url(#i%d)"><tspan fill="%s" font-weight="700">%s</tspan><tspan fill="%s">: </tspan><tspan fill="%s">%s</tspan></text>`,
 			infoX, y, i, t.key, html.EscapeString(l.k), t.dim, t.text, html.EscapeString(l.v))
 	}
 	sy := infoY + ilh*1.4 + float64(len(lines)+1)*(ilh+6) + 16
+	swBegin := infoBegin + 0.3 + float64(len(lines))*0.22
 	for i, c := range []string{"#ff5f57", "#febc2e", "#28c840", t.a0, t.a1, "#a855f7", t.flame, t.text} {
-		b.p(`<rect x="%.0f" y="%.1f" width="22" height="12" rx="2" fill="%s" opacity="0">%s</rect>`, infoX+float64(i)*26, sy-10, c, window(tInfo1+float64(i)*0.004, tGone))
+		b.p(`<rect x="%.0f" y="%.1f" width="22" height="12" rx="2" fill="%s" opacity="0">%s</rect>`, infoX+float64(i)*26, sy-10, c, onceShow(swBegin+float64(i)*0.06))
 	}
 
-	py := float64(h) - 28
-	b.p(`<g opacity="0">%s`, window(tInfo1, tGone))
-	b.p(`<text x="34" y="%.1f" fill="%s">❯</text>`, py, t.prompt)
-	b.p(`<text x="58" y="%.1f" fill="%s" clip-path="url(#enter)">%s</text>`, py, t.text, html.EscapeString(enterCmd))
-	b.p(`<rect x="58" y="%.1f" width="8" height="14" fill="%s"><animate attributeName="x" values="58;58;%.1f;%.1f" keyTimes="0;%.4f;%.4f;1" dur="%.0fs" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" calcMode="discrete" dur="0.9s" repeatCount="indefinite"/></rect>`,
-		py-11, t.text, 60+float64(len(enterCmd))*infoCharW, 60+float64(len(enterCmd))*infoCharW, tEnter0, tEnter1, cycle)
+	b.p(`<g opacity="0">%s`, loopWindow(tArt1, tGone))
+	b.p(`<text x="34" y="%.1f" fill="%s">❯</text>`, promptY, t.prompt)
+	b.p(`<text x="58" y="%.1f" fill="%s" clip-path="url(#enter)">%s</text>`, promptY, t.text, html.EscapeString(enterCmd))
+	endX := 60 + float64(len(enterCmd))*infoCharW
+	b.p(`<rect x="58" y="%.1f" width="8" height="14" fill="%s"><animate attributeName="x" values="58;58;%.1f;%.1f" keyTimes="0;%.4f;%.4f;1" begin="%.1fs" dur="%.0fs" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" calcMode="discrete" dur="0.9s" repeatCount="indefinite"/></rect>`,
+		promptY-11, t.text, endX, endX, tEnter0, tEnter1, loopBegin, cycle)
 	b.p(`</g>`)
 
-	const runLH = 16.0
-	startY := float64(h) - 20
-	travel := startY - 60 + float64(len(runLog))*runLH
-	b.p(`<g clip-path="url(#body)"><g opacity="0">%s`, window(tRun0, tEnd))
-	b.p(`<g><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 %.0f;0 %.0f" keyTimes="0;%.4f;%.4f;1" dur="%.0fs" repeatCount="indefinite"/>`, -travel, -travel, tRun0, tRun1, cycle)
+	// Terminal output: each step shows one more line at the bottom and pushes the rest up.
+	n := len(runLog)
+	firstY := paneY1 - 6 + runLH
+	var kt, vals []string
+	kt, vals = append(kt, "0"), append(vals, "0 0")
+	for k := 1; k <= n; k++ {
+		kt = append(kt, fmt.Sprintf("%.4f", tRun0+(tRun1-tRun0)*float64(k-1)/float64(n)))
+		vals = append(vals, fmt.Sprintf("0 %.0f", -float64(k)*runLH))
+	}
+	b.p(`<g class="run" clip-path="url(#pane)"><g opacity="0">%s`, loopWindow(tRun0, tEnd))
+	b.p(`<g><animateTransform attributeName="transform" type="translate" calcMode="discrete" values="%s" keyTimes="%s" begin="%.1fs" dur="%.0fs" repeatCount="indefinite"/>`, strings.Join(vals, ";"), strings.Join(kt, ";"), loopBegin, cycle)
 	for i, l := range runLog {
-		color := t.dim
-		weight := ""
+		color, weight := t.dim, ""
 		switch l.kind {
 		case "cmd":
 			color, weight = t.text, ` font-weight="700"`
@@ -310,11 +324,11 @@ func render(grid [][]cell, t theme) string {
 		case "warn":
 			color = t.warn
 		}
-		b.p(`<text x="34" y="%.1f" fill="%s"%s xml:space="preserve">%s</text>`, startY+float64(i)*runLH, color, weight, html.EscapeString(l.text))
+		b.p(`<text x="34" y="%.1f" fill="%s"%s xml:space="preserve">%s</text>`, firstY+float64(i)*runLH, color, weight, html.EscapeString(l.text))
 	}
 	b.p(`</g></g></g>`)
-
-	b.p(`<g opacity="0">%s<text x="34" y="74" fill="%s">❯</text><rect x="58" y="63" width="8" height="14" fill="%s"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" calcMode="discrete" dur="0.6s" repeatCount="indefinite"/></rect></g>`, window(tEnd, 1), t.prompt, t.text)
+	b.p(`<g opacity="0">%s<text x="34" y="%.1f" fill="%s">❯</text><rect x="58" y="%.1f" width="8" height="14" fill="%s"><animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" calcMode="discrete" dur="0.6s" repeatCount="indefinite"/></rect></g>`,
+		loopWindow(tRun1, 1), promptY, t.prompt, promptY-11, t.text)
 	b.p(`</svg>`)
 	return b.String()
 }

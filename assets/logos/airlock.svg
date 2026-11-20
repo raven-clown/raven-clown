@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="airlock logo">
+  <defs>
+    <linearGradient id="airlock-g" gradientUnits="userSpaceOnUse" x1="60" y1="60" x2="452" y2="452"><stop offset="0" stop-color="#38BDF8"/><stop offset="1" stop-color="#6366F1"/></linearGradient>
+    <linearGradient id="airlock-f0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="airlock-f1" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="airlock-f2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="airlock-f3" x1="0.5" y1="0" x2="0.5" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <g id="airlock-sil"><path d="M42 256 A214 214 0 1 0 470 256 A214 214 0 1 0 42 256 Z M70 256 A186 186 0 1 0 442 256 A186 186 0 1 0 70 256 Z M86 256 A170 170 0 1 0 426 256 A170 170 0 1 0 86 256 Z M138 256 A118 118 0 1 0 374 256 A118 118 0 1 0 138 256 Z M156 256 A100 100 0 1 0 356 256 A100 100 0 1 0 156 256 Z M226 256 A30 30 0 1 0 286 256 A30 30 0 1 0 226 256 Z" fill-rule="evenodd"/><path d="M311.9 330.2 L335.9 354.3 L354.3 335.9 L330.2 311.9 Z" fill-rule="nonzero"/><path d="M181.8 311.9 L157.7 335.9 L176.1 354.3 L200.1 330.2 Z" fill-rule="nonzero"/><path d="M200.1 181.8 L176.1 157.7 L157.7 176.1 L181.8 200.1 Z" fill-rule="nonzero"/><path d="M330.2 200.1 L354.3 176.1 L335.9 157.7 L311.9 181.8 Z" fill-rule="nonzero"/><path d="M456 256 A0 0 0 1 0 456 256 A0 0 0 1 0 456 256 Z" fill-rule="nonzero"/><path d="M429.2 356 A0 0 0 1 0 429.2 356 A0 0 0 1 0 429.2 356 Z" fill-rule="nonzero"/><path d="M356 429.2 A0 0 0 1 0 356 429.2 A0 0 0 1 0 356 429.2 Z" fill-rule="nonzero"/><path d="M256 456 A0 0 0 1 0 256 456 A0 0 0 1 0 256 456 Z" fill-rule="nonzero"/><path d="M156 429.2 A0 0 0 1 0 156 429.2 A0 0 0 1 0 156 429.2 Z" fill-rule="nonzero"/><path d="M82.8 356 A0 0 0 1 0 82.8 356 A0 0 0 1 0 82.8 356 Z" fill-rule="nonzero"/><path d="M56 256 A0 0 0 1 0 56 256 A0 0 0 1 0 56 256 Z" fill-rule="nonzero"/><path d="M82.8 156 A0 0 0 1 0 82.8 156 A0 0 0 1 0 82.8 156 Z" fill-rule="nonzero"/><path d="M156 82.8 A0 0 0 1 0 156 82.8 A0 0 0 1 0 156 82.8 Z" fill-rule="nonzero"/><path d="M256 56 A0 0 0 1 0 256 56 A0 0 0 1 0 256 56 Z" fill-rule="nonzero"/><path d="M356 82.8 A0 0 0 1 0 356 82.8 A0 0 0 1 0 356 82.8 Z" fill-rule="nonzero"/><path d="M429.2 156 A0 0 0 1 0 429.2 156 A0 0 0 1 0 429.2 156 Z" fill-rule="nonzero"/></g>
+    <clipPath id="airlock-c0"><path d="M214 226 L264.5 261.8 L280.7 235.9 Z"/></clipPath>
+    <clipPath id="airlock-c1"><path d="M214 226 L226.7 286.4 L264.5 261.8 Z"/></clipPath>
+    <clipPath id="airlock-c2"><path d="M214 226 L193.7 281 L226.7 286.4 Z"/></clipPath>
+    <clipPath id="airlock-c3"><path d="M214 226 L176 276 L193.7 281 Z"/></clipPath>
+    <clipPath id="airlock-c4"><path d="M214 226 L151.5 244.8 L176 276 Z"/></clipPath>
+    <clipPath id="airlock-c5"><path d="M214 226 L167.1 202.5 L151.5 244.8 Z"/></clipPath>
+    <clipPath id="airlock-c6"><path d="M214 226 L172.2 172 L167.1 202.5 Z"/></clipPath>
+    <clipPath id="airlock-c7"><path d="M214 226 L211.5 161.9 L172.2 172 Z"/></clipPath>
+    <clipPath id="airlock-c8"><path d="M214 226 L259.1 180.6 L211.5 161.9 Z"/></clipPath>
+    <clipPath id="airlock-c9"><path d="M214 226 L264.7 204.4 L259.1 180.6 Z"/></clipPath>
+    <clipPath id="airlock-c10"><path d="M214 226 L280.7 235.9 L264.7 204.4 Z"/></clipPath>
+    <clipPath id="airlock-c11"><path d="M280.7 235.9 L264.5 261.8 L337.5 312.2 L349.4 255 Z"/></clipPath>
+    <clipPath id="airlock-c12"><path d="M264.5 261.8 L226.7 286.4 L252.2 350.1 L337.5 312.2 Z"/></clipPath>
+    <clipPath id="airlock-c13"><path d="M226.7 286.4 L193.7 281 L167.3 371.7 L252.2 350.1 Z"/></clipPath>
+    <clipPath id="airlock-c14"><path d="M193.7 281 L176 276 L123.4 337.3 L167.3 371.7 Z"/></clipPath>
+    <clipPath id="airlock-c15"><path d="M176 276 L151.5 244.8 L81 270.3 L123.4 337.3 Z"/></clipPath>
+    <clipPath id="airlock-c16"><path d="M151.5 244.8 L167.1 202.5 L97.6 156 L81 270.3 Z"/></clipPath>
+    <clipPath id="airlock-c17"><path d="M167.1 202.5 L172.2 172 L133.8 108.4 L97.6 156 Z"/></clipPath>
+    <clipPath id="airlock-c18"><path d="M172.2 172 L211.5 161.9 L209.4 81 L133.8 108.4 Z"/></clipPath>
+    <clipPath id="airlock-c19"><path d="M211.5 161.9 L259.1 180.6 L320.7 120.6 L209.4 81 Z"/></clipPath>
+    <clipPath id="airlock-c20"><path d="M259.1 180.6 L264.7 204.4 L341.6 157.6 L320.7 120.6 Z"/></clipPath>
+    <clipPath id="airlock-c21"><path d="M264.7 204.4 L280.7 235.9 L349.4 255 L341.6 157.6 Z"/></clipPath>
+    <clipPath id="airlock-c22"><path d="M349.4 255 L337.5 312.2 L407.1 380.6 L454.4 278.5 Z"/></clipPath>
+    <clipPath id="airlock-c23"><path d="M337.5 312.2 L252.2 350.1 L285.4 457.2 L407.1 380.6 Z"/></clipPath>
+    <clipPath id="airlock-c24"><path d="M252.2 350.1 L167.3 371.7 L134.7 458.1 L285.4 457.2 Z"/></clipPath>
+    <clipPath id="airlock-c25"><path d="M167.3 371.7 L123.4 337.3 L74.9 409.1 L134.7 458.1 Z"/></clipPath>
+    <clipPath id="airlock-c26"><path d="M123.4 337.3 L81 270.3 L-25 283.7 L74.9 409.1 Z"/></clipPath>
+    <clipPath id="airlock-c27"><path d="M81 270.3 L97.6 156 L25.2 104.6 L-25 283.7 Z"/></clipPath>
+    <clipPath id="airlock-c28"><path d="M97.6 156 L133.8 108.4 L62.9 48 L25.2 104.6 Z"/></clipPath>
+    <clipPath id="airlock-c29"><path d="M133.8 108.4 L209.4 81 L201.5 -3.9 L62.9 48 Z"/></clipPath>
+    <clipPath id="airlock-c30"><path d="M209.4 81 L320.7 120.6 L364.9 31.2 L201.5 -3.9 Z"/></clipPath>
+    <clipPath id="airlock-c31"><path d="M320.7 120.6 L341.6 157.6 L422.9 109.5 L364.9 31.2 Z"/></clipPath>
+    <clipPath id="airlock-c32"><path d="M341.6 157.6 L349.4 255 L454.4 278.5 L422.9 109.5 Z"/></clipPath>
+    <clipPath id="airlock-c33"><path d="M454.4 278.5 L407.1 380.6 L662.6 561.3 L764.9 326.6 Z"/></clipPath>
+    <clipPath id="airlock-c34"><path d="M407.1 380.6 L285.4 457.2 L328.5 774.2 L662.6 561.3 Z"/></clipPath>
+    <clipPath id="airlock-c35"><path d="M285.4 457.2 L134.7 458.1 L3 744.7 L328.5 774.2 Z"/></clipPath>
+    <clipPath id="airlock-c36"><path d="M134.7 458.1 L74.9 409.1 L-151.8 650.1 L3 744.7 Z"/></clipPath>
+    <clipPath id="airlock-c37"><path d="M74.9 409.1 L-25 283.7 L-330.5 356.7 L-151.8 650.1 Z"/></clipPath>
+    <clipPath id="airlock-c38"><path d="M-25 283.7 L25.2 104.6 L-276.7 -43.9 L-330.5 356.7 Z"/></clipPath>
+    <clipPath id="airlock-c39"><path d="M25.2 104.6 L62.9 48 L-152.8 -197.1 L-276.7 -43.9 Z"/></clipPath>
+    <clipPath id="airlock-c40"><path d="M62.9 48 L201.5 -3.9 L170.4 -332.3 L-152.8 -197.1 Z"/></clipPath>
+    <clipPath id="airlock-c41"><path d="M201.5 -3.9 L364.9 31.2 L556.1 -217.3 L170.4 -332.3 Z"/></clipPath>
+    <clipPath id="airlock-c42"><path d="M364.9 31.2 L422.9 109.5 L708.9 -36.1 L556.1 -217.3 Z"/></clipPath>
+    <clipPath id="airlock-c43"><path d="M422.9 109.5 L454.4 278.5 L764.9 326.6 L708.9 -36.1 Z"/></clipPath>
+  </defs>
+  <g transform="translate(0 0) scale(1.0000)">
+    <g transform="translate(2.3 0.9)"><g transform="rotate(0.6 253.1 241.2)"><g clip-path="url(#airlock-c0)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.77"/><use href="#airlock-sil" fill="url(#airlock-f0)"/></g></g></g>
+    <g transform="translate(1.4 2.1)"><g transform="rotate(0.1 235.1 258.1)"><g clip-path="url(#airlock-c1)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.84"/><use href="#airlock-sil" fill="url(#airlock-f0)"/></g></g></g>
+    <g transform="translate(-0.2 2.5)"><g transform="rotate(0.3 211.5 264.5)"><g clip-path="url(#airlock-c2)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.94"/><use href="#airlock-sil" fill="url(#airlock-f0)"/></g></g></g>
+    <g transform="translate(-1.2 2.2)"><g transform="rotate(-0.3 194.6 261)"><g clip-path="url(#airlock-c3)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.96"/><use href="#airlock-sil" fill="url(#airlock-f2)"/></g></g></g>
+    <g transform="translate(-2.1 1.4)"><g transform="rotate(0.6 180.5 248.9)"><g clip-path="url(#airlock-c4)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.78"/><use href="#airlock-sil" fill="url(#airlock-f3)"/></g></g></g>
+    <g transform="translate(-2.5 -0.1)"><g transform="rotate(0.3 177.5 224.5)"><g clip-path="url(#airlock-c5)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.75"/><use href="#airlock-sil" fill="url(#airlock-f0)"/></g></g></g>
+    <g transform="translate(-1.9 -1.6)"><g transform="rotate(0.1 184.4 200.2)"><g clip-path="url(#airlock-c6)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.81"/><use href="#airlock-sil" fill="url(#airlock-f1)"/></g></g></g>
+    <g transform="translate(-0.9 -2.3)"><g transform="rotate(-0.4 199.2 186.7)"><g clip-path="url(#airlock-c7)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.77"/><use href="#airlock-sil" fill="url(#airlock-f0)"/></g></g></g>
+    <g transform="translate(0.9 -2.3)"><g transform="rotate(0.3 228.2 189.5)"><g clip-path="url(#airlock-c8)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.88"/><use href="#airlock-sil" fill="url(#airlock-f2)"/></g></g></g>
+    <g transform="translate(2 -1.4)"><g transform="rotate(-0.4 245.9 203.7)"><g clip-path="url(#airlock-c9)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.83"/><use href="#airlock-sil" fill="url(#airlock-f1)"/></g></g></g>
+    <g transform="translate(2.5 -0.2)"><g transform="rotate(-0.3 253.1 222.1)"><g clip-path="url(#airlock-c10)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.80"/><use href="#airlock-sil" fill="url(#airlock-f1)"/></g></g></g>
+    <g transform="translate(5.2 2.2)"><g transform="rotate(-0.2 308 266.2)"><g clip-path="url(#airlock-c11)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.82"/><use href="#airlock-sil" fill="url(#airlock-f0)"/></g></g></g>
+    <g transform="translate(3.4 4.6)"><g transform="rotate(-0.2 270.2 302.6)"><g clip-path="url(#airlock-c12)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.80"/><use href="#airlock-sil" fill="url(#airlock-f2)"/></g></g></g>
+    <g transform="translate(-0.2 5.7)"><g transform="rotate(0 210 322.3)"><g clip-path="url(#airlock-c13)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.83"/><use href="#airlock-sil" fill="url(#airlock-f1)"/></g></g></g>
+    <g transform="translate(-2.7 5)"><g transform="rotate(-0.4 165.1 316.5)"><g clip-path="url(#airlock-c14)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.83"/><use href="#airlock-sil" fill="url(#airlock-f0)"/></g></g></g>
+    <g transform="translate(-4.7 3.2)"><g transform="rotate(-0.5 133 282.1)"><g clip-path="url(#airlock-c15)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.88"/><use href="#airlock-sil" fill="url(#airlock-f3)"/></g></g></g>
+    <g transform="translate(-5.7 -0.5)"><g transform="rotate(0.6 124.3 218.4)"><g clip-path="url(#airlock-c16)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.95"/><use href="#airlock-sil" fill="url(#airlock-f3)"/></g></g></g>
+    <g transform="translate(-4.2 -3.9)"><g transform="rotate(-0.9 142.7 159.7)"><g clip-path="url(#airlock-c17)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.97"/><use href="#airlock-sil" fill="url(#airlock-f2)"/></g></g></g>
+    <g transform="translate(-1.8 -5.4)"><g transform="rotate(-0.9 181.7 130.8)"><g clip-path="url(#airlock-c18)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.92"/><use href="#airlock-sil" fill="url(#airlock-f0)"/></g></g></g>
+    <g transform="translate(2.1 -5.3)"><g transform="rotate(1 250.2 136)"><g clip-path="url(#airlock-c19)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.96"/><use href="#airlock-sil" fill="url(#airlock-f1)"/></g></g></g>
+    <g transform="translate(4.6 -3.4)"><g transform="rotate(-0.2 296.5 165.8)"><g clip-path="url(#airlock-c20)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.76"/><use href="#airlock-sil" fill="url(#airlock-f1)"/></g></g></g>
+    <g transform="translate(5.6 -0.8)"><g transform="rotate(-0.7 309.1 213.2)"><g clip-path="url(#airlock-c21)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.87"/><use href="#airlock-sil" fill="url(#airlock-f2)"/></g></g></g>
+    <g transform="translate(8.1 3.8)"><g transform="rotate(-1 387.1 306.6)"><g clip-path="url(#airlock-c22)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.95"/><use href="#airlock-sil" fill="url(#airlock-f1)"/></g></g></g>
+    <g transform="translate(5.2 7.2)"><g transform="rotate(-0.2 320.6 375)"><g clip-path="url(#airlock-c23)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.75"/><use href="#airlock-sil" fill="url(#airlock-f1)"/></g></g></g>
+    <g transform="translate(-0.2 8.9)"><g transform="rotate(0.9 209.9 409.3)"><g clip-path="url(#airlock-c24)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.89"/><use href="#airlock-sil" fill="url(#airlock-f1)"/></g></g></g>
+    <g transform="translate(-4.2 7.9)"><g transform="rotate(0.5 125.1 394.1)"><g clip-path="url(#airlock-c25)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.76"/><use href="#airlock-sil" fill="url(#airlock-f1)"/></g></g></g>
+    <g transform="translate(-7.4 4.9)"><g transform="rotate(-0.3 63.5 325.1)"><g clip-path="url(#airlock-c26)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.93"/><use href="#airlock-sil" fill="url(#airlock-f3)"/></g></g></g>
+    <g transform="translate(-8.8 -1.2)"><g transform="rotate(-1.5 44.7 203.6)"><g clip-path="url(#airlock-c27)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.77"/><use href="#airlock-sil" fill="url(#airlock-f1)"/></g></g></g>
+    <g transform="translate(-6.6 -6)"><g transform="rotate(0.3 79.9 104.2)"><g clip-path="url(#airlock-c28)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.97"/><use href="#airlock-sil" fill="url(#airlock-f3)"/></g></g></g>
+    <g transform="translate(-3.1 -8.3)"><g transform="rotate(-0.1 151.9 58.4)"><g clip-path="url(#airlock-c29)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.76"/><use href="#airlock-sil" fill="url(#airlock-f2)"/></g></g></g>
+    <g transform="translate(3 -8.4)"><g transform="rotate(1.5 274.1 57.2)"><g clip-path="url(#airlock-c30)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.77"/><use href="#airlock-sil" fill="url(#airlock-f2)"/></g></g></g>
+    <g transform="translate(6.9 -5.6)"><g transform="rotate(1.4 362.5 104.7)"><g clip-path="url(#airlock-c31)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.74"/><use href="#airlock-sil" fill="url(#airlock-f2)"/></g></g></g>
+    <g transform="translate(8.8 -1.3)"><g transform="rotate(0.4 392.1 200.2)"><g clip-path="url(#airlock-c32)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.82"/><use href="#airlock-sil" fill="url(#airlock-f1)"/></g></g></g>
+    <g transform="translate(11 5)"><g transform="rotate(0.5 572.2 386.8)"><g clip-path="url(#airlock-c33)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.88"/><use href="#airlock-sil" fill="url(#airlock-f2)"/></g></g></g>
+    <g transform="translate(6.6 10.1)"><g transform="rotate(-1.3 420.9 543.3)"><g clip-path="url(#airlock-c34)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.76"/><use href="#airlock-sil" fill="url(#airlock-f1)"/></g></g></g>
+    <g transform="translate(-0.8 12.1)"><g transform="rotate(-0.6 187.9 608.6)"><g clip-path="url(#airlock-c35)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.77"/><use href="#airlock-sil" fill="url(#airlock-f1)"/></g></g></g>
+    <g transform="translate(-6.1 10.4)"><g transform="rotate(0.1 15.2 565.5)"><g clip-path="url(#airlock-c36)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.85"/><use href="#airlock-sil" fill="url(#airlock-f0)"/></g></g></g>
+    <g transform="translate(-10.3 6.4)"><g transform="rotate(-1.3 -108.1 424.9)"><g clip-path="url(#airlock-c37)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.80"/><use href="#airlock-sil" fill="url(#airlock-f0)"/></g></g></g>
+    <g transform="translate(-12 -1.7)"><g transform="rotate(0.3 -151.8 175.3)"><g clip-path="url(#airlock-c38)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.88"/><use href="#airlock-sil" fill="url(#airlock-f3)"/></g></g></g>
+    <g transform="translate(-9.3 -7.7)"><g transform="rotate(-0.6 -85.4 -22.1)"><g clip-path="url(#airlock-c39)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.91"/><use href="#airlock-sil" fill="url(#airlock-f1)"/></g></g></g>
+    <g transform="translate(-4.6 -11.2)"><g transform="rotate(-1.9 70.5 -121.3)"><g clip-path="url(#airlock-c40)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.83"/><use href="#airlock-sil" fill="url(#airlock-f0)"/></g></g></g>
+    <g transform="translate(3.5 -11.6)"><g transform="rotate(-1.2 323.2 -130.6)"><g clip-path="url(#airlock-c41)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.91"/><use href="#airlock-sil" fill="url(#airlock-f3)"/></g></g></g>
+    <g transform="translate(9.2 -7.8)"><g transform="rotate(-1.9 513.2 -28.2)"><g clip-path="url(#airlock-c42)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.90"/><use href="#airlock-sil" fill="url(#airlock-f3)"/></g></g></g>
+    <g transform="translate(12 -1.8)"><g transform="rotate(-0.1 587.8 169.6)"><g clip-path="url(#airlock-c43)"><use href="#airlock-sil" fill="url(#airlock-g)" fill-opacity="0.80"/><use href="#airlock-sil" fill="url(#airlock-f1)"/></g></g></g>
+  </g>
+</svg>

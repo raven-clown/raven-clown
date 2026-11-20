@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="rosetta logo">
+  <defs>
+    <linearGradient id="rosetta-g" gradientUnits="userSpaceOnUse" x1="60" y1="60" x2="452" y2="452"><stop offset="0" stop-color="#FBBF24"/><stop offset="0.55" stop-color="#F97316"/><stop offset="1" stop-color="#EF4444"/></linearGradient>
+    <linearGradient id="rosetta-f0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="rosetta-f1" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="rosetta-f2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="rosetta-f3" x1="0.5" y1="0" x2="0.5" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <g id="rosetta-sil"><path d="M234 196 H278 A10 10 0 0 1 288 206 V294 A10 10 0 0 1 278 304 H234 A10 10 0 0 1 224 294 V206 A10 10 0 0 1 234 196 Z" fill-rule="nonzero"/><path d="M204 192 A52 52 0 0 1 308 192 L256 192 A0 0 0 0 0 256 192 Z" fill-rule="nonzero"/><path d="M255 112 H257 A3 3 0 0 1 260 115 V143 A3 3 0 0 1 257 146 H255 A3 3 0 0 1 252 143 V115 A3 3 0 0 1 255 112 Z" fill-rule="nonzero"/><path d="M244 106 A12 12 0 1 0 268 106 A12 12 0 1 0 244 106 Z" fill-rule="nonzero"/><path d="M207 243 H223 A3 3 0 0 1 226 246 V254 A3 3 0 0 1 223 257 H207 A3 3 0 0 1 204 254 V246 A3 3 0 0 1 207 243 Z" fill-rule="nonzero"/><path d="M289 243 H305 A3 3 0 0 1 308 246 V254 A3 3 0 0 1 305 257 H289 A3 3 0 0 1 286 254 V246 A3 3 0 0 1 289 243 Z" fill-rule="nonzero"/><path d="M181 214 H198 A4 4 0 0 1 202 218 V244 A4 4 0 0 1 198 248 H181 A4 4 0 0 1 177 244 V218 A4 4 0 0 1 181 214 Z" fill-rule="nonzero"/><path d="M181 252 H198 A4 4 0 0 1 202 256 V282 A4 4 0 0 1 198 286 H181 A4 4 0 0 1 177 282 V256 A4 4 0 0 1 181 252 Z" fill-rule="nonzero"/><path d="M151 214 H168 A4 4 0 0 1 172 218 V244 A4 4 0 0 1 168 248 H151 A4 4 0 0 1 147 244 V218 A4 4 0 0 1 151 214 Z" fill-rule="nonzero"/><path d="M151 252 H168 A4 4 0 0 1 172 256 V282 A4 4 0 0 1 168 286 H151 A4 4 0 0 1 147 282 V256 A4 4 0 0 1 151 252 Z" fill-rule="nonzero"/><path d="M121 214 H138 A4 4 0 0 1 142 218 V244 A4 4 0 0 1 138 248 H121 A4 4 0 0 1 117 244 V218 A4 4 0 0 1 121 214 Z" fill-rule="nonzero"/><path d="M121 252 H138 A4 4 0 0 1 142 256 V282 A4 4 0 0 1 138 286 H121 A4 4 0 0 1 117 282 V256 A4 4 0 0 1 121 252 Z" fill-rule="nonzero"/><path d="M91 214 H108 A4 4 0 0 1 112 218 V244 A4 4 0 0 1 108 248 H91 A4 4 0 0 1 87 244 V218 A4 4 0 0 1 91 214 Z" fill-rule="nonzero"/><path d="M91 252 H108 A4 4 0 0 1 112 256 V282 A4 4 0 0 1 108 286 H91 A4 4 0 0 1 87 282 V256 A4 4 0 0 1 91 252 Z" fill-rule="nonzero"/><path d="M61 214 H78 A4 4 0 0 1 82 218 V244 A4 4 0 0 1 78 248 H61 A4 4 0 0 1 57 244 V218 A4 4 0 0 1 61 214 Z" fill-rule="nonzero"/><path d="M61 252 H78 A4 4 0 0 1 82 256 V282 A4 4 0 0 1 78 286 H61 A4 4 0 0 1 57 282 V256 A4 4 0 0 1 61 252 Z" fill-rule="nonzero"/><path d="M314 214 H331 A4 4 0 0 1 335 218 V244 A4 4 0 0 1 331 248 H314 A4 4 0 0 1 310 244 V218 A4 4 0 0 1 314 214 Z" fill-rule="nonzero"/><path d="M314 252 H331 A4 4 0 0 1 335 256 V282 A4 4 0 0 1 331 286 H314 A4 4 0 0 1 310 282 V256 A4 4 0 0 1 314 252 Z" fill-rule="nonzero"/><path d="M344 214 H361 A4 4 0 0 1 365 218 V244 A4 4 0 0 1 361 248 H344 A4 4 0 0 1 340 244 V218 A4 4 0 0 1 344 214 Z" fill-rule="nonzero"/><path d="M344 252 H361 A4 4 0 0 1 365 256 V282 A4 4 0 0 1 361 286 H344 A4 4 0 0 1 340 282 V256 A4 4 0 0 1 344 252 Z" fill-rule="nonzero"/><path d="M374 214 H391 A4 4 0 0 1 395 218 V244 A4 4 0 0 1 391 248 H374 A4 4 0 0 1 370 244 V218 A4 4 0 0 1 374 214 Z" fill-rule="nonzero"/><path d="M374 252 H391 A4 4 0 0 1 395 256 V282 A4 4 0 0 1 391 286 H374 A4 4 0 0 1 370 282 V256 A4 4 0 0 1 374 252 Z" fill-rule="nonzero"/><path d="M404 214 H421 A4 4 0 0 1 425 218 V244 A4 4 0 0 1 421 248 H404 A4 4 0 0 1 400 244 V218 A4 4 0 0 1 404 214 Z" fill-rule="nonzero"/><path d="M404 252 H421 A4 4 0 0 1 425 256 V282 A4 4 0 0 1 421 286 H404 A4 4 0 0 1 400 282 V256 A4 4 0 0 1 404 252 Z" fill-rule="nonzero"/><path d="M434 214 H451 A4 4 0 0 1 455 218 V244 A4 4 0 0 1 451 248 H434 A4 4 0 0 1 430 244 V218 A4 4 0 0 1 434 214 Z" fill-rule="nonzero"/><path d="M434 252 H451 A4 4 0 0 1 455 256 V282 A4 4 0 0 1 451 286 H434 A4 4 0 0 1 430 282 V256 A4 4 0 0 1 434 252 Z" fill-rule="nonzero"/></g>
+    <clipPath id="rosetta-c0"><path d="M282 236 L321.8 260.1 L328.8 251.7 Z"/></clipPath>
+    <clipPath id="rosetta-c1"><path d="M282 236 L293.7 279 L321.8 260.1 Z"/></clipPath>
+    <clipPath id="rosetta-c2"><path d="M282 236 L271.2 290.4 L293.7 279 Z"/></clipPath>
+    <clipPath id="rosetta-c3"><path d="M282 236 L246.5 277.5 L271.2 290.4 Z"/></clipPath>
+    <clipPath id="rosetta-c4"><path d="M282 236 L230.9 232.3 L246.5 277.5 Z"/></clipPath>
+    <clipPath id="rosetta-c5"><path d="M282 236 L238.8 220.8 L230.9 232.3 Z"/></clipPath>
+    <clipPath id="rosetta-c6"><path d="M282 236 L255.1 188.6 L238.8 220.8 Z"/></clipPath>
+    <clipPath id="rosetta-c7"><path d="M282 236 L282 182.5 L255.1 188.6 Z"/></clipPath>
+    <clipPath id="rosetta-c8"><path d="M282 236 L313 187 L282 182.5 Z"/></clipPath>
+    <clipPath id="rosetta-c9"><path d="M282 236 L344.9 207 L313 187 Z"/></clipPath>
+    <clipPath id="rosetta-c10"><path d="M282 236 L328.8 251.7 L344.9 207 Z"/></clipPath>
+    <clipPath id="rosetta-c11"><path d="M328.8 251.7 L321.8 260.1 L409.6 319.5 L408.9 263.9 Z"/></clipPath>
+    <clipPath id="rosetta-c12"><path d="M321.8 260.1 L293.7 279 L304.4 365.5 L409.6 319.5 Z"/></clipPath>
+    <clipPath id="rosetta-c13"><path d="M293.7 279 L271.2 290.4 L257.7 376.1 L304.4 365.5 Z"/></clipPath>
+    <clipPath id="rosetta-c14"><path d="M271.2 290.4 L246.5 277.5 L181.2 348 L257.7 376.1 Z"/></clipPath>
+    <clipPath id="rosetta-c15"><path d="M246.5 277.5 L230.9 232.3 L146.2 228.3 L181.2 348 Z"/></clipPath>
+    <clipPath id="rosetta-c16"><path d="M230.9 232.3 L238.8 220.8 L160.5 190.4 L146.2 228.3 Z"/></clipPath>
+    <clipPath id="rosetta-c17"><path d="M238.8 220.8 L255.1 188.6 L218.9 123.8 L160.5 190.4 Z"/></clipPath>
+    <clipPath id="rosetta-c18"><path d="M255.1 188.6 L282 182.5 L287.3 90.4 L218.9 123.8 Z"/></clipPath>
+    <clipPath id="rosetta-c19"><path d="M282 182.5 L313 187 L359.4 107.9 L287.3 90.4 Z"/></clipPath>
+    <clipPath id="rosetta-c20"><path d="M313 187 L344.9 207 L397.9 173.8 L359.4 107.9 Z"/></clipPath>
+    <clipPath id="rosetta-c21"><path d="M344.9 207 L328.8 251.7 L408.9 263.9 L397.9 173.8 Z"/></clipPath>
+    <clipPath id="rosetta-c22"><path d="M408.9 263.9 L409.6 319.5 L462 369.3 L509.7 301.2 Z"/></clipPath>
+    <clipPath id="rosetta-c23"><path d="M409.6 319.5 L304.4 365.5 L330.1 467.3 L462 369.3 Z"/></clipPath>
+    <clipPath id="rosetta-c24"><path d="M304.4 365.5 L257.7 376.1 L258.4 462.9 L330.1 467.3 Z"/></clipPath>
+    <clipPath id="rosetta-c25"><path d="M257.7 376.1 L181.2 348 L132 400.1 L258.4 462.9 Z"/></clipPath>
+    <clipPath id="rosetta-c26"><path d="M181.2 348 L146.2 228.3 L52.5 237.6 L132 400.1 Z"/></clipPath>
+    <clipPath id="rosetta-c27"><path d="M146.2 228.3 L160.5 190.4 L65.1 152.1 L52.5 237.6 Z"/></clipPath>
+    <clipPath id="rosetta-c28"><path d="M160.5 190.4 L218.9 123.8 L145.7 30 L65.1 152.1 Z"/></clipPath>
+    <clipPath id="rosetta-c29"><path d="M218.9 123.8 L287.3 90.4 L265 3.5 L145.7 30 Z"/></clipPath>
+    <clipPath id="rosetta-c30"><path d="M287.3 90.4 L359.4 107.9 L419.7 38.7 L265 3.5 Z"/></clipPath>
+    <clipPath id="rosetta-c31"><path d="M359.4 107.9 L397.9 173.8 L491.1 146.1 L419.7 38.7 Z"/></clipPath>
+    <clipPath id="rosetta-c32"><path d="M397.9 173.8 L408.9 263.9 L509.7 301.2 L491.1 146.1 Z"/></clipPath>
+    <clipPath id="rosetta-c33"><path d="M509.7 301.2 L462 369.3 L769.9 510.9 L824.7 374.2 Z"/></clipPath>
+    <clipPath id="rosetta-c34"><path d="M462 369.3 L330.1 467.3 L391.3 785.2 L769.9 510.9 Z"/></clipPath>
+    <clipPath id="rosetta-c35"><path d="M330.1 467.3 L258.4 462.9 L216.4 792.1 L391.3 785.2 Z"/></clipPath>
+    <clipPath id="rosetta-c36"><path d="M258.4 462.9 L132 400.1 L-85.8 658.3 L216.4 792.1 Z"/></clipPath>
+    <clipPath id="rosetta-c37"><path d="M132 400.1 L52.5 237.6 L-278 239.1 L-85.8 658.3 Z"/></clipPath>
+    <clipPath id="rosetta-c38"><path d="M52.5 237.6 L65.1 152.1 L-255.5 78.8 L-278 239.1 Z"/></clipPath>
+    <clipPath id="rosetta-c39"><path d="M65.1 152.1 L145.7 30 L-11.5 -240.9 L-255.5 78.8 Z"/></clipPath>
+    <clipPath id="rosetta-c40"><path d="M145.7 30 L265 3.5 L263 -323.7 L-11.5 -240.9 Z"/></clipPath>
+    <clipPath id="rosetta-c41"><path d="M265 3.5 L419.7 38.7 L565.8 -246.8 L263 -323.7 Z"/></clipPath>
+    <clipPath id="rosetta-c42"><path d="M419.7 38.7 L491.1 146.1 L790.8 2.1 L565.8 -246.8 Z"/></clipPath>
+    <clipPath id="rosetta-c43"><path d="M491.1 146.1 L509.7 301.2 L824.7 374.2 L790.8 2.1 Z"/></clipPath>
+  </defs>
+  <g transform="translate(0 0) scale(1.0000)">
+    <g transform="translate(2.3 1)"><g transform="rotate(-0.6 310.9 249.3)"><g clip-path="url(#rosetta-c0)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.88"/><use href="#rosetta-sil" fill="url(#rosetta-f0)"/></g></g></g>
+    <g transform="translate(1.5 2)"><g transform="rotate(-0.4 299.2 258.4)"><g clip-path="url(#rosetta-c1)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.81"/><use href="#rosetta-sil" fill="url(#rosetta-f3)"/></g></g></g>
+    <g transform="translate(0 2.5)"><g transform="rotate(-0.3 282.3 268.4)"><g clip-path="url(#rosetta-c2)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.96"/><use href="#rosetta-sil" fill="url(#rosetta-f3)"/></g></g></g>
+    <g transform="translate(-1.1 2.3)"><g transform="rotate(-0.6 266.6 267.9)"><g clip-path="url(#rosetta-c3)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.91"/><use href="#rosetta-sil" fill="url(#rosetta-f2)"/></g></g></g>
+    <g transform="translate(-2.3 1)"><g transform="rotate(-0.2 253.1 248.6)"><g clip-path="url(#rosetta-c4)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.96"/><use href="#rosetta-sil" fill="url(#rosetta-f3)"/></g></g></g>
+    <g transform="translate(-2.5 -0.5)"><g transform="rotate(0.1 250.6 229.7)"><g clip-path="url(#rosetta-c5)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.93"/><use href="#rosetta-sil" fill="url(#rosetta-f1)"/></g></g></g>
+    <g transform="translate(-1.9 -1.7)"><g transform="rotate(0.1 258.6 215.1)"><g clip-path="url(#rosetta-c6)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.77"/><use href="#rosetta-sil" fill="url(#rosetta-f1)"/></g></g></g>
+    <g transform="translate(-0.6 -2.4)"><g transform="rotate(0.4 273 202.4)"><g clip-path="url(#rosetta-c7)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.95"/><use href="#rosetta-sil" fill="url(#rosetta-f1)"/></g></g></g>
+    <g transform="translate(0.7 -2.4)"><g transform="rotate(0.1 292.3 201.9)"><g clip-path="url(#rosetta-c8)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.82"/><use href="#rosetta-sil" fill="url(#rosetta-f1)"/></g></g></g>
+    <g transform="translate(1.9 -1.6)"><g transform="rotate(-0.3 313.3 210)"><g clip-path="url(#rosetta-c9)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.95"/><use href="#rosetta-sil" fill="url(#rosetta-f2)"/></g></g></g>
+    <g transform="translate(2.5 -0.3)"><g transform="rotate(-0.1 318.6 231.6)"><g clip-path="url(#rosetta-c10)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.79"/><use href="#rosetta-sil" fill="url(#rosetta-f3)"/></g></g></g>
+    <g transform="translate(5.2 2.3)"><g transform="rotate(-1.1 367.3 273.8)"><g clip-path="url(#rosetta-c11)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.85"/><use href="#rosetta-sil" fill="url(#rosetta-f0)"/></g></g></g>
+    <g transform="translate(3.3 4.6)"><g transform="rotate(1 332.4 306)"><g clip-path="url(#rosetta-c12)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.75"/><use href="#rosetta-sil" fill="url(#rosetta-f2)"/></g></g></g>
+    <g transform="translate(-0 5.7)"><g transform="rotate(-0.1 281.7 327.7)"><g clip-path="url(#rosetta-c13)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.91"/><use href="#rosetta-sil" fill="url(#rosetta-f3)"/></g></g></g>
+    <g transform="translate(-2.5 5.1)"><g transform="rotate(0.1 239.2 323)"><g clip-path="url(#rosetta-c14)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.75"/><use href="#rosetta-sil" fill="url(#rosetta-f0)"/></g></g></g>
+    <g transform="translate(-5.2 2.3)"><g transform="rotate(1.1 201.2 271.5)"><g clip-path="url(#rosetta-c15)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.82"/><use href="#rosetta-sil" fill="url(#rosetta-f2)"/></g></g></g>
+    <g transform="translate(-5.6 -1.1)"><g transform="rotate(0.3 194.1 217.9)"><g clip-path="url(#rosetta-c16)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.90"/><use href="#rosetta-sil" fill="url(#rosetta-f0)"/></g></g></g>
+    <g transform="translate(-4.3 -3.7)"><g transform="rotate(-0.1 218.3 180.9)"><g clip-path="url(#rosetta-c17)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.78"/><use href="#rosetta-sil" fill="url(#rosetta-f0)"/></g></g></g>
+    <g transform="translate(-1.3 -5.5)"><g transform="rotate(0.4 260.8 146.3)"><g clip-path="url(#rosetta-c18)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.84"/><use href="#rosetta-sil" fill="url(#rosetta-f1)"/></g></g></g>
+    <g transform="translate(1.6 -5.5)"><g transform="rotate(-1.1 310.4 142)"><g clip-path="url(#rosetta-c19)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.90"/><use href="#rosetta-sil" fill="url(#rosetta-f1)"/></g></g></g>
+    <g transform="translate(4.2 -3.9)"><g transform="rotate(-0.8 353.8 169)"><g clip-path="url(#rosetta-c20)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.90"/><use href="#rosetta-sil" fill="url(#rosetta-f0)"/></g></g></g>
+    <g transform="translate(5.6 -0.8)"><g transform="rotate(1.1 370.1 224.1)"><g clip-path="url(#rosetta-c21)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.75"/><use href="#rosetta-sil" fill="url(#rosetta-f2)"/></g></g></g>
+    <g transform="translate(8.1 3.8)"><g transform="rotate(-0.9 447.5 313.5)"><g clip-path="url(#rosetta-c22)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.78"/><use href="#rosetta-sil" fill="url(#rosetta-f1)"/></g></g></g>
+    <g transform="translate(4.9 7.4)"><g transform="rotate(0.5 376.5 380.4)"><g clip-path="url(#rosetta-c23)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.93"/><use href="#rosetta-sil" fill="url(#rosetta-f1)"/></g></g></g>
+    <g transform="translate(0.3 8.9)"><g transform="rotate(-1.5 287.6 418)"><g clip-path="url(#rosetta-c24)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.78"/><use href="#rosetta-sil" fill="url(#rosetta-f3)"/></g></g></g>
+    <g transform="translate(-3.7 8.1)"><g transform="rotate(0.1 207.3 396.8)"><g clip-path="url(#rosetta-c25)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.78"/><use href="#rosetta-sil" fill="url(#rosetta-f0)"/></g></g></g>
+    <g transform="translate(-8.2 3.6)"><g transform="rotate(-0.2 128 303.5)"><g clip-path="url(#rosetta-c26)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.86"/><use href="#rosetta-sil" fill="url(#rosetta-f3)"/></g></g></g>
+    <g transform="translate(-8.7 -1.7)"><g transform="rotate(1.1 106.1 202.1)"><g clip-path="url(#rosetta-c27)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.88"/><use href="#rosetta-sil" fill="url(#rosetta-f3)"/></g></g></g>
+    <g transform="translate(-6.8 -5.7)"><g transform="rotate(-0.8 147.5 124.1)"><g clip-path="url(#rosetta-c28)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.83"/><use href="#rosetta-sil" fill="url(#rosetta-f0)"/></g></g></g>
+    <g transform="translate(-2.6 -8.5)"><g transform="rotate(1 229.2 62)"><g clip-path="url(#rosetta-c29)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.75"/><use href="#rosetta-sil" fill="url(#rosetta-f1)"/></g></g></g>
+    <g transform="translate(2.5 -8.5)"><g transform="rotate(-1.5 332.8 60.2)"><g clip-path="url(#rosetta-c30)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.75"/><use href="#rosetta-sil" fill="url(#rosetta-f3)"/></g></g></g>
+    <g transform="translate(6.7 -5.9)"><g transform="rotate(1.2 417 116.6)"><g clip-path="url(#rosetta-c31)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.77"/><use href="#rosetta-sil" fill="url(#rosetta-f2)"/></g></g></g>
+    <g transform="translate(8.9 -0.8)"><g transform="rotate(0.4 451.9 221.2)"><g clip-path="url(#rosetta-c32)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.78"/><use href="#rosetta-sil" fill="url(#rosetta-f2)"/></g></g></g>
+    <g transform="translate(11.1 4.7)"><g transform="rotate(-0.1 641.6 388.9)"><g clip-path="url(#rosetta-c33)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.83"/><use href="#rosetta-sil" fill="url(#rosetta-f3)"/></g></g></g>
+    <g transform="translate(6.9 9.9)"><g transform="rotate(-1.3 488.3 533.2)"><g clip-path="url(#rosetta-c34)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.91"/><use href="#rosetta-sil" fill="url(#rosetta-f2)"/></g></g></g>
+    <g transform="translate(0.5 12.1)"><g transform="rotate(1 299 626.9)"><g clip-path="url(#rosetta-c35)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.79"/><use href="#rosetta-sil" fill="url(#rosetta-f0)"/></g></g></g>
+    <g transform="translate(-4.9 11.1)"><g transform="rotate(1.9 130.2 578.4)"><g clip-path="url(#rosetta-c36)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.94"/><use href="#rosetta-sil" fill="url(#rosetta-f3)"/></g></g></g>
+    <g transform="translate(-11 5)"><g transform="rotate(-1.6 -44.8 383.8)"><g clip-path="url(#rosetta-c37)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.76"/><use href="#rosetta-sil" fill="url(#rosetta-f3)"/></g></g></g>
+    <g transform="translate(-12 -1.8)"><g transform="rotate(-2 -104 176.9)"><g clip-path="url(#rosetta-c38)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.80"/><use href="#rosetta-sil" fill="url(#rosetta-f0)"/></g></g></g>
+    <g transform="translate(-9.5 -7.4)"><g transform="rotate(-2.1 -14 5)"><g clip-path="url(#rosetta-c39)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.89"/><use href="#rosetta-sil" fill="url(#rosetta-f0)"/></g></g></g>
+    <g transform="translate(-3.6 -11.5)"><g transform="rotate(0.7 165.5 -132.8)"><g clip-path="url(#rosetta-c40)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.90"/><use href="#rosetta-sil" fill="url(#rosetta-f3)"/></g></g></g>
+    <g transform="translate(3.1 -11.7)"><g transform="rotate(0.6 378.4 -132)"><g clip-path="url(#rosetta-c41)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.74"/><use href="#rosetta-sil" fill="url(#rosetta-f0)"/></g></g></g>
+    <g transform="translate(9.1 -8)"><g transform="rotate(2.1 566.9 -15)"><g clip-path="url(#rosetta-c42)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.82"/><use href="#rosetta-sil" fill="url(#rosetta-f1)"/></g></g></g>
+    <g transform="translate(12.1 -1)"><g transform="rotate(1 654.1 205.9)"><g clip-path="url(#rosetta-c43)"><use href="#rosetta-sil" fill="url(#rosetta-g)" fill-opacity="0.79"/><use href="#rosetta-sil" fill="url(#rosetta-f0)"/></g></g></g>
+  </g>
+</svg>

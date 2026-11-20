@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="transponder logo">
+  <defs>
+    <linearGradient id="transponder-g" gradientUnits="userSpaceOnUse" x1="60" y1="60" x2="452" y2="452"><stop offset="0" stop-color="#C084FC"/><stop offset="1" stop-color="#EC4899"/></linearGradient>
+    <linearGradient id="transponder-f0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="transponder-f1" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="transponder-f2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="transponder-f3" x1="0.5" y1="0" x2="0.5" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <g id="transponder-sil"><path d="M104 196 A150 150 0 0 0 322 372 Z" fill-rule="nonzero"/><path d="M206 318 L238 318 L254 420 L190 420 Z" fill-rule="nonzero"/><path d="M156 420 H288 A10 10 0 0 1 298 430 V434 A10 10 0 0 1 288 444 H156 A10 10 0 0 1 146 434 V430 A10 10 0 0 1 156 420 Z" fill-rule="nonzero"/><path d="M222 290 L236 302 L330 176 L316 164 Z" fill-rule="nonzero"/><path d="M314 158 A24 24 0 1 0 362 158 A24 24 0 1 0 314 158 Z" fill-rule="nonzero"/><path d="M346.4 88.5 A70 70 0 0 1 407.9 161.5 L387.9 160.5 A50 50 0 0 0 344 108.4 Z" fill-rule="nonzero"/><path d="M351.3 48.8 A110 110 0 0 1 447.9 163.5 L427.9 162.5 A90 90 0 0 0 348.8 68.7 Z" fill-rule="nonzero"/></g>
+    <clipPath id="transponder-c0"><path d="M230 262 L260.4 312.8 L282.7 284.1 Z"/></clipPath>
+    <clipPath id="transponder-c1"><path d="M230 262 L228.7 306.3 L260.4 312.8 Z"/></clipPath>
+    <clipPath id="transponder-c2"><path d="M230 262 L199.3 303.8 L228.7 306.3 Z"/></clipPath>
+    <clipPath id="transponder-c3"><path d="M230 262 L170.1 288.3 L199.3 303.8 Z"/></clipPath>
+    <clipPath id="transponder-c4"><path d="M230 262 L164.2 270.7 L170.1 288.3 Z"/></clipPath>
+    <clipPath id="transponder-c5"><path d="M230 262 L178.7 228.5 L164.2 270.7 Z"/></clipPath>
+    <clipPath id="transponder-c6"><path d="M230 262 L222.8 218.5 L178.7 228.5 Z"/></clipPath>
+    <clipPath id="transponder-c7"><path d="M230 262 L240.9 213.3 L222.8 218.5 Z"/></clipPath>
+    <clipPath id="transponder-c8"><path d="M230 262 L288.8 221.3 L240.9 213.3 Z"/></clipPath>
+    <clipPath id="transponder-c9"><path d="M230 262 L280.1 247.9 L288.8 221.3 Z"/></clipPath>
+    <clipPath id="transponder-c10"><path d="M230 262 L282.7 284.1 L280.1 247.9 Z"/></clipPath>
+    <clipPath id="transponder-c11"><path d="M282.7 284.1 L260.4 312.8 L291.7 378.4 L356.6 324.4 Z"/></clipPath>
+    <clipPath id="transponder-c12"><path d="M260.4 312.8 L228.7 306.3 L210.5 406 L291.7 378.4 Z"/></clipPath>
+    <clipPath id="transponder-c13"><path d="M228.7 306.3 L199.3 303.8 L151.4 391 L210.5 406 Z"/></clipPath>
+    <clipPath id="transponder-c14"><path d="M199.3 303.8 L170.1 288.3 L105.3 316.6 L151.4 391 Z"/></clipPath>
+    <clipPath id="transponder-c15"><path d="M170.1 288.3 L164.2 270.7 L101.2 280.3 L105.3 316.6 Z"/></clipPath>
+    <clipPath id="transponder-c16"><path d="M164.2 270.7 L178.7 228.5 L122.6 181.2 L101.2 280.3 Z"/></clipPath>
+    <clipPath id="transponder-c17"><path d="M178.7 228.5 L222.8 218.5 L206 138.2 L122.6 181.2 Z"/></clipPath>
+    <clipPath id="transponder-c18"><path d="M222.8 218.5 L240.9 213.3 L261.4 130.2 L206 138.2 Z"/></clipPath>
+    <clipPath id="transponder-c19"><path d="M240.9 213.3 L288.8 221.3 L347.5 170.6 L261.4 130.2 Z"/></clipPath>
+    <clipPath id="transponder-c20"><path d="M288.8 221.3 L280.1 247.9 L357 216.8 L347.5 170.6 Z"/></clipPath>
+    <clipPath id="transponder-c21"><path d="M280.1 247.9 L282.7 284.1 L356.6 324.4 L357 216.8 Z"/></clipPath>
+    <clipPath id="transponder-c22"><path d="M356.6 324.4 L291.7 378.4 L374.1 465.5 L455.3 349.7 Z"/></clipPath>
+    <clipPath id="transponder-c23"><path d="M291.7 378.4 L210.5 406 L201.6 503.3 L374.1 465.5 Z"/></clipPath>
+    <clipPath id="transponder-c24"><path d="M210.5 406 L151.4 391 L101.5 443.7 L201.6 503.3 Z"/></clipPath>
+    <clipPath id="transponder-c25"><path d="M151.4 391 L105.3 316.6 L12.2 342.7 L101.5 443.7 Z"/></clipPath>
+    <clipPath id="transponder-c26"><path d="M105.3 316.6 L101.2 280.3 L10 293.9 L12.2 342.7 Z"/></clipPath>
+    <clipPath id="transponder-c27"><path d="M101.2 280.3 L122.6 181.2 L55.5 116.7 L10 293.9 Z"/></clipPath>
+    <clipPath id="transponder-c28"><path d="M122.6 181.2 L206 138.2 L189.1 38.2 L55.5 116.7 Z"/></clipPath>
+    <clipPath id="transponder-c29"><path d="M206 138.2 L261.4 130.2 L308.6 26.8 L189.1 38.2 Z"/></clipPath>
+    <clipPath id="transponder-c30"><path d="M261.4 130.2 L347.5 170.6 L410.3 116.6 L308.6 26.8 Z"/></clipPath>
+    <clipPath id="transponder-c31"><path d="M347.5 170.6 L357 216.8 L456.1 191.9 L410.3 116.6 Z"/></clipPath>
+    <clipPath id="transponder-c32"><path d="M357 216.8 L356.6 324.4 L455.3 349.7 L456.1 191.9 Z"/></clipPath>
+    <clipPath id="transponder-c33"><path d="M455.3 349.7 L374.1 465.5 L505.6 749.5 L750.4 468.8 Z"/></clipPath>
+    <clipPath id="transponder-c34"><path d="M374.1 465.5 L201.6 503.3 L168.2 818.6 L505.6 749.5 Z"/></clipPath>
+    <clipPath id="transponder-c35"><path d="M201.6 503.3 L101.5 443.7 L-98 715.9 L168.2 818.6 Z"/></clipPath>
+    <clipPath id="transponder-c36"><path d="M101.5 443.7 L12.2 342.7 L-278.8 495.8 L-98 715.9 Z"/></clipPath>
+    <clipPath id="transponder-c37"><path d="M12.2 342.7 L10 293.9 L-329.9 272.1 L-278.8 495.8 Z"/></clipPath>
+    <clipPath id="transponder-c38"><path d="M10 293.9 L55.5 116.7 L-240.5 -41.7 L-329.9 272.1 Z"/></clipPath>
+    <clipPath id="transponder-c39"><path d="M55.5 116.7 L189.1 38.2 L97.6 -282.1 L-240.5 -41.7 Z"/></clipPath>
+    <clipPath id="transponder-c40"><path d="M189.1 38.2 L308.6 26.8 L382.7 -276.8 L97.6 -282.1 Z"/></clipPath>
+    <clipPath id="transponder-c41"><path d="M308.6 26.8 L410.3 116.6 L692.2 -54.1 L382.7 -276.8 Z"/></clipPath>
+    <clipPath id="transponder-c42"><path d="M410.3 116.6 L456.1 191.9 L753.8 63.9 L692.2 -54.1 Z"/></clipPath>
+    <clipPath id="transponder-c43"><path d="M456.1 191.9 L455.3 349.7 L750.4 468.8 L753.8 63.9 Z"/></clipPath>
+  </defs>
+  <g transform="translate(0 0) scale(1.0000)">
+    <g transform="translate(1.9 1.6)"><g transform="rotate(-0.2 257.7 286.3)"><g clip-path="url(#transponder-c0)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.97"/><use href="#transponder-sil" fill="url(#transponder-f2)"/></g></g></g>
+    <g transform="translate(0.7 2.4)"><g transform="rotate(0.5 239.7 293.7)"><g clip-path="url(#transponder-c1)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.74"/><use href="#transponder-sil" fill="url(#transponder-f1)"/></g></g></g>
+    <g transform="translate(-0.9 2.3)"><g transform="rotate(-0.3 219.3 290.7)"><g clip-path="url(#transponder-c2)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.91"/><use href="#transponder-sil" fill="url(#transponder-f3)"/></g></g></g>
+    <g transform="translate(-2 1.5)"><g transform="rotate(-0.2 199.8 284.7)"><g clip-path="url(#transponder-c3)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.80"/><use href="#transponder-sil" fill="url(#transponder-f0)"/></g></g></g>
+    <g transform="translate(-2.4 0.7)"><g transform="rotate(0.1 188.1 273.7)"><g clip-path="url(#transponder-c4)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.93"/><use href="#transponder-sil" fill="url(#transponder-f3)"/></g></g></g>
+    <g transform="translate(-2.4 -0.5)"><g transform="rotate(-0.2 191 253.7)"><g clip-path="url(#transponder-c5)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.93"/><use href="#transponder-sil" fill="url(#transponder-f1)"/></g></g></g>
+    <g transform="translate(-1.5 -2)"><g transform="rotate(-0.1 210.5 236.4)"><g clip-path="url(#transponder-c6)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.77"/><use href="#transponder-sil" fill="url(#transponder-f3)"/></g></g></g>
+    <g transform="translate(0.1 -2.5)"><g transform="rotate(0.3 231.2 231.3)"><g clip-path="url(#transponder-c7)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.79"/><use href="#transponder-sil" fill="url(#transponder-f2)"/></g></g></g>
+    <g transform="translate(1.5 -2)"><g transform="rotate(-0.4 253.2 232.2)"><g clip-path="url(#transponder-c8)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.90"/><use href="#transponder-sil" fill="url(#transponder-f2)"/></g></g></g>
+    <g transform="translate(2.2 -1.1)"><g transform="rotate(0.3 266.3 243.7)"><g clip-path="url(#transponder-c9)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.87"/><use href="#transponder-sil" fill="url(#transponder-f0)"/></g></g></g>
+    <g transform="translate(2.5 0.2)"><g transform="rotate(0.1 264.3 264.7)"><g clip-path="url(#transponder-c10)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.83"/><use href="#transponder-sil" fill="url(#transponder-f3)"/></g></g></g>
+    <g transform="translate(4.2 3.9)"><g transform="rotate(-0.8 297.8 324.9)"><g clip-path="url(#transponder-c11)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.94"/><use href="#transponder-sil" fill="url(#transponder-f3)"/></g></g></g>
+    <g transform="translate(1.1 5.6)"><g transform="rotate(0.9 247.8 350.9)"><g clip-path="url(#transponder-c12)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.92"/><use href="#transponder-sil" fill="url(#transponder-f3)"/></g></g></g>
+    <g transform="translate(-1.9 5.4)"><g transform="rotate(1 197.5 351.8)"><g clip-path="url(#transponder-c13)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.91"/><use href="#transponder-sil" fill="url(#transponder-f2)"/></g></g></g>
+    <g transform="translate(-4.3 3.7)"><g transform="rotate(0.2 156.5 324.9)"><g clip-path="url(#transponder-c14)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.79"/><use href="#transponder-sil" fill="url(#transponder-f3)"/></g></g></g>
+    <g transform="translate(-5.5 1.6)"><g transform="rotate(0.3 135.2 289)"><g clip-path="url(#transponder-c15)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.81"/><use href="#transponder-sil" fill="url(#transponder-f0)"/></g></g></g>
+    <g transform="translate(-5.5 -1.4)"><g transform="rotate(0.8 141.7 240.2)"><g clip-path="url(#transponder-c16)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.81"/><use href="#transponder-sil" fill="url(#transponder-f1)"/></g></g></g>
+    <g transform="translate(-3.2 -4.7)"><g transform="rotate(-0.7 182.5 191.6)"><g clip-path="url(#transponder-c17)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.91"/><use href="#transponder-sil" fill="url(#transponder-f2)"/></g></g></g>
+    <g transform="translate(0.2 -5.7)"><g transform="rotate(-0.1 232.8 175.1)"><g clip-path="url(#transponder-c18)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.90"/><use href="#transponder-sil" fill="url(#transponder-f0)"/></g></g></g>
+    <g transform="translate(3.3 -4.7)"><g transform="rotate(0.3 284.7 183.9)"><g clip-path="url(#transponder-c19)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.82"/><use href="#transponder-sil" fill="url(#transponder-f1)"/></g></g></g>
+    <g transform="translate(5 -2.7)"><g transform="rotate(0.1 318.4 214.1)"><g clip-path="url(#transponder-c20)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.96"/><use href="#transponder-sil" fill="url(#transponder-f2)"/></g></g></g>
+    <g transform="translate(5.7 0.4)"><g transform="rotate(-0.9 319.1 268.3)"><g clip-path="url(#transponder-c21)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.89"/><use href="#transponder-sil" fill="url(#transponder-f1)"/></g></g></g>
+    <g transform="translate(6.8 5.7)"><g transform="rotate(-0.9 369.4 379.5)"><g clip-path="url(#transponder-c22)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.91"/><use href="#transponder-sil" fill="url(#transponder-f1)"/></g></g></g>
+    <g transform="translate(1.9 8.7)"><g transform="rotate(0.9 269.5 438.3)"><g clip-path="url(#transponder-c23)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.95"/><use href="#transponder-sil" fill="url(#transponder-f1)"/></g></g></g>
+    <g transform="translate(-3.1 8.4)"><g transform="rotate(0.1 166.3 436)"><g clip-path="url(#transponder-c24)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.76"/><use href="#transponder-sil" fill="url(#transponder-f2)"/></g></g></g>
+    <g transform="translate(-6.9 5.6)"><g transform="rotate(1.2 92.6 373.5)"><g clip-path="url(#transponder-c25)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.81"/><use href="#transponder-sil" fill="url(#transponder-f2)"/></g></g></g>
+    <g transform="translate(-8.6 2.3)"><g transform="rotate(0.6 57.2 308.4)"><g clip-path="url(#transponder-c26)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.96"/><use href="#transponder-sil" fill="url(#transponder-f0)"/></g></g></g>
+    <g transform="translate(-8.6 -2.4)"><g transform="rotate(-0.6 72.3 218)"><g clip-path="url(#transponder-c27)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.85"/><use href="#transponder-sil" fill="url(#transponder-f0)"/></g></g></g>
+    <g transform="translate(-4.6 -7.6)"><g transform="rotate(-0.4 143.3 118.6)"><g clip-path="url(#transponder-c28)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.77"/><use href="#transponder-sil" fill="url(#transponder-f3)"/></g></g></g>
+    <g transform="translate(0.6 -8.9)"><g transform="rotate(-0.4 241.3 83.3)"><g clip-path="url(#transponder-c29)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.80"/><use href="#transponder-sil" fill="url(#transponder-f1)"/></g></g></g>
+    <g transform="translate(5 -7.4)"><g transform="rotate(-1.2 332 111)"><g clip-path="url(#transponder-c30)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.84"/><use href="#transponder-sil" fill="url(#transponder-f0)"/></g></g></g>
+    <g transform="translate(7.8 -4.2)"><g transform="rotate(0.4 392.7 174)"><g clip-path="url(#transponder-c31)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.78"/><use href="#transponder-sil" fill="url(#transponder-f0)"/></g></g></g>
+    <g transform="translate(8.9 0.4)"><g transform="rotate(-1.2 406.2 270.7)"><g clip-path="url(#transponder-c32)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.90"/><use href="#transponder-sil" fill="url(#transponder-f2)"/></g></g></g>
+    <g transform="translate(9.2 7.8)"><g transform="rotate(0.2 521.3 508.4)"><g clip-path="url(#transponder-c33)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.75"/><use href="#transponder-sil" fill="url(#transponder-f1)"/></g></g></g>
+    <g transform="translate(2.6 11.8)"><g transform="rotate(-0.5 312.4 634.2)"><g clip-path="url(#transponder-c34)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.89"/><use href="#transponder-sil" fill="url(#transponder-f2)"/></g></g></g>
+    <g transform="translate(-4.3 11.3)"><g transform="rotate(-1.1 93.3 620.4)"><g clip-path="url(#transponder-c35)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.80"/><use href="#transponder-sil" fill="url(#transponder-f0)"/></g></g></g>
+    <g transform="translate(-9.4 7.6)"><g transform="rotate(-0.3 -65.8 499.5)"><g clip-path="url(#transponder-c36)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.77"/><use href="#transponder-sil" fill="url(#transponder-f2)"/></g></g></g>
+    <g transform="translate(-11.8 2.8)"><g transform="rotate(-0.8 -146.6 351.1)"><g clip-path="url(#transponder-c37)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.85"/><use href="#transponder-sil" fill="url(#transponder-f3)"/></g></g></g>
+    <g transform="translate(-11.6 -3.3)"><g transform="rotate(-0.3 -126.2 160.3)"><g clip-path="url(#transponder-c38)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.84"/><use href="#transponder-sil" fill="url(#transponder-f0)"/></g></g></g>
+    <g transform="translate(-6.8 -10)"><g transform="rotate(-1.4 25.4 -42.2)"><g clip-path="url(#transponder-c39)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.86"/><use href="#transponder-sil" fill="url(#transponder-f2)"/></g></g></g>
+    <g transform="translate(0.5 -12.1)"><g transform="rotate(2 244.5 -123.5)"><g clip-path="url(#transponder-c40)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.78"/><use href="#transponder-sil" fill="url(#transponder-f0)"/></g></g></g>
+    <g transform="translate(7 -9.9)"><g transform="rotate(-1.8 448.5 -46.9)"><g clip-path="url(#transponder-c41)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.88"/><use href="#transponder-sil" fill="url(#transponder-f2)"/></g></g></g>
+    <g transform="translate(10.7 -5.6)"><g transform="rotate(1.8 578.1 79.6)"><g clip-path="url(#transponder-c42)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.91"/><use href="#transponder-sil" fill="url(#transponder-f1)"/></g></g></g>
+    <g transform="translate(12.1 0.2)"><g transform="rotate(0.7 603.9 268.6)"><g clip-path="url(#transponder-c43)"><use href="#transponder-sil" fill="url(#transponder-g)" fill-opacity="0.90"/><use href="#transponder-sil" fill="url(#transponder-f3)"/></g></g></g>
+  </g>
+</svg>

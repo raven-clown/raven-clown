@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="logbook logo">
+  <defs>
+    <linearGradient id="logbook-g" gradientUnits="userSpaceOnUse" x1="60" y1="60" x2="452" y2="452"><stop offset="0" stop-color="#A3E635"/><stop offset="1" stop-color="#10B981"/></linearGradient>
+    <linearGradient id="logbook-f0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="logbook-f1" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="logbook-f2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="logbook-f3" x1="0.5" y1="0" x2="0.5" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <g id="logbook-sil"><path d="M250 176 Q196 144 84 160 L84 368 Q196 352 250 384 Z" fill-rule="nonzero"/><path d="M262 176 Q316 144 428 160 L428 368 Q316 352 262 384 Z" fill-rule="nonzero"/><path d="M300 330 L330 330 L330 430 L315 414 L300 430 Z" fill-rule="nonzero"/><path d="M256 46 L267 81 L302 92 L267 103 L256 138 L245 103 L210 92 L245 81 Z" fill-rule="nonzero"/></g>
+    <clipPath id="logbook-c0"><path d="M300 268 L328.1 307.6 L345.7 282.8 Z"/></clipPath>
+    <clipPath id="logbook-c1"><path d="M300 268 L310.3 312.5 L328.1 307.6 Z"/></clipPath>
+    <clipPath id="logbook-c2"><path d="M300 268 L287.1 312.2 L310.3 312.5 Z"/></clipPath>
+    <clipPath id="logbook-c3"><path d="M300 268 L257.1 299.9 L287.1 312.2 Z"/></clipPath>
+    <clipPath id="logbook-c4"><path d="M300 268 L233.2 278.4 L257.1 299.9 Z"/></clipPath>
+    <clipPath id="logbook-c5"><path d="M300 268 L265.5 238.1 L233.2 278.4 Z"/></clipPath>
+    <clipPath id="logbook-c6"><path d="M300 268 L275.2 215.3 L265.5 238.1 Z"/></clipPath>
+    <clipPath id="logbook-c7"><path d="M300 268 L315.9 198.1 L275.2 215.3 Z"/></clipPath>
+    <clipPath id="logbook-c8"><path d="M300 268 L330.6 232.2 L315.9 198.1 Z"/></clipPath>
+    <clipPath id="logbook-c9"><path d="M300 268 L346 255 L330.6 232.2 Z"/></clipPath>
+    <clipPath id="logbook-c10"><path d="M300 268 L345.7 282.8 L346 255 Z"/></clipPath>
+    <clipPath id="logbook-c11"><path d="M345.7 282.8 L328.1 307.6 L397.9 375.6 L438 306.8 Z"/></clipPath>
+    <clipPath id="logbook-c12"><path d="M328.1 307.6 L310.3 312.5 L329.5 395.4 L397.9 375.6 Z"/></clipPath>
+    <clipPath id="logbook-c13"><path d="M310.3 312.5 L287.1 312.2 L266.6 401.1 L329.5 395.4 Z"/></clipPath>
+    <clipPath id="logbook-c14"><path d="M287.1 312.2 L257.1 299.9 L184.6 352 L266.6 401.1 Z"/></clipPath>
+    <clipPath id="logbook-c15"><path d="M257.1 299.9 L233.2 278.4 L164.8 288.8 L184.6 352 Z"/></clipPath>
+    <clipPath id="logbook-c16"><path d="M233.2 278.4 L265.5 238.1 L190.1 171.4 L164.8 288.8 Z"/></clipPath>
+    <clipPath id="logbook-c17"><path d="M265.5 238.1 L275.2 215.3 L246.1 124.4 L190.1 171.4 Z"/></clipPath>
+    <clipPath id="logbook-c18"><path d="M275.2 215.3 L315.9 198.1 L319.2 133.4 L246.1 124.4 Z"/></clipPath>
+    <clipPath id="logbook-c19"><path d="M315.9 198.1 L330.6 232.2 L398.2 160.9 L319.2 133.4 Z"/></clipPath>
+    <clipPath id="logbook-c20"><path d="M330.6 232.2 L346 255 L424 231.6 L398.2 160.9 Z"/></clipPath>
+    <clipPath id="logbook-c21"><path d="M346 255 L345.7 282.8 L438 306.8 L424 231.6 Z"/></clipPath>
+    <clipPath id="logbook-c22"><path d="M438 306.8 L397.9 375.6 L453 459 L520.2 341.7 Z"/></clipPath>
+    <clipPath id="logbook-c23"><path d="M397.9 375.6 L329.5 395.4 L350 485.1 L453 459 Z"/></clipPath>
+    <clipPath id="logbook-c24"><path d="M329.5 395.4 L266.6 401.1 L239.8 494.2 L350 485.1 Z"/></clipPath>
+    <clipPath id="logbook-c25"><path d="M266.6 401.1 L184.6 352 L116.4 403.6 L239.8 494.2 Z"/></clipPath>
+    <clipPath id="logbook-c26"><path d="M184.6 352 L164.8 288.8 L67.4 279.3 L116.4 403.6 Z"/></clipPath>
+    <clipPath id="logbook-c27"><path d="M164.8 288.8 L190.1 171.4 L122.8 129.6 L67.4 279.3 Z"/></clipPath>
+    <clipPath id="logbook-c28"><path d="M190.1 171.4 L246.1 124.4 L221.2 55.1 L122.8 129.6 Z"/></clipPath>
+    <clipPath id="logbook-c29"><path d="M246.1 124.4 L319.2 133.4 L328.8 46.8 L221.2 55.1 Z"/></clipPath>
+    <clipPath id="logbook-c30"><path d="M319.2 133.4 L398.2 160.9 L455.7 96.5 L328.8 46.8 Z"/></clipPath>
+    <clipPath id="logbook-c31"><path d="M398.2 160.9 L424 231.6 L516.3 211.8 L455.7 96.5 Z"/></clipPath>
+    <clipPath id="logbook-c32"><path d="M424 231.6 L438 306.8 L520.2 341.7 L516.3 211.8 Z"/></clipPath>
+    <clipPath id="logbook-c33"><path d="M520.2 341.7 L453 459 L663.3 694.2 L838.1 423.1 Z"/></clipPath>
+    <clipPath id="logbook-c34"><path d="M453 459 L350 485.1 L452.1 807 L663.3 694.2 Z"/></clipPath>
+    <clipPath id="logbook-c35"><path d="M350 485.1 L239.8 494.2 L123 799.3 L452.1 807 Z"/></clipPath>
+    <clipPath id="logbook-c36"><path d="M239.8 494.2 L116.4 403.6 L-153 597.2 L123 799.3 Z"/></clipPath>
+    <clipPath id="logbook-c37"><path d="M116.4 403.6 L67.4 279.3 L-259.9 280.9 L-153 597.2 Z"/></clipPath>
+    <clipPath id="logbook-c38"><path d="M67.4 279.3 L122.8 129.6 L-159.2 -52.5 L-259.9 280.9 Z"/></clipPath>
+    <clipPath id="logbook-c39"><path d="M122.8 129.6 L221.2 55.1 L122.5 -263.1 L-159.2 -52.5 Z"/></clipPath>
+    <clipPath id="logbook-c40"><path d="M221.2 55.1 L328.8 46.8 L379.1 -286.4 L122.5 -263.1 Z"/></clipPath>
+    <clipPath id="logbook-c41"><path d="M328.8 46.8 L455.7 96.5 L649.8 -169.3 L379.1 -286.4 Z"/></clipPath>
+    <clipPath id="logbook-c42"><path d="M455.7 96.5 L516.3 211.8 L847.3 149.2 L649.8 -169.3 Z"/></clipPath>
+    <clipPath id="logbook-c43"><path d="M516.3 211.8 L520.2 341.7 L838.1 423.1 L847.3 149.2 Z"/></clipPath>
+  </defs>
+  <g transform="translate(0 0) scale(1.0000)">
+    <g transform="translate(2 1.5)"><g transform="rotate(-0.4 324.6 286.1)"><g clip-path="url(#logbook-c0)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.88"/><use href="#logbook-sil" fill="url(#logbook-f0)"/></g></g></g>
+    <g transform="translate(1 2.3)"><g transform="rotate(-0.2 312.8 296)"><g clip-path="url(#logbook-c1)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.96"/><use href="#logbook-sil" fill="url(#logbook-f1)"/></g></g></g>
+    <g transform="translate(-0.1 2.5)"><g transform="rotate(-0 299.1 297.6)"><g clip-path="url(#logbook-c2)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.92"/><use href="#logbook-sil" fill="url(#logbook-f2)"/></g></g></g>
+    <g transform="translate(-1.5 2)"><g transform="rotate(0.1 281.4 293.4)"><g clip-path="url(#logbook-c3)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.90"/><use href="#logbook-sil" fill="url(#logbook-f1)"/></g></g></g>
+    <g transform="translate(-2.3 0.9)"><g transform="rotate(0.4 263.4 282.1)"><g clip-path="url(#logbook-c4)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.87"/><use href="#logbook-sil" fill="url(#logbook-f3)"/></g></g></g>
+    <g transform="translate(-2.5 -0.5)"><g transform="rotate(0.1 266.2 261.5)"><g clip-path="url(#logbook-c5)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.77"/><use href="#logbook-sil" fill="url(#logbook-f0)"/></g></g></g>
+    <g transform="translate(-1.5 -2)"><g transform="rotate(-0.1 280.2 240.4)"><g clip-path="url(#logbook-c6)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.88"/><use href="#logbook-sil" fill="url(#logbook-f3)"/></g></g></g>
+    <g transform="translate(-0.2 -2.5)"><g transform="rotate(0.4 297 227.1)"><g clip-path="url(#logbook-c7)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.85"/><use href="#logbook-sil" fill="url(#logbook-f1)"/></g></g></g>
+    <g transform="translate(1 -2.3)"><g transform="rotate(0.2 315.5 232.8)"><g clip-path="url(#logbook-c8)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.79"/><use href="#logbook-sil" fill="url(#logbook-f3)"/></g></g></g>
+    <g transform="translate(2.1 -1.3)"><g transform="rotate(0.2 325.5 251.7)"><g clip-path="url(#logbook-c9)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.77"/><use href="#logbook-sil" fill="url(#logbook-f1)"/></g></g></g>
+    <g transform="translate(2.5 0.1)"><g transform="rotate(-0.6 330.6 268.6)"><g clip-path="url(#logbook-c10)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.87"/><use href="#logbook-sil" fill="url(#logbook-f1)"/></g></g></g>
+    <g transform="translate(4.8 3.1)"><g transform="rotate(-1 377.5 318.2)"><g clip-path="url(#logbook-c11)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.94"/><use href="#logbook-sil" fill="url(#logbook-f2)"/></g></g></g>
+    <g transform="translate(2.6 5.1)"><g transform="rotate(1 341.5 347.8)"><g clip-path="url(#logbook-c12)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.92"/><use href="#logbook-sil" fill="url(#logbook-f0)"/></g></g></g>
+    <g transform="translate(-0.1 5.7)"><g transform="rotate(-0.5 298.4 355.3)"><g clip-path="url(#logbook-c13)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.84"/><use href="#logbook-sil" fill="url(#logbook-f1)"/></g></g></g>
+    <g transform="translate(-3.3 4.7)"><g transform="rotate(-0.3 248.9 341.3)"><g clip-path="url(#logbook-c14)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.87"/><use href="#logbook-sil" fill="url(#logbook-f1)"/></g></g></g>
+    <g transform="translate(-5.3 2.2)"><g transform="rotate(1 209.9 304.7)"><g clip-path="url(#logbook-c15)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.80"/><use href="#logbook-sil" fill="url(#logbook-f1)"/></g></g></g>
+    <g transform="translate(-5.5 -1.5)"><g transform="rotate(0.6 213.4 244.1)"><g clip-path="url(#logbook-c16)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.77"/><use href="#logbook-sil" fill="url(#logbook-f3)"/></g></g></g>
+    <g transform="translate(-3.2 -4.7)"><g transform="rotate(-0.9 244.2 187.3)"><g clip-path="url(#logbook-c17)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.75"/><use href="#logbook-sil" fill="url(#logbook-f2)"/></g></g></g>
+    <g transform="translate(-0.6 -5.7)"><g transform="rotate(-0.4 289.1 167.8)"><g clip-path="url(#logbook-c18)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.96"/><use href="#logbook-sil" fill="url(#logbook-f0)"/></g></g></g>
+    <g transform="translate(2.4 -5.2)"><g transform="rotate(-0.3 341 181.2)"><g clip-path="url(#logbook-c19)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.96"/><use href="#logbook-sil" fill="url(#logbook-f1)"/></g></g></g>
+    <g transform="translate(4.8 -3.1)"><g transform="rotate(-0.7 374.7 219.9)"><g clip-path="url(#logbook-c20)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.77"/><use href="#logbook-sil" fill="url(#logbook-f2)"/></g></g></g>
+    <g transform="translate(5.7 0.1)"><g transform="rotate(-0.3 388.4 269.1)"><g clip-path="url(#logbook-c21)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.78"/><use href="#logbook-sil" fill="url(#logbook-f2)"/></g></g></g>
+    <g transform="translate(7.4 5)"><g transform="rotate(-1.5 452.3 370.8)"><g clip-path="url(#logbook-c22)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.91"/><use href="#logbook-sil" fill="url(#logbook-f0)"/></g></g></g>
+    <g transform="translate(4.1 7.9)"><g transform="rotate(1.5 382.6 428.8)"><g clip-path="url(#logbook-c23)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.87"/><use href="#logbook-sil" fill="url(#logbook-f1)"/></g></g></g>
+    <g transform="translate(-0.2 8.9)"><g transform="rotate(0 296.5 443.9)"><g clip-path="url(#logbook-c24)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.86"/><use href="#logbook-sil" fill="url(#logbook-f2)"/></g></g></g>
+    <g transform="translate(-5 7.4)"><g transform="rotate(-0.9 201.9 412.7)"><g clip-path="url(#logbook-c25)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.91"/><use href="#logbook-sil" fill="url(#logbook-f3)"/></g></g></g>
+    <g transform="translate(-8.3 3.1)"><g transform="rotate(0.8 133.3 330.9)"><g clip-path="url(#logbook-c26)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.95"/><use href="#logbook-sil" fill="url(#logbook-f1)"/></g></g></g>
+    <g transform="translate(-8.5 -2.6)"><g transform="rotate(-0.9 136.3 217.3)"><g clip-path="url(#logbook-c27)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.90"/><use href="#logbook-sil" fill="url(#logbook-f3)"/></g></g></g>
+    <g transform="translate(-5.2 -7.3)"><g transform="rotate(-0.7 195 120.1)"><g clip-path="url(#logbook-c28)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.81"/><use href="#logbook-sil" fill="url(#logbook-f2)"/></g></g></g>
+    <g transform="translate(-1.1 -8.8)"><g transform="rotate(1.3 278.8 89.9)"><g clip-path="url(#logbook-c29)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.85"/><use href="#logbook-sil" fill="url(#logbook-f3)"/></g></g></g>
+    <g transform="translate(3.8 -8)"><g transform="rotate(0.6 375.5 109.4)"><g clip-path="url(#logbook-c30)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.85"/><use href="#logbook-sil" fill="url(#logbook-f1)"/></g></g></g>
+    <g transform="translate(7.5 -4.7)"><g transform="rotate(-1 448.5 175.2)"><g clip-path="url(#logbook-c31)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.82"/><use href="#logbook-sil" fill="url(#logbook-f2)"/></g></g></g>
+    <g transform="translate(8.9 0.3)"><g transform="rotate(-1.4 474.6 273)"><g clip-path="url(#logbook-c32)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.80"/><use href="#logbook-sil" fill="url(#logbook-f1)"/></g></g></g>
+    <g transform="translate(10.1 6.7)"><g transform="rotate(0.4 618.6 479.5)"><g clip-path="url(#logbook-c33)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.77"/><use href="#logbook-sil" fill="url(#logbook-f0)"/></g></g></g>
+    <g transform="translate(5.6 10.7)"><g transform="rotate(0.7 479.6 611.3)"><g clip-path="url(#logbook-c34)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.92"/><use href="#logbook-sil" fill="url(#logbook-f3)"/></g></g></g>
+    <g transform="translate(-0.3 12.1)"><g transform="rotate(1.9 291.2 646.4)"><g clip-path="url(#logbook-c35)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.75"/><use href="#logbook-sil" fill="url(#logbook-f1)"/></g></g></g>
+    <g transform="translate(-7 9.8)"><g transform="rotate(-0.4 81.5 573.6)"><g clip-path="url(#logbook-c36)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.95"/><use href="#logbook-sil" fill="url(#logbook-f3)"/></g></g></g>
+    <g transform="translate(-11.4 3.9)"><g transform="rotate(-1.8 -57.3 390.2)"><g clip-path="url(#logbook-c37)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.74"/><use href="#logbook-sil" fill="url(#logbook-f0)"/></g></g></g>
+    <g transform="translate(-11.6 -3.5)"><g transform="rotate(-1.4 -57.2 159.3)"><g clip-path="url(#logbook-c38)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.96"/><use href="#logbook-sil" fill="url(#logbook-f2)"/></g></g></g>
+    <g transform="translate(-7.2 -9.7)"><g transform="rotate(-1.5 76.8 -32.7)"><g clip-path="url(#logbook-c39)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.74"/><use href="#logbook-sil" fill="url(#logbook-f1)"/></g></g></g>
+    <g transform="translate(-1.2 -12)"><g transform="rotate(1.7 262.9 -111.9)"><g clip-path="url(#logbook-c40)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.78"/><use href="#logbook-sil" fill="url(#logbook-f2)"/></g></g></g>
+    <g transform="translate(4.9 -11.1)"><g transform="rotate(1.9 453.3 -78.1)"><g clip-path="url(#logbook-c41)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.81"/><use href="#logbook-sil" fill="url(#logbook-f2)"/></g></g></g>
+    <g transform="translate(10.3 -6.4)"><g transform="rotate(-1.7 617.3 72)"><g clip-path="url(#logbook-c42)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.92"/><use href="#logbook-sil" fill="url(#logbook-f1)"/></g></g></g>
+    <g transform="translate(12.1 0.4)"><g transform="rotate(-1.8 680.4 281.5)"><g clip-path="url(#logbook-c43)"><use href="#logbook-sil" fill="url(#logbook-g)" fill-opacity="0.76"/><use href="#logbook-sil" fill="url(#logbook-f2)"/></g></g></g>
+  </g>
+</svg>

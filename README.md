@@ -6,8 +6,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com/?lines=Central+Kafka+and+NiFi+platforms;Go+services+and+Kubernetes+delivery;React+consoles+for+real-time+systems;Log+analytics+on+OpenSearch;Five+years+of+multiplayer+game+servers&font=Fira+Code&size=17&pause=1200&color=2EE6A6&center=true&vCenter=true&width=640&height=36">
-  <img src="https://readme-typing-svg.demolab.com/?lines=Central+Kafka+and+NiFi+platforms;Go+services+and+Kubernetes+delivery;React+consoles+for+real-time+systems;Log+analytics+on+OpenSearch;Five+years+of+multiplayer+game+servers&font=Fira+Code&size=17&pause=1200&color=1A9E74&center=true&vCenter=true&width=640&height=36" alt="What I work on">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/ravenfetch-dark.svg">
+  <img src="./assets/ravenfetch-light.svg" alt="ravenfetch: my profile as a terminal program. The raven from my avatar, drawn in ASCII with a flickering lantern, next to who I am, what I build and where to reach me." width="100%">
 </picture>
 
 [![GitHub](https://img.shields.io/badge/GitHub-raven--clown-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/raven-clown)
@@ -24,6 +24,42 @@
 - I build and run the shared data platforms other teams plug into: a central Kafka cluster, a NiFi cluster, streaming pipelines out of the MES, and a log analytics platform on OpenSearch.
 - I usually own what I build end to end, from scoping and cross-department coordination to presenting it and supporting the people who use it.
 - Before corporate work I spent five years founding and operating a multiplayer game-server platform (FiveM and RedM), which is where most of my backend and systems experience started.
+- In my own time I build the mothership stack below, open source Go infrastructure for running agents, and send fixes upstream to the tools I use.
+
+<br>
+
+## Building Now: the Mothership Stack
+
+Four Go projects for running agents in production. Each one works alone, and they fit together through [one shared contract](https://github.com/raven-clown/mothership). Everything ships in the free build: SSO, roles, audit logs, clustering.
+
+<table>
+<tr>
+<td width="25%" align="center" valign="top">
+<a href="https://github.com/raven-clown/airlock"><img src="./assets/logos/airlock.svg" width="72" alt="airlock logo"></a>
+<h3><a href="https://github.com/raven-clown/airlock">airlock</a></h3>
+<a href="https://github.com/raven-clown/airlock/releases"><img src="https://img.shields.io/github/v/release/raven-clown/airlock?style=flat-square&color=6366F1&label=release" alt="airlock release"></a>
+<p>MCP gateway. One front door for many MCP servers, with login, permissions, an audit log and rate limits.</p>
+</td>
+<td width="25%" align="center" valign="top">
+<a href="https://github.com/raven-clown/rosetta"><img src="./assets/logos/rosetta.svg" width="72" alt="rosetta logo"></a>
+<h3><a href="https://github.com/raven-clown/rosetta">rosetta</a></h3>
+<a href="https://github.com/raven-clown/rosetta/releases"><img src="https://img.shields.io/github/v/release/raven-clown/rosetta?style=flat-square&color=F97316&label=release" alt="rosetta release"></a>
+<p>Agent protocol bridge. Write an agent once and serve it over MCP, A2A, ACP and AG-UI.</p>
+</td>
+<td width="25%" align="center" valign="top">
+<a href="https://github.com/raven-clown/transponder"><img src="./assets/logos/transponder.svg" width="72" alt="transponder logo"></a>
+<h3><a href="https://github.com/raven-clown/transponder">transponder</a></h3>
+<a href="https://github.com/raven-clown/transponder/releases"><img src="https://img.shields.io/github/v/release/raven-clown/transponder?style=flat-square&color=A855F7&label=release" alt="transponder release"></a>
+<p>LLM gateway. One API in front of Anthropic, OpenAI, Gemini, Ollama and more, with fallback, budgets and token limits.</p>
+</td>
+<td width="25%" align="center" valign="top">
+<a href="https://github.com/raven-clown/logbook"><img src="./assets/logos/logbook.svg" width="72" alt="logbook logo"></a>
+<h3><a href="https://github.com/raven-clown/logbook">logbook</a></h3>
+<a href="https://github.com/raven-clown/logbook/releases"><img src="https://img.shields.io/github/v/release/raven-clown/logbook?style=flat-square&color=10B981&label=release" alt="logbook release"></a>
+<p>Agent memory. A shared memory any agent can read and write, served as an MCP server.</p>
+</td>
+</tr>
+</table>
 
 <br>
 
@@ -140,7 +176,76 @@ More: <a href="./experience/side-projects">side projects</a> · <a href="./exper
 
 ## Open Source
 
-Merged upstream in projects I use.
+20 pull requests merged upstream, in 11 projects I use.
+
+<table>
+<tr>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a></h3>
+<p align="center"><img src="https://img.shields.io/badge/merged-10_PRs-8957e5?style=flat-square&logo=github&logoColor=white" alt="10 merged PRs"> <img src="https://img.shields.io/github/stars/mark3labs/mcp-go?style=flat-square&color=555" alt="stars"></p>
+<p align="center">The Go SDK for MCP. Transport errors that show the real status, stdio and PKCE edge cases, safe event replay, race fixes, and a request path that no longer parses the same JSON several times.</p>
+</td>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/grafana/mcp-grafana">grafana/mcp-grafana</a></h3>
+<p align="center"><a href="https://github.com/grafana/mcp-grafana/pull/1455"><img src="https://img.shields.io/badge/merged-%231455-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1455"></a> <img src="https://img.shields.io/github/stars/grafana/mcp-grafana?style=flat-square&color=555" alt="stars"></p>
+<p align="center">Tool calls with custom TLS or a SOCKS5 proxy share one transport. 300 calls open 1 connection instead of 300, and each call is about 25 times faster.</p>
+</td>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/joshmedeski/sesh">joshmedeski/sesh</a></h3>
+<p align="center"><a href="https://github.com/joshmedeski/sesh/pull/526"><img src="https://img.shields.io/badge/merged-%23526-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 526"></a> <img src="https://img.shields.io/github/stars/joshmedeski/sesh?style=flat-square&color=555" alt="stars"></p>
+<p align="center">Every lookup uses the configured <code>tmux_command</code>, so another multiplexer such as psmux works for all commands.</p>
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/clastix/kamaji">clastix/kamaji</a></h3>
+<p align="center"><a href="https://github.com/clastix/kamaji/pull/1403"><img src="https://img.shields.io/badge/merged-%231403-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1403"></a> <img src="https://img.shields.io/github/stars/clastix/kamaji?style=flat-square&color=555" alt="stars"></p>
+<p align="center">DataStore migrations take node selectors, tolerations, affinity and a security context, so the migration job runs on tainted and hardened nodes.</p>
+</td>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/itzg/mc-router">itzg/mc-router</a></h3>
+<p align="center"><a href="https://github.com/itzg/mc-router/pull/651"><img src="https://img.shields.io/badge/merged-%23651-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 651"></a> <img src="https://img.shields.io/github/stars/itzg/mc-router?style=flat-square&color=555" alt="stars"></p>
+<p align="center">A <code>-log-file</code> option writes logs to a file as well, so fail2ban can read them from an image that has no shell.</p>
+</td>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/warewulf/warewulf">warewulf/warewulf</a></h3>
+<p align="center"><a href="https://github.com/warewulf/warewulf/pull/2342"><img src="https://img.shields.io/badge/merged-%232342-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 2342"></a> <img src="https://img.shields.io/github/stars/warewulf/warewulf?style=flat-square&color=555" alt="stars"></p>
+<p align="center">The firewalld service opens the TLS port too, so nodes with <code>tls: true</code> get their runtime overlay instead of a dropped connection.</p>
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/open-policy-agent/regal">open-policy-agent/regal</a></h3>
+<p align="center"><a href="https://github.com/open-policy-agent/regal/pull/2150"><img src="https://img.shields.io/badge/merged-%232150-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 2150"></a> <img src="https://img.shields.io/github/stars/open-policy-agent/regal?style=flat-square&color=555" alt="stars"></p>
+<p align="center">The Rego language server handles Windows paths, which fixed <code>go test</code> failures in four packages on Windows.</p>
+</td>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/hmdsefi/gograph">hmdsefi/gograph</a></h3>
+<p align="center"><a href="https://github.com/hmdsefi/gograph/pull/300"><img src="https://img.shields.io/badge/merged-%23300-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 300"></a> <a href="https://github.com/hmdsefi/gograph/pull/302"><img src="https://img.shields.io/badge/merged-%23302-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 302"></a> <img src="https://img.shields.io/github/stars/hmdsefi/gograph?style=flat-square&color=555" alt="stars"></p>
+<p align="center">Two graph algorithms: <code>NegativeCycle</code> returns a negative-weight cycle, and <code>Bidirectional</code> finds the cheapest path by searching from both ends.</p>
+</td>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/Sriram-PR/doc-scraper">Sriram-PR/doc-scraper</a> · <a href="https://github.com/thebanri/limoni">thebanri/limoni</a></h3>
+<p align="center"><a href="https://github.com/Sriram-PR/doc-scraper/pull/132"><img src="https://img.shields.io/badge/merged-%23132-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 132"></a> <a href="https://github.com/thebanri/limoni/pull/110"><img src="https://img.shields.io/badge/merged-%23110-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 110"></a></p>
+<p align="center">Pooled Markdown converters took crawls from 559 to about 905 pages per second, and accessibility tests raised a terminal UI engine's coverage from 65% to 91%.</p>
+</td>
+</tr>
+</table>
+
+<details>
+<summary><b>Every pull request, one by one</b></summary>
+
+<br>
+
+| Project | PR | What changed |
+|---|---|---|
+| mark3labs/mcp-go | [#1172](https://github.com/mark3labs/mcp-go/pull/1172) | The last stdio message is kept when the server exits without a trailing newline, instead of failing with `transport closed`. |
+| clastix/kamaji | [#1403](https://github.com/clastix/kamaji/pull/1403) | Scheduling fields and a security context for DataStore migration jobs. |
+| itzg/mc-router | [#651](https://github.com/itzg/mc-router/pull/651) | `-log-file` appends logs to a file as well as stdout. |
+| warewulf/warewulf | [#2342](https://github.com/warewulf/warewulf/pull/2342) | Opens the TLS port 9874 in the firewalld service. |
+| open-policy-agent/regal | [#2150](https://github.com/open-policy-agent/regal/pull/2150) | Fixes path handling on Windows in the language server. |
+| hmdsefi/gograph | [#300](https://github.com/hmdsefi/gograph/pull/300) | `path.NegativeCycle` returns a negative-weight cycle. |
+| hmdsefi/gograph | [#302](https://github.com/hmdsefi/gograph/pull/302) | `path.Bidirectional` for the cheapest path between two vertices. |
 
 <table>
 <tr>
@@ -271,6 +376,8 @@ Merged upstream in projects I use.
 </td>
 </tr>
 </table>
+
+</details>
 
 <br>
 

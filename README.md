@@ -176,23 +176,26 @@ More: <a href="./experience/side-projects">side projects</a> · <a href="./exper
 
 ## Open Source
 
-20 pull requests merged upstream, in 11 projects I use.
+21 pull requests merged upstream, in 12 projects I use. Each card says what the project is, then what I changed in it.
 
 <table>
 <tr>
 <td width="33%" valign="top">
 <h3 align="center"><a href="https://github.com/mark3labs/mcp-go">mark3labs/mcp-go</a></h3>
 <p align="center"><img src="https://img.shields.io/badge/merged-10_PRs-8957e5?style=flat-square&logo=github&logoColor=white" alt="10 merged PRs"> <img src="https://img.shields.io/github/stars/mark3labs/mcp-go?style=flat-square&color=555" alt="stars"></p>
-<p align="center">The Go SDK for MCP. Transport errors that show the real status, stdio and PKCE edge cases, safe event replay, race fixes, and a request path that no longer parses the same JSON several times.</p>
+<p align="center"><sub><b>What it is:</b> the Go SDK for the Model Context Protocol, used to build the servers and clients that connect LLM apps to tools and data.</sub></p>
+<p align="center">Transport errors that show the real status, stdio and PKCE edge cases, safe event replay, race fixes, and a request path that no longer parses the same JSON several times.</p>
 </td>
 <td width="33%" valign="top">
 <h3 align="center"><a href="https://github.com/grafana/mcp-grafana">grafana/mcp-grafana</a></h3>
 <p align="center"><a href="https://github.com/grafana/mcp-grafana/pull/1455"><img src="https://img.shields.io/badge/merged-%231455-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1455"></a> <img src="https://img.shields.io/github/stars/grafana/mcp-grafana?style=flat-square&color=555" alt="stars"></p>
+<p align="center"><sub><b>What it is:</b> Grafana's MCP server, so an LLM agent can search dashboards, query data sources and work with alerts and incidents.</sub></p>
 <p align="center">Tool calls with custom TLS or a SOCKS5 proxy share one transport. 300 calls open 1 connection instead of 300, and each call is about 25 times faster.</p>
 </td>
 <td width="33%" valign="top">
 <h3 align="center"><a href="https://github.com/joshmedeski/sesh">joshmedeski/sesh</a></h3>
 <p align="center"><a href="https://github.com/joshmedeski/sesh/pull/526"><img src="https://img.shields.io/badge/merged-%23526-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 526"></a> <img src="https://img.shields.io/github/stars/joshmedeski/sesh?style=flat-square&color=555" alt="stars"></p>
+<p align="center"><sub><b>What it is:</b> a tmux session manager. You pick a project from a fuzzy finder and it opens or jumps to its session, with layouts from a config file.</sub></p>
 <p align="center">Every lookup uses the configured <code>tmux_command</code>, so another multiplexer such as psmux works for all commands.</p>
 </td>
 </tr>
@@ -200,16 +203,19 @@ More: <a href="./experience/side-projects">side projects</a> · <a href="./exper
 <td width="33%" valign="top">
 <h3 align="center"><a href="https://github.com/clastix/kamaji">clastix/kamaji</a></h3>
 <p align="center"><a href="https://github.com/clastix/kamaji/pull/1403"><img src="https://img.shields.io/badge/merged-%231403-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 1403"></a> <img src="https://img.shields.io/github/stars/clastix/kamaji?style=flat-square&color=555" alt="stars"></p>
+<p align="center"><sub><b>What it is:</b> runs Kubernetes control planes as pods inside a management cluster, so one cluster can host the control planes of many tenant clusters.</sub></p>
 <p align="center">DataStore migrations take node selectors, tolerations, affinity and a security context, so the migration job runs on tainted and hardened nodes.</p>
 </td>
 <td width="33%" valign="top">
 <h3 align="center"><a href="https://github.com/itzg/mc-router">itzg/mc-router</a></h3>
 <p align="center"><a href="https://github.com/itzg/mc-router/pull/651"><img src="https://img.shields.io/badge/merged-%23651-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 651"></a> <img src="https://img.shields.io/github/stars/itzg/mc-router?style=flat-square&color=555" alt="stars"></p>
+<p align="center"><sub><b>What it is:</b> a Minecraft reverse proxy. Players connect to one address and it routes each connection to a backend server by the hostname they typed.</sub></p>
 <p align="center">A <code>-log-file</code> option writes logs to a file as well, so fail2ban can read them from an image that has no shell.</p>
 </td>
 <td width="33%" valign="top">
 <h3 align="center"><a href="https://github.com/warewulf/warewulf">warewulf/warewulf</a></h3>
 <p align="center"><a href="https://github.com/warewulf/warewulf/pull/2342"><img src="https://img.shields.io/badge/merged-%232342-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 2342"></a> <img src="https://img.shields.io/github/stars/warewulf/warewulf?style=flat-square&color=555" alt="stars"></p>
+<p align="center"><sub><b>What it is:</b> provisions large bare-metal and virtual clusters, mostly for HPC. Nodes boot over the network from a container image and run stateless and diskless.</sub></p>
 <p align="center">The firewalld service opens the TLS port too, so nodes with <code>tls: true</code> get their runtime overlay instead of a dropped connection.</p>
 </td>
 </tr>
@@ -217,17 +223,36 @@ More: <a href="./experience/side-projects">side projects</a> · <a href="./exper
 <td width="33%" valign="top">
 <h3 align="center"><a href="https://github.com/open-policy-agent/regal">open-policy-agent/regal</a></h3>
 <p align="center"><a href="https://github.com/open-policy-agent/regal/pull/2150"><img src="https://img.shields.io/badge/merged-%232150-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 2150"></a> <img src="https://img.shields.io/github/stars/open-policy-agent/regal?style=flat-square&color=555" alt="stars"></p>
-<p align="center">The Rego language server handles Windows paths, which fixed <code>go test</code> failures in four packages on Windows.</p>
+<p align="center"><sub><b>What it is:</b> the linter and language server for Rego, the policy language of Open Policy Agent, used in editors and in CI.</sub></p>
+<p align="center">The language server handles Windows paths, which fixed <code>go test</code> failures in four packages on Windows.</p>
 </td>
 <td width="33%" valign="top">
 <h3 align="center"><a href="https://github.com/hmdsefi/gograph">hmdsefi/gograph</a></h3>
 <p align="center"><a href="https://github.com/hmdsefi/gograph/pull/300"><img src="https://img.shields.io/badge/merged-%23300-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 300"></a> <a href="https://github.com/hmdsefi/gograph/pull/302"><img src="https://img.shields.io/badge/merged-%23302-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 302"></a> <img src="https://img.shields.io/github/stars/hmdsefi/gograph?style=flat-square&color=555" alt="stars"></p>
+<p align="center"><sub><b>What it is:</b> generic graph data structures and algorithms for Go: dependency graphs with cycle checks, traversal, shortest paths and connectivity, with no dependencies.</sub></p>
 <p align="center">Two graph algorithms: <code>NegativeCycle</code> returns a negative-weight cycle, and <code>Bidirectional</code> finds the cheapest path by searching from both ends.</p>
 </td>
 <td width="33%" valign="top">
-<h3 align="center"><a href="https://github.com/Sriram-PR/doc-scraper">Sriram-PR/doc-scraper</a> · <a href="https://github.com/thebanri/limoni">thebanri/limoni</a></h3>
-<p align="center"><a href="https://github.com/Sriram-PR/doc-scraper/pull/132"><img src="https://img.shields.io/badge/merged-%23132-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 132"></a> <a href="https://github.com/thebanri/limoni/pull/110"><img src="https://img.shields.io/badge/merged-%23110-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 110"></a></p>
-<p align="center">Pooled Markdown converters took crawls from 559 to about 905 pages per second, and accessibility tests raised a terminal UI engine's coverage from 65% to 91%.</p>
+<h3 align="center"><a href="https://github.com/donetick/donetick">donetick/donetick</a></h3>
+<p align="center"><a href="https://github.com/donetick/donetick/pull/949"><img src="https://img.shields.io/badge/merged-%23949-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 949"></a> <img src="https://img.shields.io/github/stars/donetick/donetick?style=flat-square&color=555" alt="stars"></p>
+<p align="center"><sub><b>What it is:</b> a self-hosted app for tasks and household chores, with recurring schedules, assignees and reminders shared across a family or team.</sub></p>
+<p align="center">A chore due on a set day of the month no longer comes back due at the same moment right after it is done, when that time falls in a different month in UTC than in the chore's timezone.</p>
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/Sriram-PR/doc-scraper">Sriram-PR/doc-scraper</a></h3>
+<p align="center"><a href="https://github.com/Sriram-PR/doc-scraper/pull/132"><img src="https://img.shields.io/badge/merged-%23132-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 132"></a> <img src="https://img.shields.io/github/stars/Sriram-PR/doc-scraper?style=flat-square&color=555" alt="stars"></p>
+<p align="center"><sub><b>What it is:</b> a Go crawler that turns documentation sites into clean Markdown, for RAG pipelines and training data.</sub></p>
+<p align="center">Markdown converters are pooled, so crawls keep scaling past 8 workers: from 559 to about 905 pages per second at 32 workers.</p>
+</td>
+<td width="33%" valign="top">
+<h3 align="center"><a href="https://github.com/thebanri/limoni">thebanri/limoni</a></h3>
+<p align="center"><a href="https://github.com/thebanri/limoni/pull/110"><img src="https://img.shields.io/badge/merged-%23110-8957e5?style=flat-square&logo=github&logoColor=white" alt="Merged PR 110"></a> <img src="https://img.shields.io/github/stars/thebanri/limoni?style=flat-square&color=555" alt="stars"></p>
+<p align="center"><sub><b>What it is:</b> a terminal UI engine for Go that tests can click through and agents can drive over MCP, with charts, images and accessibility built in.</sub></p>
+<p align="center">Tests for its accessibility package: value redaction, screen reader announcements on three platforms and mode switches. Coverage went from 65% to 91%.</p>
+</td>
+<td width="33%" valign="top">
 </td>
 </tr>
 </table>
@@ -239,6 +264,7 @@ More: <a href="./experience/side-projects">side projects</a> · <a href="./exper
 
 | Project | PR | What changed |
 |---|---|---|
+| donetick/donetick | [#949](https://github.com/donetick/donetick/pull/949) | `day_of_the_month` chores compare months in the chore's timezone, not UTC, so finishing one moves it to next month. |
 | mark3labs/mcp-go | [#1172](https://github.com/mark3labs/mcp-go/pull/1172) | The last stdio message is kept when the server exits without a trailing newline, instead of failing with `transport closed`. |
 | clastix/kamaji | [#1403](https://github.com/clastix/kamaji/pull/1403) | Scheduling fields and a security context for DataStore migration jobs. |
 | itzg/mc-router | [#651](https://github.com/itzg/mc-router/pull/651) | `-log-file` appends logs to a file as well as stdout. |
